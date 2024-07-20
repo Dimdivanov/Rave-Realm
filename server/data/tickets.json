@@ -1,0 +1,82 @@
+{
+    "93cb2a09-0e6c-4d01-b49c-8fdf1ed174a6": {
+        "name": "VIP Access",
+        "type": "VIP",
+        "price": 250,
+        "stage": "Mystic Meadows",
+        "description": "Exclusive VIP access with private lounge and complimentary drinks.",
+        "_id": "93cb2a09-0e6c-4d01-b49c-8fdf1ed174a6"
+    },
+    "786a8476-07b0-4ff8-9b32-c73f7d528885": {
+        "name": "General Admission",
+        "type": "GA",
+        "price": 120,
+        "stage": "Electric Forest",
+        "description": "General admission with access to all stages and performances.",
+        "_id": "786a8476-07b0-4ff8-9b32-c73f7d528885"
+    },
+    "9096edfc-8b7a-4030-8560-405caee6bd72": {
+        "name": "Early Bird",
+        "type": "GA",
+        "price": 100,
+        "stage": "Neon Oasis",
+        "description": "Discounted general admission for early birds.",
+        "_id": "9096edfc-8b7a-4030-8560-405caee6bd72"
+    },
+    "d13ff85a-e642-411d-96f4-e530d1562e1d": {
+        "name": "Backstage Pass",
+        "type": "VIP",
+        "price": 400,
+        "stage": "Lunar Lagoon",
+        "description": "Get backstage access and meet the artists.",
+        "_id": "d13ff85a-e642-411d-96f4-e530d1562e1d"
+    },
+    "199f3b06-743d-4a85-9579-64edd5449f41": {
+        "name": "Weekend Pass",
+        "type": "GA",
+        "price": 200,
+        "stage": "Euphoria Field",
+        "description": "Enjoy the entire weekend with access to all performances.",
+        "_id": "199f3b06-743d-4a85-9579-64edd5449f41"
+    },
+    "6c35ae0c-ed18-40dd-a4fa-10759871936b": {
+        "name": "Student Discount",
+        "type": "GA",
+        "price": 80,
+        "stage": "Echo Valley",
+        "description": "Special discount for students with valid ID.",
+        "_id": "6c35ae0c-ed18-40dd-a4fa-10759871936b"
+    },
+    "6fd853c6-0137-4a0f-8583-0a11c9140bd7": {
+        "name": "Group Pack",
+        "type": "GA",
+        "price": 500,
+        "stage": "Harmonic Haven",
+        "description": "Group package for 5 people at a discounted rate.",
+        "_id": "6fd853c6-0137-4a0f-8583-0a11c9140bd7"
+    },
+    "6ee8a885-0703-432b-bdaf-8b18640a97f6": {
+        "name": "Day Pass",
+        "type": "GA",
+        "price": 70,
+        "stage": "Starlight Grove",
+        "description": "Single day pass with access to all stages for one day.",
+        "_id": "6ee8a885-0703-432b-bdaf-8b18640a97f6"
+    },
+    "c5594f60-3a5c-4425-abd3-1a3f601ce018": {
+        "name": "Family Pack",
+        "type": "GA",
+        "price": 400,
+        "stage": "Solar Sanctuary",
+        "description": "Family package for 4 people, including children under 12.",
+        "_id": "c5594f60-3a5c-4425-abd3-1a3f601ce018"
+    },
+    "e294b812-8656-475b-89db-27873c664b0a": {
+        "name": "After Party",
+        "type": "VIP",
+        "price": 150,
+        "stage": "Twilight Temple",
+        "description": "Access to the exclusive after party with DJ performances.",
+        "_id": "e294b812-8656-475b-89db-27873c664b0a"
+    }
+}

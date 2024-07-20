@@ -1,0 +1,142 @@
+{
+    "6652bc40-96b0-42ff-938f-e60a036cb9c0": {
+        "name": "Martin Garrix",
+        "imageUrl": "https://apeconcerts.com/wp-content/uploads/2024/01/1024MGpressPhoto-1024.jpg",
+        "appearanceDate": "2024-08-01",
+        "stage": "Main Stage",
+        "biography": "Martin Garrix is a Dutch DJ and record producer known for his hits like 'Animals' and 'Scared to be Lonely'.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/martin.garrix",
+            "instagramLink": "https://instagram.com/martingarrix",
+            "twitterLink": "https://twitter.com/martingarrix",
+            "soundcloudLink": "https://soundcloud.com/martingarrix"
+        },
+        "_id": "6652bc40-96b0-42ff-938f-e60a036cb9c0"
+    },
+    "b06fded2-84a9-4164-afbf-1e02c4c37fb0": {
+        "name": "David Guetta",
+        "imageUrl": "https://glos.live/content/other/clanek/2024_02/61043-fotoguettanowy.jpg",
+        "appearanceDate": "2024-08-02",
+        "stage": "Main Stage",
+        "biography": "David Guetta is a French DJ, record producer, and songwriter who has sold over nine million albums and thirty million singles worldwide.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/DavidGuetta",
+            "instagramLink": "https://instagram.com/davidguetta",
+            "twitterLink": "https://twitter.com/davidguetta",
+            "soundcloudLink": "https://soundcloud.com/davidguetta"
+        },
+        "_id": "b06fded2-84a9-4164-afbf-1e02c4c37fb0"
+    },
+    "8f98cc61-2c37-41c0-b0de-deee8516d758": {
+        "name": "Calvin Harris",
+        "imageUrl": "https://www.billboard.com/wp-content/uploads/media/calvin-harris-press-2015-billboard-1548-b.jpg",
+        "appearanceDate": "2024-08-03",
+        "stage": "VIP Stage",
+        "biography": "Calvin Harris is a Scottish DJ, record producer, singer, and songwriter known for his collaboration with artists like Rihanna and Dua Lipa.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/calvinharris",
+            "instagramLink": "https://instagram.com/calvinharris",
+            "twitterLink": "https://twitter.com/calvinharris",
+            "soundcloudLink": "https://soundcloud.com/calvinharris"
+        },
+        "_id": "8f98cc61-2c37-41c0-b0de-deee8516d758"
+    },
+    "6f1b3f47-96a9-4280-8588-5ce6686ed606": {
+        "name": "Skrillex",
+        "imageUrl": "https://piolog.com/wp-content/uploads/2023/03/vcld8s07iu4pw5bcra1u.jpg",
+        "appearanceDate": "2024-08-04",
+        "stage": "Second Stage",
+        "biography": "Skrillex is an American DJ, record producer, and musician known for his work in electronic dance music and his influence on the genre.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/skrillex",
+            "instagramLink": "https://instagram.com/skrillex",
+            "twitterLink": "https://twitter.com/skrillex",
+            "soundcloudLink": "https://soundcloud.com/skrillex"
+        },
+        "_id": "6f1b3f47-96a9-4280-8588-5ce6686ed606"
+    },
+    "c1403b6d-5a9d-4d09-87e1-247290d47351": {
+        "name": "Tiësto",
+        "imageUrl": "https://www.billboard.com/wp-content/uploads/2023/01/Tiesto-2023-cr-Spinnin-Records-billboard-1548.jpg",
+        "appearanceDate": "2024-08-05",
+        "stage": "Main Stage",
+        "biography": "Tiësto is a Dutch DJ and record producer known as 'The Godfather of EDM' with numerous awards and hits over his career.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/tiesto",
+            "instagramLink": "https://instagram.com/tiesto",
+            "twitterLink": "https://twitter.com/tiesto",
+            "soundcloudLink": "https://soundcloud.com/tiesto"
+        },
+        "_id": "c1403b6d-5a9d-4d09-87e1-247290d47351"
+    },
+    "1051d275-d664-428a-9656-fb8622610581": {
+        "name": "Armin van Buuren",
+        "imageUrl": "https://d21buns5ku92am.cloudfront.net/69775/images/495394-SNDR_2023-06-09%20Armin%20van%20Buuren-1-4db077-large-1690550348.jpg",
+        "appearanceDate": "2024-08-06",
+        "stage": "Second Stage",
+        "biography": "Armin van Buuren is a Dutch DJ, record producer, and remixer known for his weekly radio show 'A State of Trance'.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/arminvanbuuren",
+            "instagramLink": "https://instagram.com/arminvanbuuren",
+            "twitterLink": "https://twitter.com/arminvanbuuren",
+            "soundcloudLink": "https://soundcloud.com/arminvanbuuren"
+        },
+        "_id": "1051d275-d664-428a-9656-fb8622610581"
+    },
+    "a487afbc-9c1d-4893-aede-c7bf42645e14": {
+        "name": "Zedd",
+        "imageUrl": "https://i.discogs.com/Xx33uhQDl-doCAKOCpUjmXep8zY3D4Pgy6uZgTEDRQ0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA1/NzEtMTYzNDY5NjUy/Mi03Mjg0LnBuZw.jpeg",
+        "appearanceDate": "2024-08-07",
+        "stage": "VIP Stage",
+        "biography": "Zedd is a Russian-German DJ, record producer, and songwriter known for his hit songs 'Clarity' and 'Stay'.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/zedd",
+            "instagramLink": "https://instagram.com/zedd",
+            "twitterLink": "https://twitter.com/zedd",
+            "soundcloudLink": "https://soundcloud.com/zedd"
+        },
+        "_id": "a487afbc-9c1d-4893-aede-c7bf42645e14"
+    },
+    "a544dcd5-5102-4a5e-afb2-c816437a4a06": {
+        "name": "Marshmello",
+        "imageUrl": "https://cdns-images.dzcdn.net/images/artist/7990773a89df9f06fc2b871ad1de00bf/500x500.jpg",
+        "appearanceDate": "2024-08-08",
+        "stage": "Main Stage",
+        "biography": "Marshmello is an American electronic music producer and DJ known for his iconic marshmallow helmet and hit tracks like 'Alone'.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/marshmello",
+            "instagramLink": "https://instagram.com/marshmello",
+            "twitterLink": "https://twitter.com/marshmello",
+            "soundcloudLink": "https://soundcloud.com/marshmello"
+        },
+        "_id": "a544dcd5-5102-4a5e-afb2-c816437a4a06"
+    },
+    "23ec133e-e581-4cac-8478-a46e0a88f679": {
+        "name": "Steve Aoki",
+        "imageUrl": "https://www.usmagazine.com/wp-content/uploads/2022/05/Steve-Aoki-Inside-A-Day-in-My-Life.jpg?quality=40&strip=all",
+        "appearanceDate": "2024-08-09",
+        "stage": "Second Stage",
+        "biography": "Steve Aoki is an American DJ, record producer, and music executive known for his energetic shows and collaborations with various artists.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/steve.aoki",
+            "instagramLink": "https://instagram.com/steveaoki",
+            "twitterLink": "https://twitter.com/steveaoki",
+            "soundcloudLink": "https://soundcloud.com/steveaoki"
+        },
+        "_id": "23ec133e-e581-4cac-8478-a46e0a88f679"
+    },
+    "2ae445f1-a140-40c9-b006-d803b3cb8ac4": {
+        "name": "Kygo",
+        "imageUrl": "https://images.squarespace-cdn.com/content/v1/66146e5c2f8d4448140d4fe9/89e7f6bb-cc80-4f4b-9fbe-539fd10c4e2d/Kygo-Palm-Tree-MGMT.jpg",
+        "appearanceDate": "2024-08-10",
+        "stage": "VIP Stage",
+        "biography": "Kygo is a Norwegian DJ, record producer, and songwriter known for his tropical house tracks and remixes.",
+        "socialMediaLinks": {
+            "facebookLink": "https://facebook.com/kygoofficial",
+            "instagramLink": "https://instagram.com/kygomusic",
+            "twitterLink": "https://twitter.com/kygomusic",
+            "soundcloudLink": "https://soundcloud.com/kygo"
+        },
+        "_id": "2ae445f1-a140-40c9-b006-d803b3cb8ac4"
+    }
+}
