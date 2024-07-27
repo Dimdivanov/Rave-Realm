@@ -47,10 +47,16 @@ export default function Nav() {
                             Stages
                         </Link>
                         <Link
-                            to="/create"
+                            to="/create-stage"
                             className="text-lg font-semibold leading-6 text-white"
                         >
                             Create Stage
+                        </Link>
+                        <Link
+                            to="/create-artist"
+                            className="text-lg font-semibold leading-6 text-white"
+                        >
+                            Add Artist
                         </Link>
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">

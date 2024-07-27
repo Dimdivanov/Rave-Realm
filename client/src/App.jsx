@@ -16,6 +16,7 @@ import NotFound from './components/notFound/NotFound';
 
 import AccountSettings from './components/nav/userServices/AccountSettings';
 import StageCreate from './components/stages/stage-create/StageCreate';
+import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 
 const App = () => (
     <main className="relative">
@@ -27,7 +28,8 @@ const App = () => (
             <Route path="/artists" element={<ArtistsCatalog />} />
             <Route path="/artist/:artistId" element={<ArtistDetails />} />
             <Route path="/stages-list" element={<StageList />} />
-            <Route path="/create" element={<StageCreate />} /> 
+            <Route path="/create-stage" element={<StageCreate />} />
+            <Route path="/create-artist" element={<ArtistCreate />} />
             <Route path="/login" element={<Login />}></Route>
             <Route path="/sign-up" element={<Register />}></Route>
             <Route path="/*" element={<NotFound />}></Route>
