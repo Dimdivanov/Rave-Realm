@@ -13,7 +13,9 @@ import ArtistDetails from './components/artists/artists-details/ArtistDetails';
 import TicketsList from './components/getTickets/tickets-list/TicketsList';
 import StageList from './components/stages/stage-list/StageList';
 import NotFound from './components/notFound/NotFound';
+
 import AccountSettings from './components/nav/userServices/AccountSettings';
+import StageCreate from './components/stages/stage-create/StageCreate';
 
 const App = () => (
     <main className="relative">
@@ -25,6 +27,7 @@ const App = () => (
             <Route path="/artists" element={<ArtistsCatalog />} />
             <Route path="/artist/:artistId" element={<ArtistDetails />} />
             <Route path="/stages-list" element={<StageList />} />
+            <Route path="/create" element={<StageCreate />} /> 
             <Route path="/login" element={<Login />}></Route>
             <Route path="/sign-up" element={<Register />}></Route>
             <Route path="/*" element={<NotFound />}></Route>

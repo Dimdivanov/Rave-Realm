@@ -46,6 +46,12 @@ export default function Nav() {
                         >
                             Stages
                         </Link>
+                        <Link
+                            to="/create"
+                            className="text-lg font-semibold leading-6 text-white"
+                        >
+                            Create Stage
+                        </Link>
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <div className="flex space-x-4">
