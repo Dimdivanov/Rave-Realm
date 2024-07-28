@@ -42,7 +42,7 @@ const App = () => (
 
         {/* create custom Hook for forms and fetching data */}
         {/* create requester & api*/}
-
+        {/* add backdrop and pop ups */}
         {/* break down components to smaller parts pass them props n keys*/}
         {/* create context new folder*/}
 

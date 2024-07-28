@@ -7,15 +7,15 @@ export default function Nav() {
 
     return (
         <>
-            <header className="inset-x-0 top-0 z-50 fixed bg-black bg-opacity-98">
+            <header className="inset-x-0 top-0 z-50 fixed bg-black bg-opacity-98 ">
                 <nav
-                    className="flex items-center justify-between p-6 lg:px-8"
+                    className="flex items-center justify-between p-2 lg:px-8"
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">
                         <Link to="/" className="-m-1.5 p-1.5">
                             <img
-                                className="h-14 w-auto"
+                                className="h-28 w-auto" // Adjusted logo size
                                 src="src/assets/images/logo.ico"
                                 alt="Logo"
                             />
@@ -109,7 +109,6 @@ export default function Nav() {
                     </div>
                 </nav>
 
-                {/* Mobile menu, show/hide based on menu open state. */}
                 {isMenuOpen && (
                     <div className="lg:hidden" role="dialog" aria-modal="true">
                         <div
@@ -120,7 +119,7 @@ export default function Nav() {
                             <div className="flex items-center justify-between">
                                 <Link to="/" className="-m-1.5 p-1.5">
                                     <img
-                                        className="h-12 w-auto"
+                                        className="h-20 w-auto" // Adjusted logo size for mobile menu
                                         src="src/assets/images/logo.ico"
                                         alt="Logo"
                                     />
