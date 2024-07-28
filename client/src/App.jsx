@@ -13,6 +13,7 @@ import ArtistDetails from './components/artists/artists-details/ArtistDetails';
 import TicketsList from './components/getTickets/tickets-list/TicketsList';
 import StageList from './components/stages/stage-list/StageList';
 import NotFound from './components/notFound/NotFound';
+import StageDetails from './components/stages/stage-details/StageDetails';
 
 import AccountSettings from './components/nav/userServices/AccountSettings';
 import StageCreate from './components/stages/stage-create/StageCreate';
@@ -25,11 +26,15 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Navigate to="/home" />} />
             <Route path="/get-tickets" element={<TicketsList />} />
+
             <Route path="/artists" element={<ArtistsCatalog />} />
             <Route path="/artist/:artistId" element={<ArtistDetails />} />
-            <Route path="/stages-list" element={<StageList />} />
-            <Route path="/create-stage" element={<StageCreate />} />
             <Route path="/create-artist" element={<ArtistCreate />} />
+
+            <Route path="/stages-list" element={<StageList />} />
+            <Route path="/stage-details" element={<StageDetails />} />
+            <Route path="/create-stage" element={<StageCreate />} />
+
             <Route path="/login" element={<Login />}></Route>
             <Route path="/sign-up" element={<Register />}></Route>
             <Route path="/*" element={<NotFound />}></Route>
