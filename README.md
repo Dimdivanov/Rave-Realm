@@ -50,6 +50,11 @@ git clone https://github.com/Dimdivanov/Rave-Realm.git
 cd .
 ```
 
+### Install dependencies
+```sh
+npm i
+```
+
 ### To start the server
 
 ```sh
