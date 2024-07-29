@@ -9,19 +9,8 @@ function getLimitedTickets(tickets) {
 }
 
 export default function GetTickets() {
-    const {data: tickets} = useFetch(TICKET_URL, [])
-    console.log(tickets);
-    // const [tickets, setTickets] = useState([]);
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const response = await fetch(TICKET_URL);
-    //         const results = await response.json();
-    //         const data = Object.values(results);
-
-    //         setTickets(data);
-    //     })();
-    // }, []);
+    const { data: ticket } = useFetch(TICKET_URL, []);
+    const tickets = Object.values(ticket);
 
     return (
         <>
