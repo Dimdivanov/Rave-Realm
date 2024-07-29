@@ -3,6 +3,7 @@ export default function SettingsMenu() {
         <>
             <>
                 {/* Create Nested routes */}
+                {/* re-use navigation panel*/}
 
                 <div class="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen flex justify-center items-center">
                     {/* Main Container */}
