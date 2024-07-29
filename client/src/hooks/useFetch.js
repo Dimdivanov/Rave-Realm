@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 
 export function useFetch(url, initialData) {
-    const [data, setData] = useState([])
+    const [data, setData] = useState(initialData)
     useEffect(()=> {
         (async()=>{
             const response = await fetch(url);
@@ -9,6 +9,8 @@ export function useFetch(url, initialData) {
 
             setData(result);
         })();
-    })
-    return;
+    }, [])
+    return {
+        data,
+    }
 }

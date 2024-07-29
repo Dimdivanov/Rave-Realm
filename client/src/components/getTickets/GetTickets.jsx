@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useFetch } from '../../hooks/useFetch';
 
 const TICKET_URL = 'http://localhost:3030/jsonstore/tickets';
 
@@ -8,17 +9,19 @@ function getLimitedTickets(tickets) {
 }
 
 export default function GetTickets() {
-    const [tickets, setTickets] = useState([]);
+    const {data: tickets} = useFetch(TICKET_URL, [])
+    console.log(tickets);
+    // const [tickets, setTickets] = useState([]);
 
-    useEffect(() => {
-        (async () => {
-            const response = await fetch(TICKET_URL);
-            const results = await response.json();
-            const data = Object.values(results);
+    // useEffect(() => {
+    //     (async () => {
+    //         const response = await fetch(TICKET_URL);
+    //         const results = await response.json();
+    //         const data = Object.values(results);
 
-            setTickets(data);
-        })();
-    }, []);
+    //         setTickets(data);
+    //     })();
+    // }, []);
 
     return (
         <>
