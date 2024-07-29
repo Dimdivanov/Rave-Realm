@@ -61,6 +61,13 @@ export default function Nav() {
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <div className="flex space-x-4">
+                            <Link key="testPage" to="/generalInfo" className="pt-2 px-4">
+                                <img
+                                    src="src/assets/icons/settingsIcon.ico"
+                                    alt="My Bag"
+                                    className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+                                />
+                            </Link>
                             <Link key="mybag" to="/my-bag" className="pt-2 px-4">
                                 <img
                                     src="src/assets/icons/mybag.ico"

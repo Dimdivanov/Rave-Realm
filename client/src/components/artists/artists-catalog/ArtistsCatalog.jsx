@@ -35,7 +35,7 @@ export default function ArtistsCatalog() {
             >
                 <div className="container mt-20 mx-auto px-4 py-8">
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold mb-4">Artists</h1>
+                        <h1 className="text-4xl text-white font-bold mb-4 text-center">Artists</h1>
                         <div className="flex justify-center mb-4 space-x-96">
                             <button className="bg-purple-700 px-4 py-2 rounded">
                                 Full list
