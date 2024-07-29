@@ -2,6 +2,8 @@ export default function SettingsMenu() {
     return (
         <>
             <>
+                {/* Create Nested routes */}
+
                 <div class="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen flex justify-center items-center">
                     {/* Main Container */}
                     <div className="w-full max-w-screen-lg p-4 md:flex md:space-x-4">

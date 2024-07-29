@@ -35,7 +35,9 @@ export default function ArtistsCatalog() {
             >
                 <div className="container mt-20 mx-auto px-4 py-8">
                     <div className="text-center">
-                        <h1 className="text-4xl text-white font-bold mb-4 text-center">Artists</h1>
+                        <h1 className="text-4xl text-white font-bold mb-4 text-center">
+                            Artists
+                        </h1>
                         <div className="flex justify-center mb-4 space-x-96">
                             <button className="bg-purple-700 px-4 py-2 rounded">
                                 Full list
@@ -57,7 +59,7 @@ export default function ArtistsCatalog() {
                         {/* Artist Card */}
                         {artists.map((artist) => (
                             <div className="text-center" key={artist._id}>
-                                <Link to={`/artist/${artist._id}`}>
+                                <Link to={`/artist/details/${artist._id}`}>
                                     <div className="rounded border-4 border-gray-500 overflow-hidden mb-4 h-48">
                                         <img
                                             src={artist.imageUrl}

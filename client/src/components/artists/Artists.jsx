@@ -35,7 +35,7 @@ export default function Artists() {
                                     key={artist._id}
                                     className="relative bg-transparent rounded-lg overflow-hidden shadow-lg border-[5px] border-gray-38"
                                 >
-                                    <Link to={`/artist/${artist._id}`}>
+                                    <Link to={`/artist/details/${artist._id}`}>
                                         <img
                                             src={artist.imageUrl}
                                             alt={artist.name}

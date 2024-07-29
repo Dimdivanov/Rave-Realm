@@ -31,7 +31,7 @@ const App = () => (
             <Route path="/generalInfo" element={<SettingsMenu />} />
 
             <Route path="/artists" element={<ArtistsCatalog />} />
-            <Route path="/artist/:artistId" element={<ArtistDetails />} />
+            <Route path="/artist/details/:artistId" element={<ArtistDetails />} />
             <Route path="/create-artist" element={<ArtistCreate />} />
 
             <Route path="/stages-list" element={<StageList />} />
