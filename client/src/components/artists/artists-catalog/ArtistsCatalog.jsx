@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import ArtistCatalogCard from './artist-catalog-card/ArtistCatalogCard';
 
 const artists_URL = `http://localhost:3030/jsonstore/artists`;
 
@@ -58,24 +58,7 @@ export default function ArtistsCatalog() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                         {/* Artist Card */}
                         {artists.map((artist) => (
-                            <div className="text-center" key={artist._id}>
-                                <Link to={`/artist/details/${artist._id}`}>
-                                    <div className="rounded border-4 border-gray-500 overflow-hidden mb-4 h-48">
-                                        <img
-                                            src={artist.imageUrl}
-                                            alt={artist.name}
-                                            className="w-full h-full object-cover object-center"
-                                        />
-                                    </div>
-                                </Link>
-                                <h2 className="text-xl font-bold">{artist.name}</h2>
-                                <p className="text-gray-400">
-                                    {artist.appearanceDate} - {artist.stage}
-                                </p>
-                                <button className="bg-purple-700 px-4 py-2 rounded mt-2">
-                                    Add to My Lineup
-                                </button>
-                            </div>
+                            <ArtistCatalogCard key={artist._id} {...artist} />
                         ))}
 
                         {/* Repeat similar structure for each artist */}

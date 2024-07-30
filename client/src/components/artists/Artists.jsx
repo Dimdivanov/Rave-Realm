@@ -31,7 +31,7 @@ export default function Artists() {
                         {/* Artist Card */}
                         {artists.length > 0 ? (
                             getLimitedArtists(artists).map((artist) => (
-                                <ArtistCard key={artist._id} artist={artist} />
+                                <ArtistCard key={artist._id} {...artist} />
                             ))
                         ) : (
                             <div className="content-center">

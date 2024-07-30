@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function ArtistCard({ artist }) {
-    const { _id, imageUrl, name } = artist;
+export default function ArtistCard({ _id, imageUrl, name }) {
     return (
         <>
             <div className="relative bg-transparent rounded-lg overflow-hidden shadow-lg border-[5px] border-gray-38">
