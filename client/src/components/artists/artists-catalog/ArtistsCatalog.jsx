@@ -1,32 +1,9 @@
-import { useEffect, useState } from 'react';
 import ArtistCatalogCard from './artist-catalog-card/ArtistCatalogCard';
-
-const artists_URL = `http://localhost:3030/jsonstore/artists`;
+import { useGetAllArtists } from '../../../hooks/useArtists';
 
 export default function ArtistsCatalog() {
-    const [artists, setArtists] = useState([]);
-    const controller = new AbortController();
-    const signal = controller.signal;
-    useEffect(() => {
-        (async () => {
-            try {
-                const response = await fetch(artists_URL, { signal });
-                const results = await response.json();
-                const data = Object.values(results);
-                setArtists(data);
-            } catch (error) {
-                if (error.name === 'AbortError') {
-                    console.log('Fetch aborted');
-                } else {
-                    console.error('Fetch error:', error);
-                }
-            }
-        })();
-        return () => {
-            controller.abort();
-        };
-    }, []);
-
+    const artists = useGetAllArtists();
+    
     return (
         <>
             <section
@@ -60,8 +37,6 @@ export default function ArtistsCatalog() {
                         {artists.map((artist) => (
                             <ArtistCatalogCard key={artist._id} {...artist} />
                         ))}
-
-                        {/* Repeat similar structure for each artist */}
                     </div>
                 </div>
             </section>

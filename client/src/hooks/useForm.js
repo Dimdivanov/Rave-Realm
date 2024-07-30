@@ -1,11 +1,5 @@
 import { useState } from 'react';
 
-/*
-in the input components 
-const { values, changeHandler, submitHandler } = useForm(createInitialformVals, formSubmitHandlerfunc)
-*/
-
-/* for user inputs */
 export function useForm(initialValues, submitCallBack) {
     const [values, setValues] = useState(initialValues);
 
