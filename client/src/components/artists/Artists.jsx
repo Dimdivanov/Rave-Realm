@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { useGetAllArtists } from '../../hooks/useArtists';
 import ArtistCard from './artistCard/ArtistCard';
 
-const artists_URL = `http://localhost:3030/jsonstore/artists`;
 
 function getLimitedArtists(artists) {
     const limit = 8;
@@ -11,16 +10,8 @@ function getLimitedArtists(artists) {
 }
 
 export default function Artists() {
-    const [artists, setArtists] = useState([]);
+    const artists = useGetAllArtists([]);
 
-    useEffect(() => {
-        (async () => {
-            const response = await fetch(artists_URL);
-            const results = await response.json();
-            const data = Object.values(results);
-            setArtists(data);
-        })();
-    }, []);
 
     return (
         <>

@@ -8,7 +8,6 @@ export function useGetAllArtists() {
         (async () => {
             const result = await artistAPI.getAll();
             setArtists(result);
-            console.log(result);
         })();
     }, []);
 
