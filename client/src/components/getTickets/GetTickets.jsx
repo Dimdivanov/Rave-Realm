@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import { Link } from 'react-router-dom';
 const TICKET_URL = 'http://localhost:3030/jsonstore/tickets';

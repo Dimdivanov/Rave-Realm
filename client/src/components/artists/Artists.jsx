@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import ArtistCard from './artistCard/ArtistCard';
+
 const artists_URL = `http://localhost:3030/jsonstore/artists`;
 
 function getLimitedArtists(artists) {
@@ -27,27 +29,9 @@ export default function Artists() {
                     <h1 className="text-3xl font-bold mb-6 text-white">Artists</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {/* Artist Card */}
-                        {/*revisit */}
-
                         {artists.length > 0 ? (
                             getLimitedArtists(artists).map((artist) => (
-                                <div
-                                    key={artist._id}
-                                    className="relative bg-transparent rounded-lg overflow-hidden shadow-lg border-[5px] border-gray-38"
-                                >
-                                    <Link to={`/artist/details/${artist._id}`}>
-                                        <img
-                                            src={artist.imageUrl}
-                                            alt={artist.name}
-                                            className="w-full h-40 object-cover object-center"
-                                        />
-                                    </Link>
-                                    <div className="absolute bottom-0 w-full p-2 bg-transparent">
-                                        <h2 className="text-center text-lg font-semibold text-white">
-                                            {artist.name}
-                                        </h2>
-                                    </div>
-                                </div>
+                                <ArtistCard key={artist._id} artist={artist} />
                             ))
                         ) : (
                             <div className="content-center">
