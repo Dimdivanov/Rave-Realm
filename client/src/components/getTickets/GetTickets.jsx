@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch';
-
+import { Link } from 'react-router-dom';
 const TICKET_URL = 'http://localhost:3030/jsonstore/tickets';
 
 function getLimitedTickets(tickets) {
@@ -44,12 +44,12 @@ export default function GetTickets() {
                                         </p>
                                     </div>
                                     {/* edit this button to put in cart */}
-                                    <a
-                                        href="/tickets/1"
+                                    <Link
+                                        to={`/tickets/details/${ticket._id}`}
                                         className="mt-4 inline-block bg-yellow-500 text-black py-2 px-4 rounded-full hover:bg-yellow-400"
                                     >
                                         Get Now
-                                    </a>
+                                    </Link>
                                 </div>
                             ))
                         ) : (

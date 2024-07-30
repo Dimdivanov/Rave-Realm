@@ -1,4 +1,4 @@
-import Hero from '../hero/Hero';
+import Hero from './hero/Hero';
 import Artists from '../artists/Artists';
 import GetTickets from '../getTickets/GetTickets';
 import News from '../news/News';
