@@ -3,7 +3,7 @@ import { useGetAllArtists } from '../../../hooks/useArtists';
 
 export default function ArtistsCatalog() {
     const artists = useGetAllArtists();
-    
+
     return (
         <>
             <section
@@ -11,6 +11,7 @@ export default function ArtistsCatalog() {
                 className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400"
             >
                 <div className="container mt-20 mx-auto px-4 py-8">
+                    {/* artist catalog menu component */}
                     <div className="text-center">
                         <h1 className="text-4xl text-white font-bold mb-4 text-center">
                             Artists
