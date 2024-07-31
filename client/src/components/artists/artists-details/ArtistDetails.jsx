@@ -1,35 +1,20 @@
-import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-const artists_URL = `http://localhost:3030/jsonstore/artists`;
+import { useGetOneArtists } from '../../../hooks/useArtists';
 
 export default function ArtistDetails() {
-    const [artistDetails, setArtistDetails] = useState({});
-
     const { artistId } = useParams();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const fetchArtist = async () => {
-            try {
-                const response = await fetch(`${artists_URL}/${artistId}`);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch artist details');
-                }
-                const result = await response.json();
-                setArtistDetails(result);
-            } catch (error) {
-                console.error('Error fetching artist details:', error);
-            }
-        };
-
-        fetchArtist();
-    }, [artistId]);
+    const [artistDetails] = useGetOneArtists(artistId);
 
     return (
         <>
             <div className="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen p-8 flex items-center justify-center">
                 <div className="max-w-4xl mx-auto">
-                    <button onClick={() => navigate('/')} className="mb-4 text-white">
+                    <button
+                        onClick={() => navigate('/artists')}
+                        className="mb-4 text-white"
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -70,38 +55,6 @@ export default function ArtistDetails() {
                                 <button className="bg-yellow-500 text-black px-4 py-2 rounded-lg ml-40">
                                     Add to My Lineup
                                 </button>
-                            </div>
-                            <div className="flex space-x-2 w-full justify-center">
-                                <a
-                                    href="#"
-                                    className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition"
-                                >
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition"
-                                >
-                                    <i className="fab fa-tiktok"></i>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition"
-                                >
-                                    <i className="fab fa-facebook-f"></i>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition"
-                                >
-                                    <i className="fab fa-instagram"></i>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition"
-                                >
-                                    <i className="fab fa-youtube"></i>
-                                </a>
                             </div>
                         </div>
                         <div>

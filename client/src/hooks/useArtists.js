@@ -13,3 +13,15 @@ export function useGetAllArtists() {
 
     return artist;
 }
+
+export function useGetOneArtists(artistId) {
+    const [artistDetails, setArtistDetails] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const result = await artistAPI.getOne(artistId);
+            setArtistDetails(result)
+        })();
+    }, []);
+    return [artistDetails];
+}
