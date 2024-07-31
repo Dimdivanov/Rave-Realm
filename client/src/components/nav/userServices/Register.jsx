@@ -1,26 +1,43 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useRef, useEffect, useState } from 'react';
 
-const formInitialState = {
+import { useForm } from '../../../hooks/useForm';
+import { useRegister } from '../../../hooks/useAuth';
+
+const initialValues = {
     email: '',
     password: '',
     rePassword: '',
 };
 
 export default function Register() {
-    const [formValues, setFormValues] = useState(formInitialState);
+    const [error, setError] = useState('');
 
-    const changeHandler = (e) => {
-        setFormValues((oldState) => ({
-            ...oldState,
-            [e.target.name]: e.target.value,
-        }));
+    const emailRef = useRef(null);
+    useEffect(() => {
+        if (emailRef.current) {
+            emailRef.current.focus();
+        }
+    }, []);
+    const register = useRegister();
+    const navigate = useNavigate();
+
+    const registerHandler = async ({ email, password, rePassword }) => {
+        if (password !== rePassword) {
+            return setError('Password missmatch!');
+        }
+        try {
+            await register(email, password);
+            navigate('/');
+        } catch (err) {
+            setError(err.message);
+        }
     };
-    const onSubmitHandler = (e) => {
-        e.preventDefault();
-        //post the credentials
-        console.log(formValues);
-    };
+
+    const { values, changeHandler, submitHandler } = useForm(
+        initialValues,
+        registerHandler
+    );
 
     return (
         <>
@@ -36,12 +53,7 @@ export default function Register() {
                     </h2>
                 </div>
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form
-                        onSubmit={onSubmitHandler}
-                        className="space-y-6"
-                        action="#"
-                        method="POST"
-                    >
+                    <form onSubmit={submitHandler} className="space-y-6" method="POST">
                         <div>
                             <label
                                 htmlFor="email"
@@ -54,7 +66,8 @@ export default function Register() {
                                     name="email"
                                     type="email"
                                     autoComplete="email"
-                                    value={formValues.email}
+                                    ref={emailRef}
+                                    value={values.email}
                                     onChange={changeHandler}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -74,7 +87,7 @@ export default function Register() {
                                     name="password"
                                     type="password"
                                     autoComplete="current-password"
-                                    value={formValues.password}
+                                    value={values.password}
                                     onChange={changeHandler}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -94,7 +107,7 @@ export default function Register() {
                                     name="rePassword"
                                     type="password"
                                     autoComplete="confirm-password"
-                                    value={formValues.rePassword}
+                                    value={values.rePassword}
                                     onChange={changeHandler}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -109,7 +122,7 @@ export default function Register() {
                             </button>
                         </div>
                     </form>
-                    <p className="mt-10 text-center text-sm text-gray-500">
+                    <p className="mt-10 text-center text-sm text-white">
                         Already registered?&nbsp;
                         <Link
                             to="/login"
@@ -118,6 +131,11 @@ export default function Register() {
                             Login
                         </Link>
                     </p>
+                    {error && (
+                        <p className="mt-10 text-center text-lg text-red-600">
+                            <span>{error}</span>
+                        </p>
+                    )}
                 </div>
             </div>
         </>

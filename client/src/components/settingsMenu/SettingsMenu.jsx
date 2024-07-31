@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function SettingsMenu() {
     return (
         <>
@@ -32,9 +34,28 @@ export default function SettingsMenu() {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/tickets" className="hover:underline">
-                                            Tickets
+                                        <a
+                                            href="/get-tickets"
+                                            className="hover:underline"
+                                        >
+                                            FAQ
                                         </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/get-tickets"
+                                            className="hover:underline"
+                                        >
+                                            Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/account-settings-test"
+                                            className="hover:underline"
+                                        >
+                                            Account Settings Test
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>

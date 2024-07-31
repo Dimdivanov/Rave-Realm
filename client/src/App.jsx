@@ -45,7 +45,10 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Navigate to="/" />} />
                     <Route path="/get-tickets" element={<TicketsList />} />
+
                     <Route path="/generalInfo" element={<SettingsMenu />} />
+                    <Route path="/account-settings-test" element={<AccountSettings />} />
+
                     <Route path="/artists" element={<ArtistsCatalog />} />
                     <Route path="/artist/details/:artistId" element={<ArtistDetails />} />
                     <Route path="/create-artist" element={<ArtistCreate />} />
