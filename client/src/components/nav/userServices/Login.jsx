@@ -4,31 +4,29 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from '../../../hooks/useForm';
 import { useLogin } from '../../../hooks/useAuth';
 
+const initialValues = { email: '', password: '' };
 export default function Login() {
+    /*transfer focus in custom hook */
     const emailRef = useRef(null);
-    const navigate = useNavigate();
-
-    const login = useLogin();
-    const { values, changeHandler, submitHandler } = useForm(
-        {
-            email: '',
-            password: '',
-        },
-        async ({ email, password }) => {
-            try {
-                await login(email, password);
-                navigate('/');
-            } catch (err) {
-                console.log(err.message);
-            }
-        }
-    );
-    //transfer focus in custom hook
     useEffect(() => {
         if (emailRef.current) {
             emailRef.current.focus();
         }
     }, []);
+    //until here
+    const login = useLogin();
+    const navigate = useNavigate();
+
+    const loginHandler = async ({ email, password }) => {
+        try {
+            await login(email, password);
+            navigate('/');
+        } catch (err) {
+            alert(err.message);
+        }
+    };
+
+    const { values, changeHandler, submitHandler } = useForm(initialValues, loginHandler);
 
     return (
         <>
