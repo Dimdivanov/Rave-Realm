@@ -23,6 +23,7 @@ import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';
 
 const App = () => {
+    //to do - remove this from app component
     const [authState, setAuthState] = useState({});
     const changeAuthState = (state) => {
         //to do validation here
