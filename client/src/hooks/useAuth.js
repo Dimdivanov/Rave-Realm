@@ -16,10 +16,10 @@ export const useLogin = () => {
 export const useRegister = () => {
     const { changeAuthState } = useContext(AuthContext);
     const registerHandler = async (email, password) => {
-        const result = await register(email, password);
-        changeAuthState(result);
+        const { password: _, ...authData } = await register(email, password);
+        changeAuthState(authData);
         return result;
     };
-    
+
     return registerHandler;
 };

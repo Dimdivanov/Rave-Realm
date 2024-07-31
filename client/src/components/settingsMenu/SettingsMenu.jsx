@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function SettingsMenu() {
     return (
@@ -55,6 +55,11 @@ export default function SettingsMenu() {
                                             className="hover:underline"
                                         >
                                             Account Settings Test
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/logout" className="hover:underline">
+                                            Logout Test
                                         </Link>
                                     </li>
                                 </ul>

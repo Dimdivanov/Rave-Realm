@@ -1,10 +1,13 @@
-import { loginRegisterLinks } from '../../constants';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
+import { AuthContext } from '../../contexts/AuthContext';
+import { loginRegisterLinks } from '../../constants';
+
+//rework this module separate into 2 more nav-center-menu and mobile-view-menu
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const { isAuthenticated } = useContext(AuthContext);
     return (
         <>
             <header className="inset-x-0 top-0 z-50 fixed bg-black bg-opacity-98 ">
@@ -21,47 +24,58 @@ export default function Nav() {
                             />
                         </Link>
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-12">
-                        <Link
-                            to="/"
-                            className="text-lg font-semibold leading-6 text-white"
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            to="/get-tickets"
-                            className="text-lg font-semibold leading-6 text-white"
-                        >
-                            Get Tickets
-                        </Link>
-                        <Link
-                            to="/artists"
-                            className="text-lg font-semibold leading-6 text-white"
-                        >
-                            Artists
-                        </Link>
-                        <Link
-                            to="/stages-list"
-                            className="text-lg font-semibold leading-6 text-white"
-                        >
-                            Stages
-                        </Link>
-                        <Link
-                            to="/create-stage"
-                            className="text-lg font-semibold leading-6 text-white"
-                        >
-                            Create Stage
-                        </Link>
-                        <Link
-                            to="/create-artist"
-                            className="text-lg font-semibold leading-6 text-white"
-                        >
-                            Add Artist
-                        </Link>
+                    <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-6 lg:px-6 lg:py-6">
+                        <>
+                            <Link
+                                to="/"
+                                className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                to="/get-tickets"
+                                className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                            >
+                                Get Tickets
+                            </Link>
+                            <Link
+                                to="/artists"
+                                className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                            >
+                                Artists
+                            </Link>
+                            <Link
+                                to="/stages-list"
+                                className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                            >
+                                Stages
+                            </Link>
+                            {isAuthenticated && (
+                                <>
+                                    <Link
+                                        to="/create-stage"
+                                        className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                                    >
+                                        Create Stage
+                                    </Link>
+                                    <Link
+                                        to="/create-artist"
+                                        className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                                    >
+                                        Add Artist
+                                    </Link>
+                                </>
+                            )}
+                        </>
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <div className="flex space-x-4">
-                            <Link key="testPage" to="/generalInfo" className="pt-2 px-4">
+
+                    <div className="hidden lg:flex lg:flex-1 lg:justify-end p-2">
+                        <div className="flex space-x-4 p-2">
+                            <Link
+                                key="testPage"
+                                to="/generalInfo"
+                                className="pt-2 px-4 p-2"
+                            >
                                 <img
                                     src="src/assets/icons/settingsIcon.ico"
                                     alt="My Bag"
@@ -75,20 +89,38 @@ export default function Nav() {
                                     className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                 />
                             </Link>
-                            <Link
-                                key="signup"
-                                to={loginRegisterLinks[0].href}
-                                className="border rounded-full px-6 py-4 shadow font-bold text-white w-32 h-12 text-center flex items-center justify-center flex-shrink-0 hover:scale-105 hover:shadow-lg transition-transform duration-200"
-                            >
-                                Sign Up
-                            </Link>
-                            <Link
-                                key="login"
-                                to={loginRegisterLinks[1].href}
-                                className="bg-white border rounded-full px-6 py-4 shadow font-bold text-black w-32 h-12 text-center flex items-center justify-center flex-shrink-0 hover:scale-105 hover:shadow-lg transition-transform duration-200"
-                            >
-                                Log In
-                            </Link>
+                            {isAuthenticated ? (
+                                <>
+                                    <Link
+                                        key="testPage2"
+                                        to="/account-settings-test"
+                                        className="pt-2 px-4"
+                                    >
+                                        <img
+                                            src="src/assets/icons/profileIcon.svg"
+                                            alt="My Profile"
+                                            className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+                                        />
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    <Link
+                                        key="signup"
+                                        to={loginRegisterLinks[0].href}
+                                        className="border rounded-full px-6 py-4 shadow font-bold text-white w-32 h-12 text-center flex items-center justify-center flex-shrink-0 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+                                    >
+                                        Sign Up
+                                    </Link>
+                                    <Link
+                                        key="login"
+                                        to={loginRegisterLinks[1].href}
+                                        className="bg-white border rounded-full px-6 py-4 shadow font-bold text-black w-32 h-12 text-center flex items-center justify-center flex-shrink-0 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+                                    >
+                                        Log In
+                                    </Link>
+                                </>
+                            )}
                         </div>
                     </div>
                     <div className="flex lg:hidden">
