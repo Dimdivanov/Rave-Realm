@@ -1,4 +1,35 @@
+import { useNavigate } from 'react-router-dom';
+
+import { useCreateArtist } from '../../../hooks/useArtists';
+import { useForm } from '../../../hooks/useForm';
+
+const initialValues = {
+    artistName: '',
+    imageUrl: '',
+    appearanceDate: '',
+    stage: '',
+    biography: '',
+};
+
 export default function ArtistCreate() {
+    const navigate = useNavigate();
+    const createArtist = useCreateArtist();
+
+    const createHandler = async (values) => {
+        try {
+            const artist = await createArtist(values);
+
+            navigate('/artists');
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    const { values, changeHandler, submitHandler } = useForm(
+        initialValues,
+        createHandler
+    );
+
     return (
         <>
             <section
@@ -9,12 +40,26 @@ export default function ArtistCreate() {
                     <h2 className="text-3xl font-semibold mb-6 text-center text-white">
                         Add Artist
                     </h2>
-                    <form className="create-artist-form space-y-4">
+                    <form
+                        onSubmit={submitHandler}
+                        className="create-artist-form space-y-4"
+                    >
                         <input
                             type="text"
                             name="artistName"
                             id="artist-name"
                             placeholder="Artist Name"
+                            value={values.artistName}
+                            onChange={changeHandler}
+                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                        />
+                        <input
+                            type="text"
+                            name="imageUrl"
+                            id="imageUrl"
+                            placeholder="Image URL"
+                            value={values.style}
+                            onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
                         <textarea
@@ -22,21 +67,18 @@ export default function ArtistCreate() {
                             name="biography"
                             placeholder="Biography"
                             rows={5}
+                            value={values.biography}
+                            onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                             defaultValue={''}
                         />
                         <input
                             type="text"
-                            name="style"
-                            id="style"
-                            placeholder="Style (Genre)"
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                        />
-                        <input
-                            type="text"
-                            name="performanceTime"
-                            id="performance-time"
-                            placeholder="Performance Time"
+                            name="appearanceDate"
+                            id="appearance-date"
+                            placeholder="Performance Date"
+                            value={values.appearanceDate}
+                            onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
                         <input
@@ -44,13 +86,8 @@ export default function ArtistCreate() {
                             name="stage"
                             id="stage"
                             placeholder="Stage"
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                        />
-                        <input
-                            type="text"
-                            name="socialMediaLinks"
-                            id="social-media-links"
-                            placeholder="Social Media Links"
+                            value={values.stage}
+                            onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
                         <button

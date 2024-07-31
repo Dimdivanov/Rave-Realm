@@ -92,7 +92,7 @@ export default function Nav() {
                             {isAuthenticated ? (
                                 <>
                                     <Link
-                                        key="testPage2"
+                                        key="account-sttings-test"
                                         to="/account-settings-test"
                                         className="pt-2 px-4"
                                     >

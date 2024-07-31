@@ -25,3 +25,9 @@ export function useGetOneArtists(artistId) {
     }, [artistId]);
     return [artistDetails];
 }
+
+export function useCreateArtist() {
+    const artistCreateHandler = (artistData) => artistAPI.create(artistData);
+
+    return artistCreateHandler;
+}
