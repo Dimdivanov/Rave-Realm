@@ -31,14 +31,14 @@ export default function ArtistDetails() {
                         </svg>
                     </button>
                     <h1 className="text-4xl font-bold mb-12 text-center">
-                        {artistDetails.name}
+                        {artistDetails.artistName}
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex flex-col items-center">
                             <div className="w-full h-72">
                                 <img
                                     src={artistDetails.imageUrl}
-                                    alt={artistDetails.name}
+                                    alt={artistDetails.artistName}
                                     className="rounded-lg mb-4 w-full h-full object-cover"
                                 />
                             </div>

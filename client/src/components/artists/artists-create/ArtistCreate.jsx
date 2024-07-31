@@ -17,6 +17,7 @@ export default function ArtistCreate() {
 
     const createHandler = async (values) => {
         try {
+            //can destructure artist and take id and other options
             const artist = await createArtist(values);
 
             navigate('/artists');
@@ -70,7 +71,6 @@ export default function ArtistCreate() {
                             value={values.biography}
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                            defaultValue={''}
                         />
                         <input
                             type="text"

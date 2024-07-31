@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 export default function ArtistCatalogCard({
     _id,
     imageUrl,
-    name,
+    artistName,
     stage,
     appearanceDate,
 }) {
-    
     return (
         <>
             <div className="text-center">
@@ -15,12 +14,12 @@ export default function ArtistCatalogCard({
                     <div className="rounded border-4 border-gray-500 overflow-hidden mb-4 h-48">
                         <img
                             src={imageUrl}
-                            alt={name}
+                            alt={artistName}
                             className="w-full h-full object-cover object-center"
                         />
                     </div>
                 </Link>
-                <h2 className="text-xl font-bold">{name}</h2>
+                <h2 className="text-xl font-bold">{artistName}</h2>
                 <p className="text-gray-400">
                     {appearanceDate} - {stage}
                 </p>

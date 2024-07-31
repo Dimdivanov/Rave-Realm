@@ -15,9 +15,7 @@ This React project is designed to streamline the ticket purchasing and event cre
 
 The project is still in progress with the following tasks to be completed:
 
--   Implement custom hooks for data fetching from the server
 -   Break down components into smaller pieces
--   Use Context API
 -   Add more views for Account Settings, Stage Details, and Ticket Details
 -   Implement sub-routes
 -   Add abort controllers
@@ -51,6 +49,7 @@ cd .
 ```
 
 ### Install dependencies
+
 ```sh
 npm i
 ```
