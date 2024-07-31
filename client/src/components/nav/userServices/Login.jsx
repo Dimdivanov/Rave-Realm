@@ -1,31 +1,34 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useRef, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const formInitialState = {
-    email: '',
-    password: '',
-};
+import { useForm } from '../../../hooks/useForm';
+import { useLogin } from '../../../hooks/useAuth';
 
 export default function Login() {
-    //attaching a reference
-    // const usernameInputRef = useRef(false);
-    const [formValues, setFormValues] = useState(formInitialState);
-    //will place the focus on the login username input
-    // useEffect(() => {
-    //     usernameInputRef.current.focus();
-    // }, []);
+    const emailRef = useRef(null);
+    const navigate = useNavigate();
 
-    const changeHandler = (e) => {
-        setFormValues((oldState) => ({
-            ...oldState,
-            [e.target.name]: e.target.value,
-        }));
-    };
-    const onSubmitHandler = (e) => {
-        e.preventDefault();
-        //post the credentials
-        console.log(formValues);
-    };
+    const login = useLogin();
+    const { values, changeHandler, submitHandler } = useForm(
+        {
+            email: '',
+            password: '',
+        },
+        async ({ email, password }) => {
+            try {
+                await login(email, password);
+                navigate('/');
+            } catch (err) {
+                console.log(err.message);
+            }
+        }
+    );
+    //transfer focus in custom hook
+    useEffect(() => {
+        if (emailRef.current) {
+            emailRef.current.focus();
+        }
+    }, []);
 
     return (
         <>
@@ -42,7 +45,7 @@ export default function Login() {
                 </div>
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form
-                        onSubmit={onSubmitHandler}
+                        onSubmit={submitHandler}
                         className="space-y-6"
                         action="#"
                         method="POST"
@@ -59,7 +62,8 @@ export default function Login() {
                                     name="email"
                                     type="email"
                                     autoComplete="email"
-                                    value={formValues.email}
+                                    ref={emailRef}
+                                    value={values.email}
                                     onChange={changeHandler}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -80,7 +84,7 @@ export default function Login() {
                                     name="password"
                                     type="password"
                                     autoComplete="current-password"
-                                    value={formValues.password}
+                                    value={values.password}
                                     onChange={changeHandler}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />

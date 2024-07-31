@@ -20,8 +20,8 @@ export function useGetOneArtists(artistId) {
     useEffect(() => {
         (async () => {
             const result = await artistAPI.getOne(artistId);
-            setArtistDetails(result)
+            setArtistDetails(result);
         })();
-    }, []);
+    }, [artistId]);
     return [artistDetails];
 }
