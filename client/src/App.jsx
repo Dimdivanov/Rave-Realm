@@ -24,8 +24,8 @@ import SettingsMenu from './components/settingsMenu/SettingsMenu';
 
 const App = () => {
     const [authState, setAuthState] = useState({});
-    //explain me this part of the code here below
     const changeAuthState = (state) => {
+        //to do validation here
         setAuthState(state);
     };
     const contextData = {
