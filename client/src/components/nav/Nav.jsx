@@ -53,16 +53,22 @@ export default function Nav() {
                             {isAuthenticated && (
                                 <>
                                     <Link
-                                        to="/create-stage"
+                                        to="/create-ticket"
                                         className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
                                     >
-                                        Create Stage
+                                        Create Tickets
                                     </Link>
                                     <Link
                                         to="/create-artist"
                                         className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
                                     >
                                         Add Artist
+                                    </Link>
+                                    <Link
+                                        to="/create-stage"
+                                        className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                                    >
+                                        Create Stage
                                     </Link>
                                 </>
                             )}
