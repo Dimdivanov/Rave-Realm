@@ -1,27 +1,30 @@
+import { useParams } from 'react-router-dom';
+import { useGetOneStage } from '../../../hooks/useStages';
+
 export default function StageDetails() {
+    const { stageId } = useParams();
+    const [stageDetails] = useGetOneStage(stageId);
+    
     return (
         <>
-            <section
+             <section
                 id="stage-info"
-                class="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10"
+                className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-20" // Adjusted py-10 to py-20 for more top padding
             >
-                <div class="container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
-                    <div class="image-container relative overflow-hidden rounded-lg shadow-lg mb-6">
+                <div className="container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+                    <div className="image-container relative overflow-hidden rounded-lg shadow-lg mb-6 w-full max-w-lg mx-auto border-2 border-gray-400"> {/* Added max-w-lg for size and border for gray frame */}
                         <img
-                            src="https://www.4lighttechnicalprojects.com/wp-content/uploads/2020/07/4LIGHT_UNTOLD_CLUJ_8-1030x687.jpeg"
-                            alt="Stage Image"
-                            class="w-full h-full object-cover"
+                            src={stageDetails.stageImageUrl}
+                            alt={stageDetails.stageName}
+                            className="w-full h-full object-cover"
                         />
                     </div>
-                    <div class="description text-white text-center">
-                        <h2 class="text-4xl font-semibold mb-4">Stage Name</h2>
-                        <p class="text-lg mb-4">
-                            This stage features an incredible lineup of DJs, stunning
-                            visuals, and an immersive atmosphere that brings the music to
-                            life. Join us for unforgettable performances and moments of
-                            pure magic.
+                    <div className="description text-white text-center">
+                        <h2 className="text-4xl font-semibold mb-4">{stageDetails.stageName}</h2>
+                        <p className="text-lg mb-4">
+                            {stageDetails.description}
                         </p>
-                        <button class="bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors">
+                        <button className="bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors">
                             Learn More
                         </button>
                     </div>

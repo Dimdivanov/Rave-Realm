@@ -67,6 +67,14 @@ export default function SettingsMenu() {
                                     </li>
                                     <li>
                                         <Link
+                                            to="/stage/details/"
+                                            className="hover:underline"
+                                        >
+                                            Account Settings Test
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
                                             to="/account-settings-test"
                                             className="hover:underline"
                                         >

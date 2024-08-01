@@ -1,55 +1,57 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useGetAllStages } from '../../hooks/useStages';
+import StageCard from './stage-card/StageCard';
 
 export default function Stages() {
+    const stages = useGetAllStages([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const slides = [
-        { id: 1, content: 'Slide 1', bgColor: 'bg-red-500' },
-        { id: 2, content: 'Slide 2', bgColor: 'bg-green-500' },
-        { id: 3, content: 'Slide 3', bgColor: 'bg-blue-500' },
-    ];
 
-    const totalSlides = slides.length;
+    // Number of items per slide and calculate total slides
+    const itemsPerSlide = 3;
+    const totalSlides = Math.ceil(stages.length / itemsPerSlide);
 
-    const nextSlide = () => {
+    const nextStage = () => {
         setCurrentIndex((currentIndex + 1) % totalSlides);
     };
 
-    const prevSlide = () => {
+    const prevStage = () => {
         setCurrentIndex((currentIndex - 1 + totalSlides) % totalSlides);
     };
+
     return (
-        <>
-            
-                <section className="padding  bg-default-black space-x-60">
-                    <div className="relative w-full h-64 overflow-hidden">
-                        <div
-                            className="flex transition-transform duration-500"
-                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                        >
-                            {slides.map((slide) => (
-                                <div
-                                    key={slide.id}
-                                    className={`flex-none w-full h-64 flex justify-center items-center ${slide.bgColor} text-white text-xl font-bold`}
-                                >
-                                    {slide.content}
-                                </div>
-                            ))}
-                        </div>
-                        <button
-                            onClick={prevSlide}
-                            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
-                        >
-                            Prev
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
-                        >
-                            Next
-                        </button>
+        <section className="padding bg-default-black space-x-60">
+            {stages.length > 0 ? (
+                <div className="relative w-full h-64 overflow-hidden">
+                    <div
+                        className="flex transition-transform duration-500"
+                        style={{ transform: `translateX(-${currentIndex * 100 / itemsPerSlide}%)`, width: `${totalSlides * 100}%` }}
+                    >
+                        {stages.map((stage) => (
+                            <div key={stage._id} className="flex-none w-full md:w-1/3 h-64">
+                                <StageCard {...stage} />
+                            </div>
+                        ))}
                     </div>
-                </section>
-            
-        </>
+                    <button
+                        onClick={prevStage}
+                        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+                    >
+                        Prev
+                    </button>
+                    <button
+                        onClick={nextStage}
+                        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+                    >
+                        Next
+                    </button>
+                </div>
+            ) : (
+                <div className="w-full h-64 flex justify-center items-center">
+                    <h3 className="text-2xl font-bold tracking-tight text-white sm:text-6xl">
+                        No Stages found.
+                    </h3>
+                </div>
+            )}
+        </section>
     );
 }

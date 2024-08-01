@@ -42,7 +42,7 @@ const App = () => {
 
                     <Route path="/create-artist" element={<ArtistCreate />} />
                     <Route path="/stages-list" element={<StageList />} />
-                    <Route path="/stage-details" element={<StageDetails />} />
+                    <Route path="/stage/details/:stageId" element={<StageDetails />} />
                     <Route path="/create-stage" element={<StageCreate />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/sign-up" element={<Register />} />

@@ -12,7 +12,6 @@ function getLimitedArtists(artists) {
 export default function Artists() {
     const artists = useGetAllArtists([]);
 
-
     return (
         <>
             <section className=" bg-black">

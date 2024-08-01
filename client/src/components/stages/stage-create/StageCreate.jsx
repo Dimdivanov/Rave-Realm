@@ -58,12 +58,12 @@ export default function StageCreate() {
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
-                        <input
-                            type="text"
-                            name="category"
-                            id="stage-category"
-                            placeholder="Category"
-                            value={values.category}
+                        <textarea
+                            id="stage-description"
+                            name="description"
+                            placeholder="Description"
+                            rows={5}
+                            value={values.description}
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
@@ -76,12 +76,12 @@ export default function StageCreate() {
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
-                        <textarea
-                            id="stage-description"
-                            name="description"
-                            placeholder="Description"
-                            rows={4}
-                            value={values.description}
+                        <input
+                            type="text"
+                            name="category"
+                            id="stage-category"
+                            placeholder="Category"
+                            value={values.category}
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />

@@ -1,4 +1,5 @@
 import ArtistCatalogCard from './artist-catalog-card/ArtistCatalogCard';
+
 import { useGetAllArtists } from '../../../hooks/useArtists';
 
 export default function ArtistsCatalog() {

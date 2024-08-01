@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import stageAPI from '../api/stages-api';
 
-export function useGetAllArtists() {
+export function useGetAllStages() {
     const [stages, setStages] = useState([]);
 
     useEffect(() => {
@@ -20,10 +20,10 @@ export function useGetOneStage(stageId) {
 
     useEffect(() => {
         (async () => {
-            const result = await artistAPI.getOne(stageId);
+            const result = await stageAPI.getOne(stageId);
             setStageDetails(result);
         })();
-    }, [stageDetails]);
+    }, [stageId]);
     return [stageDetails];
 }
 
