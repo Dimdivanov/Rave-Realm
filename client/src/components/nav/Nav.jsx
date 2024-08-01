@@ -165,7 +165,7 @@ export default function Nav() {
                                 <Link to="/" className="-m-1.5 p-1.5">
                                     <img
                                         className="h-20 w-auto" // Adjusted logo size for mobile menu
-                                        src="src/assets/logo.ico"
+                                        src="src/assets/icons/logo.ico"
                                         alt="Logo"
                                     />
                                 </Link>
@@ -220,6 +220,27 @@ export default function Nav() {
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Stages
+                                    </Link>
+                                    <Link
+                                        to="/create-ticket"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Create Tickets
+                                    </Link>
+                                    <Link
+                                        to="/create-artist"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Add Artist
+                                    </Link>
+                                    <Link
+                                        to="/create-stage"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Create Stage
                                     </Link>
                                 </div>
                             </div>

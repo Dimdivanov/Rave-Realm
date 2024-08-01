@@ -12,9 +12,9 @@ export default function SettingsMenu() {
                     <div className="w-full max-w-screen-lg p-4 md:flex md:space-x-4">
                         {/* Sidebar */}
                         <div className="w-full md:w-1/4 p-4 space-y-4 bg-black bg-opacity-25 rounded-lg">
+                            <div className="text-xl text-center">Micro Menu</div>
                             <div className="flex items-center">
-                                <button className="text-white text-lg">← Back</button>
-                                <div className="ml-4 text-xl">About Festival</div>
+                                
                             </div>
                             <nav className="mt-8">
                                 <ul className="space-y-4">
@@ -93,7 +93,7 @@ export default function SettingsMenu() {
                         <div className="w-full md:w-2/3 lg:w-1/2 p-4">
                             <div className="relative">
                                 <img
-                                    src="/src/assets/images/festivalBanner.jpg"
+                                    src="/src/assets/images/decorations/festivalBanner.jpg"
                                     alt="Festival Banner"
                                     className="w-full h-96 object-contain rounded-lg"
                                 />
