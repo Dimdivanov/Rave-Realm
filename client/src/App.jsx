@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { AuthContext } from './contexts/AuthContext';
+
+import { AuthContextProvider } from './contexts/AuthContext';
 
 import Nav from './components/nav/Nav';
 import Home from './components/home/Home';
@@ -23,24 +23,8 @@ import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';
 
 const App = () => {
-    //to do - remove this from app component
-    const [authState, setAuthState] = useState({});
-    const changeAuthState = (state) => {
-        //to do validation here
-        //to do fix by implementing persisted state for authentication
-        localStorage.setItem('accessToken', state.accessToken);
-        setAuthState(state);
-    };
-    const contextData = {
-        userId: authState._id,
-        email: authState.email,
-        accessToken: authState.accessToken,
-        isAuthenticated: !!authState.email,
-        changeAuthState,
-    };
-
     return (
-        <AuthContext.Provider value={contextData}>
+        <AuthContextProvider>
             <main className="relative">
                 <Nav />
                 <Routes>
@@ -64,7 +48,7 @@ const App = () => {
                 <FollowUs />
                 <Footer />
             </main>
-        </AuthContext.Provider>
+        </AuthContextProvider>
     );
 };
 export default App;
