@@ -1434,7 +1434,7 @@
             '2e51c423-5cf2-48ec-981f-c1b50cb4610d': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Main Stage',
-                stageImageUrl: '/src/assets/images/stageBanner/raveRealmMainStage.jpg',
+                stageImageUrl: 'public/images/stageBanner/raveRealmMainStage.jpg',
                 category: 'Electronic Music',
                 capacity: '25000',
                 description:

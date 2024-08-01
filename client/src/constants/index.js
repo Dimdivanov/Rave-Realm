@@ -10,3 +10,4 @@ export const loginRegisterLinks = [
     { href: '/sign-up', label: 'Sign up' },
     { href: '/login', label: 'Log In' },
 ];
+
