@@ -1434,13 +1434,46 @@
             '2e51c423-5cf2-48ec-981f-c1b50cb4610d': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Main Stage',
-                stageImageUrl: 'public/images/stageBanner/raveRealmMainStage.jpg',
+                stageImageUrl: '/src/assets/images/stageBanner/raveRealmMainStage.jpg',
                 category: 'Electronic Music',
                 capacity: '25000',
                 description:
                     'The heart of the festival, where high-energy beats and massive drops create an electrifying atmosphere. A pulsating beacon for those who thrive on epic drops and euphoric dance moments.',
                 _createdOn: 1722528928467,
                 _id: '2e51c423-5cf2-48ec-981f-c1b50cb4610d',
+            },
+            '39678929-667e-4497-b37c-fadb4117df75': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                stageName: 'Mystic Meadows',
+                stageImageUrl: '/src/assets/images/stageBanner/mysticMeadows.jpg',
+                category: 'Chillwave',
+                capacity: '10000',
+                description:
+                    'A serene escape into a world of lush soundscapes and dreamy melodies. Perfect for those who want to unwind and let their minds wander amidst a peaceful, otherworldly ambiance.',
+                _createdOn: 1722536679272,
+                _id: '39678929-667e-4497-b37c-fadb4117df75',
+            },
+            'a8b2539a-43ea-4796-a1ff-70d5a4b625aa': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                stageName: 'Electric Forest',
+                stageImageUrl: '/src/assets/images/stageBanner/electricForest.jpg',
+                category: 'Synthwave',
+                capacity: '15000',
+                description:
+                    'An immersive realm of vibrant, pulsating lights and futuristic sounds. Where the rhythms are infectious and the melodies transport you to a neon-drenched, high-energy wonderland.',
+                _createdOn: 1722537180444,
+                _id: 'a8b2539a-43ea-4796-a1ff-70d5a4b625aa',
+            },
+            'c3fcd524-6035-44ec-b1c0-31c9d65cdd3b': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                stageName: 'Neon Oasis',
+                stageImageUrl: '/src/assets/images/stageBanner/neonOasis.jpg',
+                category: 'Dubstep, Trap',
+                capacity: '8000',
+                description:
+                    'A dazzling oasis of colorful lights and throbbing basslines. This stage is all about intense drops and experimental beats, offering a wild escape into the heart of modern bass music.',
+                _createdOn: 1722537388377,
+                _id: 'c3fcd524-6035-44ec-b1c0-31c9d65cdd3b',
             },
         },
         artists: {

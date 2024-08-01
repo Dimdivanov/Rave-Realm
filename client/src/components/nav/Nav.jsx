@@ -19,7 +19,7 @@ export default function Nav() {
                         <Link to="/" className="-m-1.5 p-1.5">
                             <img
                                 className="h-28 w-auto" // Adjusted logo size
-                                src="public/icons/logo.ico"
+                                src="src/assets/icons/logo.ico"
                                 alt="Logo"
                             />
                         </Link>
@@ -83,14 +83,14 @@ export default function Nav() {
                                 className="pt-2 px-4 p-2"
                             >
                                 <img
-                                    src="public/icons/settingsIcon.ico"
+                                    src="src/assets/icons/settingsIcon.ico"
                                     alt="My Bag"
                                     className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                 />
                             </Link>
                             <Link key="mybag" to="/my-bag" className="pt-2 px-4">
                                 <img
-                                    src="public/icons/mybag.ico"
+                                    src="src/assets/icons/mybag.ico"
                                     alt="My Bag"
                                     className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                 />
@@ -103,7 +103,7 @@ export default function Nav() {
                                         className="pt-2 px-4"
                                     >
                                         <img
-                                            src="public/icons/profileIcon.svg"
+                                            src="src/assets/icons/profileIcon.svg"
                                             alt="My Profile"
                                             className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                         />
@@ -165,7 +165,7 @@ export default function Nav() {
                                 <Link to="/" className="-m-1.5 p-1.5">
                                     <img
                                         className="h-20 w-auto" // Adjusted logo size for mobile menu
-                                        src="public/images/logo.ico"
+                                        src="src/assets/logo.ico"
                                         alt="Logo"
                                     />
                                 </Link>
