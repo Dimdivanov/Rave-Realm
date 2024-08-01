@@ -1433,13 +1433,12 @@
         stages: {
             '2e51c423-5cf2-48ec-981f-c1b50cb4610d': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
-                stageName: 'Elephant Dreams',
-                stageImageUrl:
-                    'https://i2.wp.com/www.alltherooms.com/blog/wp-content/uploads/2018/11/Electric-Zoo-By-EDM.jpg?resize=640%2C427&ssl=1',
+                stageName: 'Main Stage',
+                stageImageUrl: '/src/assets/images/stageBanner/raveRealmMainStage.jpg',
                 category: 'Electronic Music',
-                capacity: '13000',
+                capacity: '25000',
                 description:
-                    'Elephant Dreams in a world full of hate, come and cleanse your mind with EDM fest music!',
+                    'The heart of the festival, where high-energy beats and massive drops create an electrifying atmosphere. A pulsating beacon for those who thrive on epic drops and euphoric dance moments.',
                 _createdOn: 1722528928467,
                 _id: '2e51c423-5cf2-48ec-981f-c1b50cb4610d',
             },
@@ -1468,6 +1467,18 @@
                     'David Guetta is a French DJ, record producer, and songwriter who has sold over nine million albums and thirty million singles worldwide.',
                 _createdOn: 1722531145605,
                 _id: '7a10a9fa-6b65-4a89-ac86-dddd8171ebb3',
+            },
+            'cb6b5dc7-d6f2-4300-bbbb-e68bce282b66': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                artistName: 'Calvin Harris',
+                imageUrl:
+                    'https://www.billboard.com/wp-content/uploads/media/calvin-harris-press-2015-billboard-1548-b.jpg',
+                appearanceDate: '2024-08-03',
+                stage: 'Electric Forest',
+                biography:
+                    'Calvin Harris is a Scottish DJ, record producer, singer, and songwriter known for his collaboration with artists like Rihanna and Dua Lipa.',
+                _createdOn: 1722531666580,
+                _id: 'cb6b5dc7-d6f2-4300-bbbb-e68bce282b66',
             },
         },
         tickets: {},

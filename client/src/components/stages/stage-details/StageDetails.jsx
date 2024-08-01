@@ -20,7 +20,7 @@ export default function StageDetails() {
                         />
                     </div>
                     <div className="description text-white text-center">
-                        <h2 className="text-4xl font-semibold mb-4">{stageDetails.stageName}</h2>
+                        <h2 className="text-3xl font-semibold mb-4">{stageDetails.stageName}</h2>
                         <p className="text-lg mb-4">
                             {stageDetails.description}
                         </p>
