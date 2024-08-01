@@ -26,16 +26,16 @@ export default function Footer() {
                     </div>
                     {/* Menu Links */}
                     <div className="flex justify-center space-x-6 mb-6 text-gray-400">
-                        <a href="#" className="hover:underline">
+                        <a href="/FAQ" className="hover:underline">
                             FAQ
                         </a>
-                        <a href="#" className="hover:underline">
+                        <a href="/privacy-policy" className="hover:underline">
                             Privacy &amp; Policy
                         </a>
-                        <a href="#" className="hover:underline">
+                        <a href="/terms-conditions" className="hover:underline">
                             Terms &amp; Conditions
                         </a>
-                        <a href="#" className="hover:underline">
+                        <a href="/contact" className="hover:underline">
                             Contact
                         </a>
                     </div>
