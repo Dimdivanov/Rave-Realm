@@ -18,7 +18,7 @@ export default function StageCreate() {
         try {
             await createStage(values);
 
-            navigate('/stages');
+            navigate('/stages-list');
         } catch (error) {
             console.log(err.message);
         }
