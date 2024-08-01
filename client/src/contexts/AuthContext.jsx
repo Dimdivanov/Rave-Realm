@@ -14,8 +14,6 @@ export function AuthContextProvider(props) {
     const [authState, setAuthState] = usePersistedState('auth', {});
 
     const changeAuthState = (state) => {
-        //to do fix by implementing persisted state for authentication
-        localStorage.setItem('accessToken', state.accessToken);
         setAuthState(state);
     };
 
