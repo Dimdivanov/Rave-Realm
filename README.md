@@ -69,3 +69,8 @@ ctrl + shift + ` - to open terminal (2nd terminal)
 cd client
 npm run dev
 ```
+
+### Clear local storage before start
+
+-   F12 in the browser to open dev panel
+-   type in console - localStorage.clear();

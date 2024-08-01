@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import artistAPI from '../api/artists-api';
 
 export function useGetAllArtists() {

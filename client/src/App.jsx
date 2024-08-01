@@ -70,38 +70,20 @@ const App = () => {
 export default App;
 
 {
-    /* create custom Hook for forms and fetching data */
-}
-{
-    /* create requester & api*/
-}
-{
-    /* add backdrop and pop ups */
-}
-{
-    /* break down components to smaller parts pass them props n keys*/
-}
-{
-    /* create context new folder*/
+    /* add backdrop and modular pop up */
 }
 
 {
     /* in account settings create subroute link to route + with Outlet */
 }
 {
-    /* create abort controller for every fetch */
+    /* create abort controller for every fetch + lazy load */
 }
 
-{
-    /* Needs attention <AccountSettings /> */
-}
 {
     /* <StageDetails /> */
 }
 
-{
-    /* <Create Artist, Stage, Ticket /> */
-}
 {
     /* <Edit Artist, Stage, Ticket /> */
 }

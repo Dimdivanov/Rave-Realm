@@ -64,6 +64,60 @@ export default function StageList() {
                                 </div>
                             </div>
                             {/* News Card End */}
+                            {/* News Card Start */}
+                            <div className="border-4 border-gray-700 rounded-lg overflow-hidden shadow-lg">
+                                <img
+                                    src="https://external-preview.redd.it/CDnF-uTYgWaxRyf7OVb2rGD1S1bzoArrEbiNkZJJx7A.jpg?auto=webp&s=087dd556cd84c1171898e72fe2f810d681742f4b"
+                                    alt="News Image"
+                                    className="w-full h-48 object-cover"
+                                />
+                                <div className="p-4">
+                                    <h2 className="text-xl font-semibold mb-2">
+                                        Neon Oasis combines desert-inspired aesthetics
+                                        with vibrant neon colors, high-energy dance
+                                        parties, and cutting-edge holographic visuals,
+                                        making it a futuristic desert rave.
+                                    </h2>
+                                    <p className="text-sm text-gray-400">Today</p>
+                                </div>
+                            </div>
+                            {/* News Card End */}
+                            {/* News Card Start */}
+                            <div className="border-4 border-gray-700 rounded-lg overflow-hidden shadow-lg">
+                                <img
+                                    src="https://external-preview.redd.it/CDnF-uTYgWaxRyf7OVb2rGD1S1bzoArrEbiNkZJJx7A.jpg?auto=webp&s=087dd556cd84c1171898e72fe2f810d681742f4b"
+                                    alt="News Image"
+                                    className="w-full h-48 object-cover"
+                                />
+                                <div className="p-4">
+                                    <h2 className="text-xl font-semibold mb-2">
+                                        Neon Oasis combines desert-inspired aesthetics
+                                        with vibrant neon colors, high-energy dance
+                                        parties, and cutting-edge holographic visuals,
+                                        making it a futuristic desert rave.
+                                    </h2>
+                                    <p className="text-sm text-gray-400">Today</p>
+                                </div>
+                            </div>
+                            {/* News Card End */}
+                            {/* News Card Start */}
+                            <div className="border-4 border-gray-700 rounded-lg overflow-hidden shadow-lg">
+                                <img
+                                    src="https://external-preview.redd.it/CDnF-uTYgWaxRyf7OVb2rGD1S1bzoArrEbiNkZJJx7A.jpg?auto=webp&s=087dd556cd84c1171898e72fe2f810d681742f4b"
+                                    alt="News Image"
+                                    className="w-full h-48 object-cover"
+                                />
+                                <div className="p-4">
+                                    <h2 className="text-xl font-semibold mb-2">
+                                        Neon Oasis combines desert-inspired aesthetics
+                                        with vibrant neon colors, high-energy dance
+                                        parties, and cutting-edge holographic visuals,
+                                        making it a futuristic desert rave.
+                                    </h2>
+                                    <p className="text-sm text-gray-400">Today</p>
+                                </div>
+                            </div>
+                            {/* News Card End */}
                         </div>
                     </div>
                 </section>

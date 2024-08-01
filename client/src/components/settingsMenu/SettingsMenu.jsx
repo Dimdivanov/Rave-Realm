@@ -46,7 +46,23 @@ export default function SettingsMenu() {
                                             href="/get-tickets"
                                             className="hover:underline"
                                         >
+                                            Privacy & Policy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/get-tickets"
+                                            className="hover:underline"
+                                        >
                                             Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/get-tickets"
+                                            className="hover:underline"
+                                        >
+                                            Contact Us
                                         </a>
                                     </li>
                                     <li>
