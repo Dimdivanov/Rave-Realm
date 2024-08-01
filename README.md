@@ -15,11 +15,11 @@ This React project is designed to streamline the ticket purchasing and event cre
 
 The project is still in progress with the following tasks to be completed:
 
--   Break down components into smaller pieces
+-   Break down components (in progress)
 -   Add more views for Account Settings, Stage Details, and Ticket Details
--   Implement sub-routes
--   Add abort controllers
--   Create and edit views
+-   Implement sub-routes on settings menu and account menu
+-   Add abort controllers (bonus)
+-   Edit view
 -   Style with module.css and refine overall styles and elements
 
 ## Technology Stack
