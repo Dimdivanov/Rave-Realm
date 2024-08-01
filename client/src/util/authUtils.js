@@ -7,3 +7,7 @@ export const getAccessToken = () => {
     const authData = JSON.parse(authJSON);
     return authData?.accessToken;
 };
+
+export const forbiddenTokenClear = () => localStorage.clear();
+    
+

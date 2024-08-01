@@ -1,4 +1,4 @@
-import { getAccessToken } from '../util/authUtils';
+import { getAccessToken, forbiddenTokenClear } from '../util/authUtils';
 
 async function requester(method, url, data) {
     const options = {};
@@ -28,7 +28,9 @@ async function requester(method, url, data) {
     if (response.status === 204) {
         return;
     }
-
+    if (response.status === 403) {
+        forbiddenTokenClear();
+    }
     const result = await response.json();
 
     if (!response.ok) {

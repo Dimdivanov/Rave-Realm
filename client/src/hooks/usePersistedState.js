@@ -14,7 +14,11 @@ export default function usePersistedState(key, initialState) {
 
     //we dont expose the setState so we make wrapped state
     const updateState = (value) => {
-        localStorage.setItem(key, JSON.stringify(value));
+        if (value === null || value === undefined) {
+            localStorage.removeItem(key);
+        } else {
+            localStorage.setItem(key, JSON.stringify(value));
+        }
 
         setState(value);
     };
