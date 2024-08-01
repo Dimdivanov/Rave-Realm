@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import usePersistedState from '../hooks/userPersistedState';
+import usePersistedState from '../hooks/usePersistedState';
 
 export const AuthContext = createContext({
     userId: '',
