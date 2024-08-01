@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer';
 
 import Login from './components/nav/userServices/Login';
 import Register from './components/nav/userServices/Register';
+import Logout from './components/nav/userServices/Logout';
 
 import ArtistsCatalog from './components/artists/artists-catalog/ArtistsCatalog';
 import ArtistDetails from './components/artists/artists-details/ArtistDetails';
@@ -34,9 +35,11 @@ const App = () => {
 
                     <Route path="/generalInfo" element={<SettingsMenu />} />
                     <Route path="/account-settings-test" element={<AccountSettings />} />
+                    <Route path="/logout" element={<Logout />} />
 
                     <Route path="/artists" element={<ArtistsCatalog />} />
                     <Route path="/artist/details/:artistId" element={<ArtistDetails />} />
+
                     <Route path="/create-artist" element={<ArtistCreate />} />
                     <Route path="/stages-list" element={<StageList />} />
                     <Route path="/stage-details" element={<StageDetails />} />

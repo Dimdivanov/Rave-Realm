@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function AccountSettings() {
     return (
         <>
@@ -38,6 +40,11 @@ export default function AccountSettings() {
                                         <a href="#created-events" className="text-white">
                                             Created Events
                                         </a>
+                                    </li>
+                                    <li className="mb-2">
+                                        <Link to="/logout" className="text-white">
+                                            Logout
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
