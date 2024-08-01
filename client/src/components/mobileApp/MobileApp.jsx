@@ -23,9 +23,15 @@ export default function MobileApp() {
                             </div>
                         </div>
                     </div>
-
+                    <div className="absolute m-64 z-0">
+                        <img
+                            src="src/assets/images/decorations/iphoneMockup.png"
+                            alt="Background Image"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                     {/* Right Section */}
-                    <div className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 rounded-lg">
+                    <div className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 ml-52 rounded-lg">
                         <img
                             src="src/assets/icons/logo.ico"
                             alt="Icon"

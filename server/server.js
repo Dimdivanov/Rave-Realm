@@ -1513,6 +1513,18 @@
                 _createdOn: 1722531666580,
                 _id: 'cb6b5dc7-d6f2-4300-bbbb-e68bce282b66',
             },
+            '205c157c-44d2-46fd-8c91-84864d9bac2c': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                artistName: 'Skrillex',
+                imageUrl:
+                    'https://piolog.com/wp-content/uploads/2023/03/vcld8s07iu4pw5bcra1u.jpg',
+                appearanceDate: '2024-08-04',
+                stage: 'Neon Oasis',
+                biography:
+                    'Skrillex is an American DJ, record producer, and musician known for his work in electronic dance music and his influence on the genre.',
+                _createdOn: 1722538961662,
+                _id: '205c157c-44d2-46fd-8c91-84864d9bac2c',
+            },
         },
         tickets: {},
         // recipes: {

@@ -4,7 +4,6 @@ import { useGetAllStages } from '../../../hooks/useStages';
 
 export default function StageList() {
     const stages = useGetAllStages();
-    console.log(stages);
     return (
         <>
             <>
