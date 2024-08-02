@@ -1,8 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useRef, useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { useForm } from '../../../hooks/useForm';
 import { useRegister } from '../../../hooks/useAuth';
+import useFocusForm from '../../../hooks/useFocusForm';
 
 const initialValues = {
     email: '',
@@ -12,13 +13,8 @@ const initialValues = {
 
 export default function Register() {
     const [error, setError] = useState('');
-
-    const emailRef = useRef(null);
-    useEffect(() => {
-        if (emailRef.current) {
-            emailRef.current.focus();
-        }
-    }, []);
+    const emailRef = useFocusForm();
+   
     const register = useRegister();
     const navigate = useNavigate();
 

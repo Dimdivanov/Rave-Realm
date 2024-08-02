@@ -1,4 +1,8 @@
+import useFocusForm from '../../../../hooks/useFocusForm';
+
 export default function ArtistCatalogMenu() {
+    const searchRef = useFocusForm();
+
     return (
         <>
             {/* artist catalog menu component */}
@@ -16,6 +20,7 @@ export default function ArtistCatalogMenu() {
                 <input
                     type="text"
                     placeholder="Search artists ..."
+                    ref={searchRef}
                     className="bg-purple-800 text-white rounded px-4 py-2 w-full max-w-lg mx-auto mb-8"
                 />
             </div>

@@ -1,19 +1,13 @@
-import { useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { useForm } from '../../../hooks/useForm';
 import { useLogin } from '../../../hooks/useAuth';
+import useFocusForm from '../../../hooks/useFocusForm';
 
 const initialValues = { email: '', password: '' };
 export default function Login() {
-    /*transfer focus in custom hook */
-    const emailRef = useRef(null);
-    useEffect(() => {
-        if (emailRef.current) {
-            emailRef.current.focus();
-        }
-    }, []);
-    //until here
+    const emailRef = useFocusForm();
+
     const login = useLogin();
     const navigate = useNavigate();
 
@@ -42,11 +36,7 @@ export default function Login() {
                     </h2>
                 </div>
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form
-                        onSubmit={submitHandler}
-                        className="space-y-6"
-                        method="POST"
-                    >
+                    <form onSubmit={submitHandler} className="space-y-6" method="POST">
                         <div>
                             <label
                                 htmlFor="email"
