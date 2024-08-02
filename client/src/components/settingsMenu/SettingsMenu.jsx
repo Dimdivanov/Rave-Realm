@@ -13,57 +13,55 @@ export default function SettingsMenu() {
                         {/* Sidebar */}
                         <div className="w-full md:w-1/4 p-4 space-y-4 bg-black bg-opacity-25 rounded-lg">
                             <div className="text-xl text-center">Micro Menu</div>
-                            <div className="flex items-center">
-                                
-                            </div>
+                            <div className="flex items-center"></div>
                             <nav className="mt-8">
                                 <ul className="space-y-4">
                                     <li>
-                                        <a href="/news" className="hover:underline">
+                                        <Link to="/news" className="hover:underline">
                                             News
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/map" className="hover:underline">
+                                        <Link to="/map" className="hover:underline">
                                             Map
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/about" className="hover:underline">
+                                        <Link to="/about" className="hover:underline">
                                             About
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
-                                            href="/get-tickets"
+                                        <Link
+                                            to="/get-tickets"
                                             className="hover:underline"
                                         >
                                             FAQ
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
-                                            href="/privacy-policy"
+                                        <Link
+                                            to="/privacy-policy"
                                             className="hover:underline"
                                         >
                                             Privacy & Policy
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
-                                            href="/terms-conditions"
+                                        <Link
+                                            to="/terms-conditions"
                                             className="hover:underline"
                                         >
                                             Terms & Conditions
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
-                                            href="/get-tickets"
+                                        <Link
+                                            to="/contact-us"
                                             className="hover:underline"
                                         >
                                             Contact Us
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
                                         <Link
@@ -89,7 +87,7 @@ export default function SettingsMenu() {
                                 </ul>
                             </nav>
                         </div>
-                        {/* Main Content */}
+                        {/* Main Content render all content here*/}
                         <div className="w-full md:w-2/3 lg:w-1/2 p-4">
                             <div className="relative">
                                 <img

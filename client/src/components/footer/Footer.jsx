@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
     return (
         <>
@@ -5,39 +7,39 @@ export default function Footer() {
                 <footer className="py-6">
                     {/* Social Media Icons */}
                     <div className="flex justify-center space-x-6 mb-6">
-                        <a href="#" className="icon text-xl">
+                        <Link to="#" className="icon text-xl">
                             <i className="fab fa-twitter" />
-                        </a>
-                        <a href="#" className="icon text-xl">
+                        </Link>
+                        <Link to="#" className="icon text-xl">
                             <i className="fab fa-tiktok" />
-                        </a>
-                        <a href="#" className="icon text-xl">
+                        </Link>
+                        <Link to="#" className="icon text-xl">
                             <i className="fab fa-youtube" />
-                        </a>
-                        <a href="#" className="icon text-xl">
+                        </Link>
+                        <Link to="#" className="icon text-xl">
                             <i className="fab fa-facebook" />
-                        </a>
-                        <a href="#" className="icon text-xl">
+                        </Link>
+                        <Link to="#" className="icon text-xl">
                             <i className="fab fa-instagram" />
-                        </a>
-                        <a href="#" className="icon text-xl">
+                        </Link>
+                        <Link to="#" className="icon text-xl">
                             <i className="fab fa-telegram" />
-                        </a>
+                        </Link>
                     </div>
                     {/* Menu Links */}
                     <div className="flex justify-center space-x-6 mb-6 text-gray-400">
-                        <a href="/FAQ" className="hover:underline">
+                        <Link to="/FAQ" className="hover:underline">
                             FAQ
-                        </a>
-                        <a href="/privacy-policy" className="hover:underline">
+                        </Link>
+                        <Link to="/privacy-policy" className="hover:underline">
                             Privacy &amp; Policy
-                        </a>
-                        <a href="/terms-conditions" className="hover:underline">
+                        </Link>
+                        <Link to="/terms-conditions" className="hover:underline">
                             Terms &amp; Conditions
-                        </a>
-                        <a href="/contact" className="hover:underline">
+                        </Link>
+                        <Link to="/contact" className="hover:underline">
                             Contact
-                        </a>
+                        </Link>
                     </div>
                     {/* Copyright Text */}
                     <div className="text-center text-gray-400">

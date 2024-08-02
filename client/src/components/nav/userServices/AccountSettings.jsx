@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function AccountSettings() {
     return (
@@ -14,32 +14,32 @@ export default function AccountSettings() {
                                 </div>
                                 <ul>
                                     <li className="mb-2">
-                                        <a
-                                            href="#account-settings"
+                                        <Link
+                                            to="#account-settings"
                                             className="text-yellow-400"
                                         >
                                             Account Settings
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
-                                        <a href="#tickets" className="text-white">
+                                        <Link to="#tickets" className="text-white">
                                             Tickets
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
-                                        <a href="#stages" className="text-white">
+                                        <Link to="#stages" className="text-white">
                                             Stages
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
-                                        <a href="#artists" className="text-white">
+                                        <Link to="#artists" className="text-white">
                                             Artists
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
-                                        <a href="#created-events" className="text-white">
+                                        <Link to="#created-events" className="text-white">
                                             Created Events
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
                                         <Link to="/logout" className="text-white">

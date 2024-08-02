@@ -73,12 +73,5 @@ export default App;
 }
 
 {
-    /* <StageDetails /> */
-}
-
-{
     /* <Edit Artist, Stage, Ticket /> */
-}
-{
-    /* <Details Artist, Stage, Ticket /> */
 }
