@@ -6,7 +6,7 @@ export default function ArtistDetails() {
     const navigate = useNavigate();
 
     const [artistDetails] = useGetOneArtists(artistId);
-
+    
     return (
         <>
             <div className="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen p-8 flex items-center justify-center">

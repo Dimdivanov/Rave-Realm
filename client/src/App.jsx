@@ -24,6 +24,9 @@ import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';
 import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
 import TicketDetails from './components/getTickets/ticket-details/TicketDetails';
+//nested route
+
+
 
 const App = () => {
     return (
@@ -37,8 +40,10 @@ const App = () => {
                     <Route path="/create-ticket" element={<TicketCreate />} />
                     <Route path="/ticket/details/:ticketId" element={<TicketDetails />} />
 
-                    <Route path="/generalInfo" element={<SettingsMenu />} />
+                    <Route path="/settings-menu" element={<SettingsMenu />}/>
+                      
                     <Route path="/account-settings-test" element={<AccountSettings />} />
+
                     <Route path="/logout" element={<Logout />} />
 
                     <Route path="/artists" element={<ArtistsCatalog />} />

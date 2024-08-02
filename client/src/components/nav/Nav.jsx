@@ -79,7 +79,7 @@ export default function Nav() {
                         <div className="flex space-x-4 p-2">
                             <Link
                                 key="testPage"
-                                to="/generalInfo"
+                                to="/settings-menu"
                                 className="pt-2 px-4 p-2"
                             >
                                 <img
