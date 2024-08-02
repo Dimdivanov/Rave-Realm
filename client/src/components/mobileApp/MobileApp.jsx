@@ -15,12 +15,12 @@ export default function MobileApp() {
                         />
                     </div>
                     <div className="flex-1 text-left mb-8 lg:mb-0 z-10 lg:w-1/2 lg:ml-8 relative">
-                        <div className="mb-8">
+                        <div className="mb-8 lg:-ml-24">
                             <h2 className="text-2xl font-bold">
                                 Manage your tickets with our app
                             </h2>
                         </div>
-                        <div className="mb-8">
+                        <div className="mb-8 lg:-ml-24">
                             <p>Get it on:</p>
                             <div className="flex space-x-4 mt-4">
                                 <button className="bg-black text-white px-4 py-2 rounded">
@@ -34,7 +34,7 @@ export default function MobileApp() {
                     </div>
 
                     {/* Right Section */}
-                    <div className="space-x-2flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 rounded-lg lg:w-1/2 lg:ml-8 z-10">
+                    <div className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 rounded-lg lg:w-1/2 lg:ml-8 z-10">
                         <img
                             src="src/assets/icons/logo.ico"
                             alt="Icon"

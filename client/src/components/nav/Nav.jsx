@@ -83,7 +83,7 @@ export default function Nav() {
                                 className="w-15 pt-2 px-4 p-2"
                             >
                                 <img
-                                    src="src/assets/icons/settingsIcon.ico"
+                                    src="src/assets/icons/sitemap.png"
                                     alt="My Bag"
                                     className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                 />

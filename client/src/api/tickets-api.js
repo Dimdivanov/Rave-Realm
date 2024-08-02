@@ -8,14 +8,21 @@ const getAll = async () => {
     return tickets;
 };
 
+const getAllMatching = async (match) => {
+    const result = await request.get(BASE_URL);
+    const tickets = Object.values(result).filter(ticket=> ticket.type === match);
+    return tickets;
+};
+
 const getOne = (ticketId) => request.get(`${BASE_URL}/${ticketId}`);
 
-const create = (ticketData) => request.post(`${BASE_URL}`, ticketData) 
+const create = (ticketData) => request.post(`${BASE_URL}`, ticketData);
 
 const ticketAPI = {
     getAll,
     getOne,
-    create
+    create,
+    getAllMatching
 };
 
 export default ticketAPI;

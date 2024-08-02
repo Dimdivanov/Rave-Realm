@@ -14,6 +14,18 @@ export function useGetAllTickets() {
     return tickets;
 }
 
+export function useGetAllMatching(match) {
+    const [tickets, setTickets] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const result = await ticketAPI.getAllMatching(match);
+            setTickets(result);
+        })();
+    }, []);
+
+    return tickets;
+}
 export function useGetOneTicket(ticketId) {
     const [ticketDetails, setTicketDetails] = useState({});
 
