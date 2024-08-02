@@ -1538,6 +1538,17 @@
                 _createdOn: 1722586198228,
                 _id: '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc',
             },
+            'b4892e56-bafe-4f18-8e07-ff4f882d71fc': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                ticketName: 'General Access',
+                ticketImgUrl: '/src/assets/images/ticket/GA.png',
+                type: 'GA',
+                price: '125',
+                description:
+                    'General admission with access to all stages and performances.',
+                _createdOn: 1722588750788,
+                _id: 'b4892e56-bafe-4f18-8e07-ff4f882d71fc',
+            },
         },
         // recipes: {
         // 	"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {

@@ -22,9 +22,9 @@ export function useGetOneTicket(ticketId) {
             const result = await ticketAPI.getOne(ticketId);
             setTicketDetails(result);
         })();
-    }, []);
+    }, [ticketId]);
 
-    return ticketDetails;
+    return [ticketDetails];
 }
 
 export function useCreateTicket() {

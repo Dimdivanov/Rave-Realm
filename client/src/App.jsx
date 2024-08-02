@@ -23,6 +23,7 @@ import StageCreate from './components/stages/stage-create/StageCreate';
 import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';
 import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
+import TicketDetails from './components/getTickets/ticket-details/TicketDetails';
 
 const App = () => {
     return (
@@ -33,7 +34,8 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Navigate to="/" />} />
                     <Route path="/get-tickets" element={<TicketsList />} />
-                    <Route path="/create-ticket" element={<TicketCreate />}/>
+                    <Route path="/create-ticket" element={<TicketCreate />} />
+                    <Route path="/ticket/details/:ticketId" element={<TicketDetails />} />
 
                     <Route path="/generalInfo" element={<SettingsMenu />} />
                     <Route path="/account-settings-test" element={<AccountSettings />} />
@@ -44,8 +46,9 @@ const App = () => {
 
                     <Route path="/create-artist" element={<ArtistCreate />} />
                     <Route path="/stages-list" element={<StageList />} />
-                    <Route path="/stage/details/:stageId" element={<StageDetails />} />
                     <Route path="/create-stage" element={<StageCreate />} />
+                    <Route path="/stage/details/:stageId" element={<StageDetails />} />
+
                     <Route path="/login" element={<Login />} />
                     <Route path="/sign-up" element={<Register />} />
                     <Route path="/*" element={<NotFound />} />

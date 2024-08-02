@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+
 import { useGetOneStage } from '../../../hooks/useStages';
 
 export default function StageDetails() {
