@@ -4,7 +4,6 @@ export default function TicketCard(ticket) {
     return (
         <>
             <div
-                key={ticket._id}
                 className="bg-black rounded-xl overflow-hidden shadow-lg p-6 flex flex-col justify-between"
             >
                 <div className="text-white">
