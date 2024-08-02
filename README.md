@@ -15,11 +15,11 @@ This React project is designed to streamline the ticket purchasing and event cre
 
 The project is still in progress with the following tasks to be completed:
 
--   Break down components (in progress)
+-   Break down components (in progress) - Nav, FollowUs, Footer, Account Settings menu, News, Settings Menu, Stages (fix carousel)
 -   Add more views for Account Settings, Stage Details, and Ticket Details
 -   Implement sub-routes on settings menu and account menu
 -   Add abort controllers (bonus)
--   Edit view
+-   Edit views (tickets,stages,artists)
 -   Style with module.css and refine overall styles and elements
 
 ## Technology Stack
@@ -69,8 +69,3 @@ ctrl + shift + ` - to open terminal (2nd terminal)
 cd client
 npm run dev
 ```
-
-### Clear local storage before start
-
--   F12 in the browser to open dev panel
--   type in console - localStorage.clear();
