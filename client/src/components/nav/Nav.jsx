@@ -80,7 +80,7 @@ export default function Nav() {
                             <Link
                                 key="testPage"
                                 to="/settings-menu"
-                                className="pt-2 px-4 p-2"
+                                className="w-15 pt-2 px-4 p-2"
                             >
                                 <img
                                     src="src/assets/icons/settingsIcon.ico"
@@ -88,7 +88,7 @@ export default function Nav() {
                                     className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                 />
                             </Link>
-                            <Link key="mybag" to="/my-bag" className="pt-2 px-4">
+                            <Link key="mybag" to="/my-bag" className="w-15 pt-2 px-4">
                                 <img
                                     src="src/assets/icons/mybag.ico"
                                     alt="My Bag"

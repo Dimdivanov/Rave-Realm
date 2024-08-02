@@ -4,17 +4,16 @@ export default function MobileApp() {
     return (
         <>
             <section className="padding bg-mobileSection relative">
+                {/* Left Section */}
                 <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row items-center justify-between mt-16 lg:mt-0 relative">
                     {/* Background Image */}
-                    <div className="relative lg:inset-0 lg:w-1/2 w-full h-64 lg:h-auto lg:absolute lg:left-0 lg:top-0 lg:flex lg:items-center lg:justify-center z-0 mb-8 lg:mb-0">
+                    <div className="lg:inset-0 lg:w-1/2 w-full h-64 lg:h-auto lg:absolute lg:left-0 lg:top-0 lg:flex lg:items-center lg:justify-center z-0 mb-8 lg:mb-0">
                         <img
                             src="src/assets/images/decorations/iphoneMockup.png"
                             alt="Background Image"
-                            className="w-full h-full object-cover"
+                            className="object-cover"
                         />
                     </div>
-
-                    {/* Left Section */}
                     <div className="flex-1 text-left mb-8 lg:mb-0 z-10 lg:w-1/2 lg:ml-8 relative">
                         <div className="mb-8">
                             <h2 className="text-2xl font-bold">
@@ -35,7 +34,7 @@ export default function MobileApp() {
                     </div>
 
                     {/* Right Section */}
-                    <div className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 rounded-lg lg:w-1/2 lg:ml-8 z-10">
+                    <div className="space-x-2flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 rounded-lg lg:w-1/2 lg:ml-8 z-10">
                         <img
                             src="src/assets/icons/logo.ico"
                             alt="Icon"

@@ -45,7 +45,6 @@ export default function Login() {
                     <form
                         onSubmit={submitHandler}
                         className="space-y-6"
-                        action="#"
                         method="POST"
                     >
                         <div>
