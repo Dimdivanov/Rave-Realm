@@ -43,7 +43,7 @@ export default function SettingsMenu() {
                                     </li>
                                     <li>
                                         <a
-                                            href="/get-tickets"
+                                            href="/privacy-policy"
                                             className="hover:underline"
                                         >
                                             Privacy & Policy
@@ -51,7 +51,7 @@ export default function SettingsMenu() {
                                     </li>
                                     <li>
                                         <a
-                                            href="/get-tickets"
+                                            href="/terms-conditions"
                                             className="hover:underline"
                                         >
                                             Terms & Conditions

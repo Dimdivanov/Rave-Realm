@@ -16,9 +16,9 @@ export default function Nav() {
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">
-                        <Link to="/" className="-m-1.5 p-1.5">
+                        <Link to="/" className="relative -m-1.5 p-1.5 group">
                             <img
-                                className="h-28 w-auto" // Adjusted logo size
+                                className="h-28 w-auto transition-transform duration-300 ease-in-out transform group-hover:scale-110"
                                 src="src/assets/icons/logo.ico"
                                 alt="Logo"
                             />
