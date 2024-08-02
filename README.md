@@ -6,8 +6,8 @@ This React project is designed to streamline the ticket purchasing and event cre
 
 ## Features
 
--   **Easy Ticket Purchase:** Streamlined process for users to buy tickets for various events.
--   **Event Creation:** Event organizers can create events, specifying stages, artists, and ticket details.
+-   **Easy Ticket Purchase:** Streamlined process for users to buy tickets.
+-   **Stage Creation:** Stage organizers can create event, specifying stages, artists, and ticket details.
 -   **Community Building:** Connects individuals with similar music interests, helping them find and attend events together.
 -   **Pre-loaded Data:** The platform comes with pre-loaded data to ensure a smooth user experience from the start.
 
