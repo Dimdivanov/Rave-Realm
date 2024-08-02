@@ -4,8 +4,8 @@ import StageCard from './stage-card/StageCard';
 
 export default function Stages() {
     const stages = useGetAllStages([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
 
+    const [currentIndex, setCurrentIndex] = useState(0);
     // Number of items per slide and calculate total slides
     const itemsPerSlide = 3;
     const totalSlides = Math.ceil(stages.length / itemsPerSlide);

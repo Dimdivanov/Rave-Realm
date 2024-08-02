@@ -1526,6 +1526,19 @@
                 _id: '205c157c-44d2-46fd-8c91-84864d9bac2c',
             },
         },
+        tickets: {
+            '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                ticketName: 'VIP Access',
+                ticketImgUrl: '/src/assets/images/ticket/VIP.png',
+                type: 'VIP',
+                price: '500',
+                description:
+                    'Exclusive VIP access with private lounge and complimentary drinks.',
+                _createdOn: 1722586198228,
+                _id: '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc',
+            },
+        },
         // recipes: {
         // 	"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
         // 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

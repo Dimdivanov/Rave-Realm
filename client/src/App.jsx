@@ -22,6 +22,7 @@ import AccountSettings from './components/nav/userServices/AccountSettings';
 import StageCreate from './components/stages/stage-create/StageCreate';
 import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';
+import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Navigate to="/" />} />
                     <Route path="/get-tickets" element={<TicketsList />} />
+                    <Route path="/create-ticket" element={<TicketCreate />}/>
 
                     <Route path="/generalInfo" element={<SettingsMenu />} />
                     <Route path="/account-settings-test" element={<AccountSettings />} />

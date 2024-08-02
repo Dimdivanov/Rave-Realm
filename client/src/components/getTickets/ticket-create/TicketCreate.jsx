@@ -1,24 +1,31 @@
 import { useNavigate } from 'react-router-dom';
-
-import { useCreateStage } from '../../../hooks/useStages';
+import { useCreateTicket } from '../../../hooks/useTickets';
 import { useForm } from '../../../hooks/useForm';
 
 const initialValues = {
-    stageName: '',
-    stageImageUrl: '',
-    category: '',
-    capacity: '',
+    _id: '',
+    ticketName: '',
+    ticketImgUrl: '',
+    type: '',
+    price: '',
     description: '',
 };
-export default function StageCreate() {
+
+/* start - might remove later */
+const ticketImgUrlOptions = {
+    'General Access': '/src/assets/images/ticket/GA.png',
+    'VIP': '/src/assets/images/ticket/VIP.png',
+};
+/* end - might remove later */
+
+export default function TicketCreate() {
     const navigate = useNavigate();
-    const createStage = useCreateStage();
+    const createTicket = useCreateTicket();
 
     const createHandler = async (values) => {
         try {
-            await createStage(values);
-
-            navigate('/stages-list');
+            await createTicket(values);
+            navigate('/get-tickets');
         } catch (err) {
             console.log(err.message);
         }
@@ -37,29 +44,34 @@ export default function StageCreate() {
             >
                 <div className="form w-full max-w-3xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
                     <h2 className="text-3xl font-semibold mb-6 text-center text-white">
-                        Create Stage
+                        Create Ticket
                     </h2>
                     <form onSubmit={submitHandler} className="create-form space-y-4">
                         <input
                             type="text"
-                            name="stageName"
-                            id="stageName"
-                            placeholder="Stage Name"
-                            value={values.stageName}
+                            name="ticketName"
+                            id="ticketName"
+                            placeholder="Ticket Name"
+                            value={values.ticketName}
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
-                        <input
-                            type="text"
-                            name="stageImageUrl"
-                            id="stage-image"
-                            placeholder="Stage Image URL"
-                            value={values.stageImageUrl}
+                        <select
+                            name="ticketImgUrl"
+                            id="ticket-image"
+                            value={values.ticketImgUrl}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                        />
+                            className="w-full p-3 bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-black placeholder-gray-300"
+                        >
+                            <option value="">Select Ticket Image</option>
+                            {Object.entries(ticketImgUrlOptions).map(([key, url]) => (
+                                <option key={key} value={url}>
+                                    {key}
+                                </option>
+                            ))}
+                        </select>
                         <textarea
-                            id="stage-description"
+                            id="ticket-description"
                             name="description"
                             placeholder="Description"
                             rows={5}
@@ -68,20 +80,20 @@ export default function StageCreate() {
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
                         <input
-                            type="number"
-                            name="capacity"
-                            id="stage-capacity"
-                            placeholder="Capacity (Number of People)"
-                            value={values.capacity}
+                            type="text"
+                            name="type"
+                            id="ticket-type"
+                            placeholder="Type"
+                            value={values.type}
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
                         <input
-                            type="text"
-                            name="category"
-                            id="stage-category"
-                            placeholder="Category"
-                            value={values.category}
+                            type="number"
+                            name="price"
+                            id="ticket-price"
+                            placeholder="Price"
+                            value={values.price}
                             onChange={changeHandler}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
@@ -89,7 +101,7 @@ export default function StageCreate() {
                             type="submit"
                             className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700 transition-colors"
                         >
-                            Add Stage
+                            Create Ticket
                         </button>
                     </form>
                 </div>
