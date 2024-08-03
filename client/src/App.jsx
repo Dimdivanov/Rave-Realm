@@ -26,6 +26,8 @@ import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
 import TicketDetails from './components/getTickets/ticket-details/TicketDetails';
 import ArtistEdit from './components/artists/artists-details/artist-edit/ArtistEdit';
 import ScrollTop from './util/scrollTopUtil';
+
+import AuthenticatorGuard from './components/common/AuthenticatorGuard';
 //nested route
 
 const App = () => {
@@ -52,12 +54,15 @@ const App = () => {
 
                     <Route path="/stages-list" element={<StageList />} />
                     <Route path="/stage/details/:stageId" element={<StageDetails />} />
-                    <Route path="/create-stage" element={<StageCreate />} />
 
                     <Route path="/login" element={<Login />} />
                     <Route path="/sign-up" element={<Register />} />
-                    <Route path="/logout" element={<Logout />} />
                     <Route path="/*" element={<NotFound />} />
+
+                    <Route element={<AuthenticatorGuard />}>
+                    <Route path="/create-stage" element={<StageCreate />} />
+                        <Route path="/home" element={<Logout />} />
+                    </Route>
                 </Routes>
                 <FollowUs />
                 <Footer />

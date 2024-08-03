@@ -42,7 +42,7 @@ export default function ArtistEdit() {
             id="edit-artist"
             className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10"
         >
-            <div className="w-full max-w-3xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+            <div className="w-full max-w-3xl mx-auto p-6 mt-28 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
                 <h2 className="text-3xl font-semibold mb-6 text-center text-white">
                     Edit Artist
                 </h2>
@@ -93,10 +93,16 @@ export default function ArtistEdit() {
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                     />
                     <button
-                        type="submit"
-                        className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700 transition-colors"
+                        onClick={() => navigate('/artists')}
+                        className="ml-11 w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
                     >
-                        Edit Artist
+                        Back
+                    </button>
+                    <button
+                        type="submit"
+                        className="ml-80 w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                    >
+                        Edit
                     </button>
                 </form>
             </div>
