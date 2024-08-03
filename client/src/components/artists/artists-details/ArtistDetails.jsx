@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../../../contexts/AuthContext';
 import { useGetOneArtists } from '../../../hooks/useArtists';
@@ -91,14 +92,11 @@ export default function ArtistDetails() {
                             </div>
                             {isOwner ? (
                                 <div className="mt-6 flex space-x-4">
-                                    <button
-                                        onClick={() =>
-                                            navigate(`/artist/edit/${artistId}`)
-                                        }
-                                        className="px-4 py-2 bg-yellow-500 text-black font-medium rounded-lg shadow-md hover:bg-yellow-400 transition duration-300"
-                                    >
-                                        Edit
-                                    </button>
+                                    <Link to={`/artist/edit/${artistId}`}>
+                                        <button className="px-4 py-2 bg-yellow-500 text-black font-medium rounded-lg shadow-md hover:bg-yellow-400 transition duration-300">
+                                            Edit
+                                        </button>
+                                    </Link>
                                     <button
                                         onClick={artistDelClickHandler}
                                         className="px-4 py-2 bg-red-500 text-white font-medium rounded-lg shadow-md hover:bg-red-400 transition duration-300"
