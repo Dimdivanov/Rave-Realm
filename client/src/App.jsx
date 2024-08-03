@@ -25,11 +25,13 @@ import SettingsMenu from './components/settingsMenu/SettingsMenu';
 import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
 import TicketDetails from './components/getTickets/ticket-details/TicketDetails';
 import ArtistEdit from './components/artists/artists-details/artist-edit/ArtistEdit';
+import ScrollTop from './util/scrollTopUtil';
 //nested route
 
 const App = () => {
     return (
         <AuthContextProvider>
+            <ScrollTop />
             <main className="relative">
                 <Nav />
                 <Routes>

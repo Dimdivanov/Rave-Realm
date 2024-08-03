@@ -7,7 +7,7 @@ export default function Hero() {
         <>
             <section
                 id="hero"
-                className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400"
+                className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400 sm:min-h-[50vh] md:min-h-[60vh]"
             >
                 <div className="relative isolate px-6 pt-14 lg:px-8">
                     <div

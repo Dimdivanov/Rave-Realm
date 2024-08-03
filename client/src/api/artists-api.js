@@ -18,12 +18,26 @@ const remove = (artistId) => request.del(`${BASE_URL}/${artistId}`);
 const update = (artistId, artistData) =>
     request.put(`${BASE_URL}/${artistId}`, artistData);
 
+const getLatest = async () => {
+    const urlSearchParams = new URLSearchParams({
+        sortBy: `_createdOn desc`,
+        pageSize: 8,
+    });
+
+    const res = await request.get(`${BASE_URL}?${urlSearchParams.toString()}`);
+    const result = Object.values(res);
+    return result;
+};
+
+
+
 const artistAPI = {
     getAll,
     getOne,
     create,
     remove,
     update,
+    getLatest,
 };
 
 export default artistAPI;
