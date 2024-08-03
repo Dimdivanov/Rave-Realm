@@ -25,7 +25,6 @@ export default function Stages() {
                 <div className="relative flex transition-transform duration-500 ease-in-out">
                     {/* Carousel Items */}
                     <div className="flex">
-                        {/* Example items. Replace these with your data as needed */}
                         <div className="flex-none w-full md:w-1/3 h-64 px-4 py-2">
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
                                 <img
@@ -35,18 +34,6 @@ export default function Stages() {
                                 />
                             </div>
                         </div>
-                        {/* Add more items as needed */}
-                        {/* Example items. Replace these with your data as needed */}
-                        <div className="flex-none w-full md:w-1/3 h-64 px-4 py-2">
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
-                                <img
-                                    src="/src/assets/images/stageBanner/echoValley.jpg"
-                                    className="w-full h-auto object-center"
-                                    alt="Stage 1"
-                                />
-                            </div>
-                        </div>
-                        {/* Add more items as needed */}
                     </div>
                 </div>
                 {/* Navigation Controls */}
@@ -90,8 +77,8 @@ export default function Stages() {
                 <button className="w-3 h-3 rounded-full bg-gray-500" />
                 <button className="w-3 h-3 rounded-full bg-gray-500" />
                 <button className="w-3 h-3 rounded-full bg-gray-500" />
-                {/* Add more indicators as needed */}
             </div>
+            {/* Add more indicators as needed */}
         </section>
     );
 }
