@@ -44,3 +44,7 @@ export function useCreateTicket() {
 
     return ticketHandler;
 }
+
+export function useDeleteTicket() {
+    
+}

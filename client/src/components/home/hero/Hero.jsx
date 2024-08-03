@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+
+import ModalRemove from '../../modal/ModalRemove';
+
 export default function Hero() {
     return (
         <>

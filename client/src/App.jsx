@@ -34,6 +34,7 @@ const App = () => {
             <main className="relative">
                 <Nav />
                 <Routes>
+                    
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Navigate to="/" />} />
                     <Route path="/get-tickets" element={<TicketsList />} />

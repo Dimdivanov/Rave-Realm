@@ -10,8 +10,10 @@ const getAll = async () => {
 
 const getAllMatching = async (match) => {
     const result = await request.get(BASE_URL);
-    const tickets = Object.values(result).filter(ticket => (ticket.type === match) ? true : false);
-    
+    const tickets = Object.values(result).filter((ticket) =>
+        ticket.type === match ? true : false
+    );
+
     return tickets;
 };
 
@@ -19,11 +21,14 @@ const getOne = (ticketId) => request.get(`${BASE_URL}/${ticketId}`);
 
 const create = (ticketData) => request.post(`${BASE_URL}`, ticketData);
 
+const remove = (ticketId) => request.del(`${BASE_URL}/${ticketId}`);
+
 const ticketAPI = {
     getAll,
     getOne,
     create,
-    getAllMatching
+    remove,
+    getAllMatching,
 };
 
 export default ticketAPI;

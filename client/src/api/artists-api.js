@@ -10,12 +10,15 @@ const getAll = async () => {
 
 const getOne = (artistId) => request.get(`${BASE_URL}/${artistId}`);
 
-const create = (artistData) => request.post(`${BASE_URL}`, artistData) 
+const create = (artistData) => request.post(`${BASE_URL}`, artistData);
+
+const remove = (artistId) => request.del(`${BASE_URL}/${artistId}`);
 
 const artistAPI = {
     getAll,
     getOne,
-    create
+    create,
+    remove,
 };
 
 export default artistAPI;

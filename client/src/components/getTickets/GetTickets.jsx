@@ -1,5 +1,6 @@
 import { useGetAllTickets } from '../../hooks/useTickets';
 
+
 import TicketCard from './ticket-card/TicketCard';
 /* conditions */
 function getLimitedTickets(tickets) {

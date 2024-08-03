@@ -15,7 +15,7 @@ const initialValues = {
 const BASE_URL = '/src/assets/images/ticket';
 
 const ticketImgUrlOptions = {
-    'General Access': `${BASE_URL}/general-access.png`,
+    'General Access': `${BASE_URL}/GA.png`,
     VIP: `${BASE_URL}/VIP.png`,
     'One Day Pass': `${BASE_URL}/ODP.png`,
 };
@@ -66,7 +66,7 @@ export default function TicketCreate() {
                         onChange={changeHandler}
                         className="w-full p-3 bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-black placeholder-gray-300"
                     >
-                        <option value="">Select Ticket Image</option>
+                        <option>Select Ticket Image</option>
                         {Object.entries(ticketImgUrlOptions).map(([key, url]) => (
                             <option key={key} value={url}>
                                 {key}

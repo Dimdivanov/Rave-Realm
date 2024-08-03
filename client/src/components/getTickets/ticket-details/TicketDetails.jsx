@@ -1,19 +1,46 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
 
-import { useGetOneTicket } from '../../../hooks/useTickets';
+import ModalRemove from '../../modal/ModalRemove';
+
 import { AuthContext } from '../../../contexts/AuthContext';
-import { useContext } from 'react';
+import { useGetOneTicket } from '../../../hooks/useTickets';
+import ticketAPI from '../../../api/tickets-api';
 
 export default function TicketDetails() {
     const { ticketId } = useParams();
     const [ticketDetails] = useGetOneTicket(ticketId);
+    /* consider moving the modal */
+    const [showModalRemove, setShowModalRemove] = useState(false);
 
     const { userId } = useContext(AuthContext);
-    //consider moving it ?
     const isOwner = userId === ticketDetails._ownerId;
+
+    const navigate = useNavigate();
+    const ticketDelClickHandler = () => {
+        setShowModalRemove(true);
+    };
+    const onDeleteClickHandler = async () => {
+        setShowModalRemove(false);
+        try {
+            await ticketAPI.remove(ticketId);
+            navigate('/get-tickets');
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+    const modalRemoveCloseHandler = () => {
+        setShowModalRemove(false);
+    };
 
     return (
         <>
+            {showModalRemove && (
+                <ModalRemove
+                    onClose={modalRemoveCloseHandler}
+                    onDeleteClick={onDeleteClickHandler}
+                />
+            )}
             <div className="min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10">
                 <div className="w-full max-w-4xl p-24 bg-gray-900 bg-opacity-80 rounded-lg shadow-md backdrop-blur-md flex flex-col lg:flex-row">
                     <h2 className="text-3xl font-semibold mb-6 text-center text-white w-full lg:hidden">
@@ -39,6 +66,7 @@ export default function TicketDetails() {
                         <p className="mt-4 text-gray-300 break-words">
                             {ticketDetails.description}
                         </p>
+
                         {isOwner ? (
                             <div className="mt-6 flex space-x-4">
                                 <Link
@@ -47,7 +75,10 @@ export default function TicketDetails() {
                                 >
                                     Edit
                                 </Link>
-                                <button className="px-5 py-2 bg-red-500 text-white font-medium rounded-full">
+                                <button
+                                    onClick={ticketDelClickHandler}
+                                    className="px-5 py-2 bg-red-500 text-white font-medium rounded-full"
+                                >
                                     Delete
                                 </button>
                             </div>
