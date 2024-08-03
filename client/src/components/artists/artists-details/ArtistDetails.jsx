@@ -1,4 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+
+import { AuthContext } from '../../../contexts/AuthContext';
 import { useGetOneArtists } from '../../../hooks/useArtists';
 
 export default function ArtistDetails() {
@@ -6,7 +9,9 @@ export default function ArtistDetails() {
     const navigate = useNavigate();
 
     const [artistDetails] = useGetOneArtists(artistId);
-    
+    const { userId } = useContext(AuthContext);
+    const isOwner = userId === artistDetails._ownerId;
+
     return (
         <>
             <div className="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen p-8 flex items-center justify-center">
@@ -56,6 +61,28 @@ export default function ArtistDetails() {
                                     Add to My Lineup
                                 </button>
                             </div>
+                            {isOwner ? (
+                                <div className="mt-6 flex space-x-4">
+                                    <button
+                                        onClick={() =>
+                                            navigate(`/artists/edit/${artistId}`)
+                                        }
+                                        className="px-4 py-2 bg-yellow-500 text-black font-medium rounded-lg shadow-md hover:bg-yellow-400 transition duration-300"
+                                    >
+                                        Edit
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            /* Implement delete functionality */
+                                        }}
+                                        className="px-4 py-2 bg-red-500 text-white font-medium rounded-lg shadow-md hover:bg-red-400 transition duration-300"
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
+                            ) : (
+                                ''
+                            )}
                         </div>
                         <div>
                             <h2 className="text-2xl font-bold mb-4">Biography:</h2>
