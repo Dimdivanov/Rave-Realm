@@ -1,4 +1,4 @@
-import { useGetAllMatching, useGetAllTickets } from '../../../hooks/useTickets';
+import { useGetAllMatching } from '../../../hooks/useTickets';
 import TicketListCard from './ticket-list-card/TicketListCard';
 
 const TicketGrid = ({ tickets }) => (
@@ -15,7 +15,7 @@ export default function TicketsList() {
     const ticketVIP = useGetAllMatching('VIP');
     const ticketGA = useGetAllMatching('GA');
     const ticketODP = useGetAllMatching('ODP');
-    const commonTickets = useGetAllTickets();
+
     return (
         <div className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400">
             <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -24,7 +24,7 @@ export default function TicketsList() {
                 </h1>
                 <TicketGrid tickets={ticketGA} />
                 <TicketGrid tickets={ticketODP} />
-                <TicketGrid tickets={ticketVIP} /> 
+                <TicketGrid tickets={ticketVIP} />
             </div>
         </div>
     );

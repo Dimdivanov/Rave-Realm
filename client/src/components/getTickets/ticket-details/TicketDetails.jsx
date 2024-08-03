@@ -10,16 +10,16 @@ import ticketAPI from '../../../api/tickets-api';
 export default function TicketDetails() {
     const { ticketId } = useParams();
     const [ticketDetails] = useGetOneTicket(ticketId);
-    /* consider moving the modal */
     const [showModalRemove, setShowModalRemove] = useState(false);
-
+    const navigate = useNavigate();
+    
     const { userId } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
-
-    const navigate = useNavigate();
+    
     const ticketDelClickHandler = () => {
         setShowModalRemove(true);
     };
+    
     const onDeleteClickHandler = async () => {
         setShowModalRemove(false);
         try {

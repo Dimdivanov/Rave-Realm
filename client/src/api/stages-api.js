@@ -10,12 +10,15 @@ const getAll = async () => {
 
 const getOne = (stageId) => request.get(`${BASE_URL}/${stageId}`);
 
-const create = (stageData) => request.post(`${BASE_URL}`, stageData) 
+const create = (stageData) => request.post(`${BASE_URL}`, stageData);
+
+const remove = (stageId) => request.del(`${BASE_URL}/${stageId}`);
 
 const stageAPI = {
     getAll,
     getOne,
-    create
+    create,
+    remove,
 };
 
 export default stageAPI;
