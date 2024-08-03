@@ -21,24 +21,23 @@ export default function TicketListCard({
                         />
                     </div>
                 </Link>
-                <div className="mt-4 flex justify-between">
-                    <div>
-                        <div className="p-4">
-                            <h2 className="text-xl font-bold text-gray-400">
-                                {ticketName}
-                            </h2>
-                            <p className="text-sm text-white">Type: {type}</p>
-                            <p className="text-sm text-white">Price: {price}BGN</p>
-                            <p className="mt-2 text-gray-300">{description}</p>
-                        </div>
-                        <div className="p-4 flex justify-end">
-                            <button className="px-10 py-3 bg-blue-500 text-white rounded-full">
-                                Buy
-                            </button>
-                        </div>
+                <div className="mt-4 flex flex-col">
+                    <div className="p-4 flex flex-col flex-grow">
+                        <h2 className="text-xl font-bold text-gray-400">
+                            {ticketName}
+                        </h2>
+                        <p className="text-sm text-white">Type: {type}</p>
+                        <p className="text-sm text-white">Price: {price} BGN</p>
+                        <p className="mt-2 text-gray-300 break-words overflow-hidden text-ellipsis line-clamp-2">
+                            {description}
+                        </p>
+                    </div>
+                    <div className="p-4 flex justify-end">
+                        <button className="px-10 py-3 bg-blue-500 text-white rounded-full">
+                            Buy
+                        </button>
                     </div>
                 </div>
-               
             </div>
         </>
     );
