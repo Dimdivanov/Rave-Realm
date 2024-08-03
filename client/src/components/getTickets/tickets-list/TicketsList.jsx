@@ -24,8 +24,7 @@ export default function TicketsList() {
                 </h1>
                 <TicketGrid tickets={ticketGA} />
                 <TicketGrid tickets={ticketODP} />
-                <TicketGrid tickets={ticketVIP} />
-                <TicketGrid tickets={commonTickets} />
+                <TicketGrid tickets={ticketVIP} /> 
             </div>
         </div>
     );
