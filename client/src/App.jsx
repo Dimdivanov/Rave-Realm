@@ -24,9 +24,8 @@ import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';
 import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
 import TicketDetails from './components/getTickets/ticket-details/TicketDetails';
+import ArtistEdit from './components/artists/artists-details/artist-edit/ArtistEdit';
 //nested route
-
-
 
 const App = () => {
     return (
@@ -34,19 +33,19 @@ const App = () => {
             <main className="relative">
                 <Nav />
                 <Routes>
-                    
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Navigate to="/" />} />
                     <Route path="/get-tickets" element={<TicketsList />} />
-                    <Route path="/create-ticket" element={<TicketCreate />} />
                     <Route path="/ticket/details/:ticketId" element={<TicketDetails />} />
+                    <Route path="/create-ticket" element={<TicketCreate />} />
 
-                    <Route path="/settings-menu" element={<SettingsMenu />}/>
-                      
+                    <Route path="/settings-menu" element={<SettingsMenu />} />
+
                     <Route path="/account-settings-test" element={<AccountSettings />} />
 
                     <Route path="/artists" element={<ArtistsCatalog />} />
                     <Route path="/artist/details/:artistId" element={<ArtistDetails />} />
+                    <Route path="/artist/edit/:artistId" element={<ArtistEdit />} />
                     <Route path="/create-artist" element={<ArtistCreate />} />
 
                     <Route path="/stages-list" element={<StageList />} />
