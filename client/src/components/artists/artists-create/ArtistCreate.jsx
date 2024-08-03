@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useCreateArtist } from '../../../hooks/useArtists';
 import { useForm } from '../../../hooks/useForm';
+import useFocusForm from '../../../hooks/useFocusForm';
 
 const initialValues = {
     artistName: '',
@@ -14,6 +15,8 @@ const initialValues = {
 export default function ArtistCreate() {
     const navigate = useNavigate();
     const createArtist = useCreateArtist();
+
+    const ref = useFocusForm();
 
     const createHandler = async (values) => {
         try {
@@ -52,6 +55,7 @@ export default function ArtistCreate() {
                             placeholder="Artist Name"
                             value={values.artistName}
                             onChange={changeHandler}
+                            ref={ref}
                             className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                         />
                         <input

@@ -1,12 +1,17 @@
 import { useParams, Link } from 'react-router-dom';
 
 import { useGetOneTicket } from '../../../hooks/useTickets';
+import { AuthContext } from '../../../contexts/AuthContext';
+import { useContext } from 'react';
 
 export default function TicketDetails() {
     const { ticketId } = useParams();
-
     const [ticketDetails] = useGetOneTicket(ticketId);
-    
+
+    const { userId } = useContext(AuthContext);
+    //consider moving it ?
+    const isOwner = userId === ticketDetails._ownerId;
+
     return (
         <>
             <div className="min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10">
@@ -31,18 +36,24 @@ export default function TicketDetails() {
                         <p className="text-sm text-gray-400">
                             Price: {ticketDetails.price} BGN
                         </p>
-                        <p className="mt-4 text-gray-300">{ticketDetails.description}</p>
-                        <div className="mt-6 flex space-x-4">
-                            <Link
-                                to={`/ticket/edit/${ticketDetails._id}`}
-                                className="px-5 py-2 bg-yellow-500 text-white font-medium rounded-full"
-                            >
-                                Edit
-                            </Link>
-                            <button className="px-5 py-2 bg-red-500 text-white font-medium rounded-full">
-                                Delete
-                            </button>
-                        </div>
+                        <p className="mt-4 text-gray-300 break-words">
+                            {ticketDetails.description}
+                        </p>
+                        {isOwner ? (
+                            <div className="mt-6 flex space-x-4">
+                                <Link
+                                    to={`/ticket/edit/${ticketDetails._id}`}
+                                    className="px-5 py-2 bg-yellow-500 text-white font-medium rounded-full"
+                                >
+                                    Edit
+                                </Link>
+                                <button className="px-5 py-2 bg-red-500 text-white font-medium rounded-full">
+                                    Delete
+                                </button>
+                            </div>
+                        ) : (
+                            ''
+                        )}
                     </div>
                 </div>
             </div>

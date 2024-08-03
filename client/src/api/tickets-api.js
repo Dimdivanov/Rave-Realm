@@ -10,7 +10,8 @@ const getAll = async () => {
 
 const getAllMatching = async (match) => {
     const result = await request.get(BASE_URL);
-    const tickets = Object.values(result).filter(ticket=> ticket.type === match);
+    const tickets = Object.values(result).filter(ticket => (ticket.type === match) ? true : false);
+    
     return tickets;
 };
 

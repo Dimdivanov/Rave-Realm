@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useCreateTicket } from '../../../hooks/useTickets';
 import { useForm } from '../../../hooks/useForm';
+import useFocusForm from '../../../hooks/useFocusForm';
 
 const initialValues = {
     _id: '',
@@ -12,6 +13,7 @@ const initialValues = {
 };
 
 const BASE_URL = '/src/assets/images/ticket';
+
 const ticketImgUrlOptions = {
     'General Access': `${BASE_URL}/general-access.png`,
     VIP: `${BASE_URL}/VIP.png`,
@@ -21,6 +23,7 @@ const ticketImgUrlOptions = {
 export default function TicketCreate() {
     const navigate = useNavigate();
     const createTicket = useCreateTicket();
+    const ref = useFocusForm();
 
     const createHandler = async (values) => {
         try {
@@ -51,6 +54,7 @@ export default function TicketCreate() {
                         name="ticketName"
                         id="ticketName"
                         placeholder="Ticket Name"
+                        ref={ref}
                         value={values.ticketName}
                         onChange={changeHandler}
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
