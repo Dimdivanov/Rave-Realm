@@ -8,6 +8,6 @@ export const getAccessToken = () => {
     return authData?.accessToken;
 };
 
-export const forbiddenTokenClear = () => localStorage.clear();
+export const forbiddenTokenClear = () => localStorage.removeItem('auth');
     
 
