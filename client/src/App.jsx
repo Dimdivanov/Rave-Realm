@@ -45,18 +45,17 @@ const App = () => {
                       
                     <Route path="/account-settings-test" element={<AccountSettings />} />
 
-                    <Route path="/logout" element={<Logout />} />
-
                     <Route path="/artists" element={<ArtistsCatalog />} />
                     <Route path="/artist/details/:artistId" element={<ArtistDetails />} />
-
                     <Route path="/create-artist" element={<ArtistCreate />} />
+
                     <Route path="/stages-list" element={<StageList />} />
-                    <Route path="/create-stage" element={<StageCreate />} />
                     <Route path="/stage/details/:stageId" element={<StageDetails />} />
+                    <Route path="/create-stage" element={<StageCreate />} />
 
                     <Route path="/login" element={<Login />} />
                     <Route path="/sign-up" element={<Register />} />
+                    <Route path="/logout" element={<Logout />} />
                     <Route path="/*" element={<NotFound />} />
                 </Routes>
                 <FollowUs />

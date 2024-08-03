@@ -46,6 +46,7 @@ export default function Login() {
                             </label>
                             <div className="mt-2">
                                 <input
+                                    id="email"
                                     name="email"
                                     type="email"
                                     autoComplete="email"
