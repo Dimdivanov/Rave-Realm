@@ -1,15 +1,17 @@
 import { getAccessToken, forbiddenTokenClear } from '../util/authUtils';
 
 async function requester(method, url, data) {
-    const options = {};
+    const options = {
+        method,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
 
     const accessToken = getAccessToken();
 
     if (accessToken) {
-        options.headers = {
-            ...options.headers,
-            'X-Authorization': accessToken,
-        };
+        options.headers['X-Authorization'] = accessToken;
     }
 
     if (method !== 'GET') {
@@ -17,27 +19,31 @@ async function requester(method, url, data) {
     }
 
     if (data) {
-        options.headers = {
-            ...options.headers,
-            'Content-Type': 'application/json',
-        };
         options.body = JSON.stringify(data);
     }
-    
-    const response = await fetch(url, options);
-    if (response.status === 204) {
-        return;
-    }
-    if (response.status === 403) {
-        forbiddenTokenClear();
-    }
-    const result = await response.json();
 
-    if (!response.ok) {
-        throw result;
-    }
+    try {
+        const response = await fetch(url, options);
 
-    return result;
+        if (response.status === 204) {
+            return;
+        }
+
+        if (response.status === 403) {
+            forbiddenTokenClear();
+            return;
+        }
+
+        if (!response.ok) {
+            const result = await response.json();
+            throw result;
+        }
+
+        return await response.json();
+    } catch (err) {
+        console.error('Request failed:', err);
+        throw err;
+    }
 }
 
 export const get = requester.bind(null, 'GET');

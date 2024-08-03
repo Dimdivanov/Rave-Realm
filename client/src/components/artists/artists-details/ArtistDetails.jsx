@@ -1,19 +1,47 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { AuthContext } from '../../../contexts/AuthContext';
 import { useGetOneArtists } from '../../../hooks/useArtists';
+import ModalRemove from '../../modal/ModalRemove';
+import artistAPI from '../../../api/artists-api';
 
 export default function ArtistDetails() {
+    const [showModalRemove, setShowModalRemove] = useState(false);
+
     const { artistId } = useParams();
     const navigate = useNavigate();
-
     const [artistDetails] = useGetOneArtists(artistId);
+
     const { userId } = useContext(AuthContext);
     const isOwner = userId === artistDetails._ownerId;
 
+    const artistDelClickHandler = () => {
+        setShowModalRemove(true);
+    };
+
+    const onDeleteClickHandle = async () => {
+        setShowModalRemove(false);
+        try {
+            await artistAPI.remove(artistId);
+            navigate('/artists');
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    const modalRemoveCloseHandler = () => {
+        setShowModalRemove(false);
+    };
+
     return (
         <>
+            {showModalRemove && (
+                <ModalRemove
+                    onClose={modalRemoveCloseHandler}
+                    onDeleteClick={onDeleteClickHandle}
+                />
+            )}
             <div className="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen p-8 flex items-center justify-center">
                 <div className="max-w-4xl mx-auto">
                     <button
@@ -72,9 +100,7 @@ export default function ArtistDetails() {
                                         Edit
                                     </button>
                                     <button
-                                        onClick={() => {
-                                            /* Implement delete functionality */
-                                        }}
+                                        onClick={artistDelClickHandler}
                                         className="px-4 py-2 bg-red-500 text-white font-medium rounded-lg shadow-md hover:bg-red-400 transition duration-300"
                                     >
                                         Delete

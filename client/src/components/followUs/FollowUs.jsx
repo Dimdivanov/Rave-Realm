@@ -6,7 +6,11 @@ export default function FollowUs() {
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex items-center space-x-4">
                     <div className="text-white text-6xl">
-                        {/* Optionally, add an Instagram icon here */}
+                            <img
+                                src="/src/assets/icons/instagramLogo.png"
+                                alt="instaLogo"
+                                className="w-32 h-32 rounded-lg shadow-lg object-cover"
+                            />
                     </div>
                     <div>
                         <p className="text-xl text-white">Follow us on Instagram</p>

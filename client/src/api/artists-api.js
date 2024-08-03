@@ -5,6 +5,7 @@ const BASE_URL = 'http://localhost:3030/data/artists';
 const getAll = async () => {
     const result = await request.get(BASE_URL);
     const artists = Object.values(result);
+    
     return artists;
 };
 

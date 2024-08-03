@@ -8,7 +8,6 @@ export default function TicketListCard({
     type,
     price,
 }) {
-   
     return (
         <>
             <div className="group relative">
@@ -23,9 +22,7 @@ export default function TicketListCard({
                 </Link>
                 <div className="mt-4 flex flex-col">
                     <div className="p-4 flex flex-col flex-grow">
-                        <h2 className="text-xl font-bold text-gray-400">
-                            {ticketName}
-                        </h2>
+                        <h2 className="text-xl font-bold text-gray-400">{ticketName}</h2>
                         <p className="text-sm text-white">Type: {type}</p>
                         <p className="text-sm text-white">Price: {price} BGN</p>
                         <p className="mt-2 text-gray-300 break-words overflow-hidden text-ellipsis line-clamp-2">
