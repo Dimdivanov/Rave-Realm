@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function TicketCard(ticket) {
     return (
         <>
-            <div
-                className="bg-black rounded-xl overflow-hidden shadow-lg p-6 flex flex-col justify-between"
-            >
+            <div className="bg-black rounded-xl overflow-hidden shadow-lg p-6 flex flex-col justify-between">
                 <div className="text-white">
                     <div className="flex items-center justify-between mb-4">
                         <div className="bg-yellow-500 p-2 rounded-full">
@@ -22,7 +20,7 @@ export default function TicketCard(ticket) {
                 </div>
                 {/* edit this button to put in cart */}
                 <Link
-                    to={`/tickets/details/${ticket._id}`}
+                    to={`/ticket/details/${ticket._id}`}
                     className="mt-4 inline-block bg-yellow-500 text-black py-2 px-4 rounded-full hover:bg-yellow-400"
                 >
                     Get Now

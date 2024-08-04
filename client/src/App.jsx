@@ -28,7 +28,10 @@ import TicketDetails from './components/getTickets/ticket-details/TicketDetails'
 import ArtistEdit from './components/artists/artists-details/artist-edit/ArtistEdit';
 import ScrollTop from './util/scrollTopUtil';
 
-import AuthenticatorGuard from './components/common/AuthenticatorGuard';
+import {
+    AuthenticatorGuard,
+    AuthRedirectGuard,
+} from './components/common/AuthenticatorGuard';
 import StageEdit from './components/stages/stage-details/stage-edit/StageEdit';
 import TicketEdit from './components/getTickets/ticket-details/ticket-edit/TicketEdit';
 
@@ -42,6 +45,7 @@ const App = () => {
                 <main className="relative">
                     <Nav />
                     <Routes>
+                        {/* Start Protected routes */}
                         <Route element={<AuthenticatorGuard />}>
                             <Route path="/create-stage" element={<StageCreate />} />
                             <Route path="/create-ticket" element={<TicketCreate />} />
@@ -62,12 +66,17 @@ const App = () => {
 
                             <Route path="/logout" element={<Logout />} />
                         </Route>
+                        {/* End Protected routes */}
+                        {/* Start Public routes */}
+                        <Route element={<AuthRedirectGuard />}>
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/sign-up" element={<Register />} />
+                        </Route>
+                        {/* End Public routes */}
 
                         <Route path="/" element={<Home />} />
                         <Route path="/home" element={<Navigate to="/" />} />
                         <Route path="/settings-menu" element={<SettingsMenu />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/sign-up" element={<Register />} />
                         <Route path="/*" element={<NotFound />} />
 
                         <Route path="/artists" element={<ArtistsCatalog />} />
@@ -86,7 +95,6 @@ const App = () => {
                             path="/stage/details/:stageId"
                             element={<StageDetails />}
                         />
-
                     </Routes>
                     <FollowUs />
                     <Footer />

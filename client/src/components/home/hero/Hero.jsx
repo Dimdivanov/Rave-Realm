@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 
-import ModalRemove from '../../modal/ModalRemove';
-
 export default function Hero() {
     return (
         <>
@@ -22,7 +20,7 @@ export default function Hero() {
                             }}
                         />
                     </div>
-                    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                    <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-64">
                         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
                         <div className="text-center">
                             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -43,7 +41,7 @@ export default function Hero() {
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6">
                                 <Link
-                                    to="/get-tickets"
+                                    to="/create-stage"
                                     className="rounded-full bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Be a creator
