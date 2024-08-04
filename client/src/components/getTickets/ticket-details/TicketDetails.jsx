@@ -89,9 +89,7 @@ export default function TicketDetails() {
                                 >
                                     Delete
                                 </button>
-                                <button
-                                    className="px-5 py-2 bg-green-500 text-white font-medium rounded-full"
-                                >
+                                <button className="px-5 py-2 bg-green-500 text-white font-medium rounded-full">
                                     Buy
                                 </button>
                             </div>
@@ -100,9 +98,7 @@ export default function TicketDetails() {
                                 {isOwner ? (
                                     ''
                                 ) : (
-                                    <button
-                                        className="px-5 py-2 bg-green-500 text-white font-medium rounded-full"
-                                    >
+                                    <button className="px-5 py-2 bg-green-500 text-white font-medium rounded-full">
                                         Buy
                                     </button>
                                 )}
