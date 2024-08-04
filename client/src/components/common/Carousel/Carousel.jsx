@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Carousel({ slides }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,13 +30,15 @@ export default function Carousel({ slides }) {
                             key={slide._id}
                             className="flex-none w-full md:w-1/3 h-64 px-4 py-2"
                         >
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
-                                <img
-                                    src={slide.stageImageUrl}
-                                    className="w-full h-auto object-cover"
-                                    alt={slide.stageName}
-                                />
-                            </div>
+                            <Link to={`/stage/details/${slide._id}`}>
+                                <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                                    <img
+                                        src={slide.stageImageUrl}
+                                        className="w-full h-auto object-cover"
+                                        alt={slide.stageName}
+                                    />
+                                </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

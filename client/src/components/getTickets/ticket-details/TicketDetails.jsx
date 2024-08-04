@@ -2,8 +2,10 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 
 import ModalRemove from '../../modal/ModalRemove';
+import Spinner from '../../common/spinner/Spinner';
 
 import { AuthContext } from '../../../contexts/AuthContext';
+import { SpinnerContext } from '../../../contexts/SpinnerContext';
 import { useGetOneTicket } from '../../../hooks/useTickets';
 import ticketAPI from '../../../api/tickets-api';
 
@@ -12,21 +14,27 @@ export default function TicketDetails() {
     const [ticketDetails] = useGetOneTicket(ticketId);
     const [showModalRemove, setShowModalRemove] = useState(false);
     const navigate = useNavigate();
-    
+
     const { userId } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
+
     
+    const { isLoading, setIsLoading } = useContext(SpinnerContext);
+
     const ticketDelClickHandler = () => {
         setShowModalRemove(true);
     };
-    
+
     const onDeleteClickHandler = async () => {
         setShowModalRemove(false);
+        setIsLoading(true)
         try {
             await ticketAPI.remove(ticketId);
             navigate('/get-tickets');
         } catch (err) {
             console.log(err.message);
+        } finally {
+            setIsLoading(false);
         }
     };
     const modalRemoveCloseHandler = () => {
@@ -35,6 +43,7 @@ export default function TicketDetails() {
 
     return (
         <>
+            {isLoading && <Spinner />} {/* Show spinner based on isLoading state */}
             {showModalRemove && (
                 <ModalRemove
                     onClose={modalRemoveCloseHandler}

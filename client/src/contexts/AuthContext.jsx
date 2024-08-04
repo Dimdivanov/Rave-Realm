@@ -35,8 +35,3 @@ export function AuthContextProvider(props) {
     );
 }
 
-// export function useAuthContext() {
-//     const authData = useContext(AuthContext);
-
-//     return authData;
-// }

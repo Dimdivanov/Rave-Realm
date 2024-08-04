@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { AuthContextProvider } from './contexts/AuthContext';
+import { SpinnerContextProvider } from './contexts/SpinnerContext';
 
 import Nav from './components/nav/Nav';
 import Home from './components/home/Home';
@@ -36,43 +37,57 @@ import TicketEdit from './components/getTickets/ticket-details/ticket-edit/Ticke
 const App = () => {
     return (
         <AuthContextProvider>
-            <ScrollTop />
-            <main className="relative">
-                <Nav />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Navigate to="/" />} />
+            <SpinnerContextProvider>
+                <ScrollTop />
+                <main className="relative">
+                    <Nav />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/home" element={<Navigate to="/" />} />
 
-                    <Route path="/get-tickets" element={<TicketsList />} />
-                    <Route path="/create-ticket" element={<TicketCreate />} />
-                    <Route path="/ticket/details/:ticketId" element={<TicketDetails />} />
-                    <Route path="/ticket/edit/:ticketId" element={<TicketEdit />} />
+                        <Route path="/get-tickets" element={<TicketsList />} />
+                        <Route path="/create-ticket" element={<TicketCreate />} />
+                        <Route
+                            path="/ticket/details/:ticketId"
+                            element={<TicketDetails />}
+                        />
+                        <Route path="/ticket/edit/:ticketId" element={<TicketEdit />} />
 
-                    <Route path="/settings-menu" element={<SettingsMenu />} />
+                        <Route path="/settings-menu" element={<SettingsMenu />} />
 
-                    <Route path="/account-settings-test" element={<AccountSettings />} />
+                        <Route
+                            path="/account-settings-test"
+                            element={<AccountSettings />}
+                        />
 
-                    <Route path="/artists" element={<ArtistsCatalog />} />
-                    <Route path="/artist/details/:artistId" element={<ArtistDetails />} />
-                    <Route path="/artist/edit/:artistId" element={<ArtistEdit />} />
-                    <Route path="/create-artist" element={<ArtistCreate />} />
+                        <Route path="/artists" element={<ArtistsCatalog />} />
+                        <Route
+                            path="/artist/details/:artistId"
+                            element={<ArtistDetails />}
+                        />
+                        <Route path="/artist/edit/:artistId" element={<ArtistEdit />} />
+                        <Route path="/create-artist" element={<ArtistCreate />} />
 
-                    <Route path="/stages-list" element={<StageList />} />
-                    <Route path="/stage/details/:stageId" element={<StageDetails />} />
-                    <Route path="/stage/edit/:stageId" element={<StageEdit />} />
+                        <Route path="/stages-list" element={<StageList />} />
+                        <Route
+                            path="/stage/details/:stageId"
+                            element={<StageDetails />}
+                        />
+                        <Route path="/stage/edit/:stageId" element={<StageEdit />} />
 
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/sign-up" element={<Register />} />
-                    <Route path="/*" element={<NotFound />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/sign-up" element={<Register />} />
+                        <Route path="/*" element={<NotFound />} />
 
-                    <Route element={<AuthenticatorGuard />}>
-                        <Route path="/create-stage" element={<StageCreate />} />
-                        <Route path="/home" element={<Logout />} />
-                    </Route>
-                </Routes>
-                <FollowUs />
-                <Footer />
-            </main>
+                        <Route element={<AuthenticatorGuard />}>
+                            <Route path="/create-stage" element={<StageCreate />} />
+                            <Route path="/home" element={<Logout />} />
+                        </Route>
+                    </Routes>
+                    <FollowUs />
+                    <Footer />
+                </main>
+            </SpinnerContextProvider>
         </AuthContextProvider>
     );
 };
