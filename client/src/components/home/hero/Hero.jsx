@@ -34,17 +34,17 @@ export default function Hero() {
                             <div className="mt-10 flex items-center justify-center gap-x-6">
                                 <Link
                                     to="/get-tickets"
-                                    className="rounded-full bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="relative rounded-full bg-gradient-to-r from-[rgb(116,47,255)] to-[rgb(230,35,196)] px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:from-[rgb(100,35,255)] hover:to-[rgb(220,35,196)] hover:scale-105 hover:shadow-xl border-2 border-white"
                                 >
-                                    Get your tickets
+                                    Get Your Tickets
+                                    <span className="absolute inset-0 rounded-full border-2 border-[rgb(116,47,255)] opacity-50"></span>
                                 </Link>
-                            </div>
-                            <div className="mt-10 flex items-center justify-center gap-x-6">
                                 <Link
                                     to="/create-stage"
-                                    className="rounded-full bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="relative rounded-full bg-gradient-to-r from-[rgb(116,47,255)] to-[rgb(230,35,196)] px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:from-[rgb(100,35,255)] hover:to-[rgb(220,35,196)] hover:scale-105 hover:shadow-xl border-2 border-white"
                                 >
-                                    Be a creator
+                                    Be a Creator
+                                    <span className="absolute inset-0 rounded-full border-2 border-[rgb(116,47,255)] opacity-50"></span>
                                 </Link>
                             </div>
                         </div>

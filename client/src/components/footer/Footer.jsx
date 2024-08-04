@@ -8,22 +8,28 @@ export default function Footer() {
                     {/* Social Media Icons */}
                     <div className="flex justify-center space-x-6 mb-6">
                         <Link to="#" className="icon text-xl">
+                            <img
+                                src="/src/assets/icons/xIcon.png" // Make sure the file extension is correct
+                                alt="xIcon"
+                                className="w-6 h-6" // Adjust size as needed
+                            />
                             <i className="fab fa-twitter" />
                         </Link>
                         <Link to="#" className="icon text-xl">
+                            <img
+                                src="/src/assets/icons/instaIcon.png" // Make sure the file extension is correct
+                                alt="xIcon"
+                                className="w-6 h-6" // Adjust size as needed
+                            />
                             <i className="fab fa-tiktok" />
                         </Link>
                         <Link to="#" className="icon text-xl">
+                            <img
+                                src="/src/assets/icons/utubeIcon.png" // Make sure the file extension is correct
+                                alt="xIcon"
+                                className="w-6 h-6" // Adjust size as needed
+                            />
                             <i className="fab fa-youtube" />
-                        </Link>
-                        <Link to="#" className="icon text-xl">
-                            <i className="fab fa-facebook" />
-                        </Link>
-                        <Link to="#" className="icon text-xl">
-                            <i className="fab fa-instagram" />
-                        </Link>
-                        <Link to="#" className="icon text-xl">
-                            <i className="fab fa-telegram" />
                         </Link>
                     </div>
                     {/* Menu Links */}
@@ -38,7 +44,7 @@ export default function Footer() {
                             Terms &amp; Conditions
                         </Link>
                         <Link to="/contact" className="hover:underline">
-                            Contact
+                            Contacts
                         </Link>
                     </div>
                     {/* Copyright Text */}
