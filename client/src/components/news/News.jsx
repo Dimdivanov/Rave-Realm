@@ -1,7 +1,7 @@
 export default function News() {
     return (
         <>
-            <section className="padding-x py-10 bg-default-black">
+            <section className="padding-x py-10 bg-black">
                 <div className="container mx-auto px-4 py-8 text-white">
                     <div className="text-3xl font-bold mb-6">
                         <h2 className="text-3xl font-bold mb-6">News</h2>

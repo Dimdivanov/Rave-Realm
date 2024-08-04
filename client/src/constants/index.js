@@ -11,3 +11,19 @@ export const loginRegisterLinks = [
     { href: '/login', label: 'Log In' },
 ];
 
+export const slides = [
+    { url: '/src/assets/images/stageBanner/echoValley.jpg', title: 'echoValley' },
+    {
+        url: '/src/assets/images/stageBanner/electricForest.jpg',
+        title: 'electricForest',
+    },
+    {
+        url: '/src/assets/images/stageBanner/harmonicHeaven.jpg',
+        title: 'harmonicHeaven',
+    },
+    {
+        url: '/src/assets/images/stageBanner/mysticMeadows.jpg',
+        title: 'mysticMeadows',
+    },
+    { url: '/src/assets/images/stageBanner/neonOasis.jpg', title: 'neonOasis' },
+];
