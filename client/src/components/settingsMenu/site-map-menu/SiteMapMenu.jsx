@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
-export default function SiteMapMenu() {
+export default function SiteMapMenu({ info }) {
     return (
         <>
             {/* Sidebar */}
             <div className="w-full md:w-1/4 p-4 space-y-4 bg-black bg-opacity-25 rounded-lg">
-                <div className="text-xl text-center">Micro Menu</div>
+                <div className="text-xl">{info.email}</div>
                 <div className="flex items-center"></div>
                 <nav className="mt-8">
                     <ul className="space-y-4">

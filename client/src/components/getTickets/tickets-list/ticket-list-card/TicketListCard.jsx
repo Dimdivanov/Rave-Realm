@@ -8,7 +8,6 @@ export default function TicketListCard({
     type,
     price,
 }) {
-    
     return (
         <>
             <div className="group relative">
@@ -30,10 +29,12 @@ export default function TicketListCard({
                             {description}
                         </p>
                     </div>
-                    <div className="p-4 flex justify-end">
-                        <button className="px-10 py-3 bg-blue-500 text-white rounded-full">
-                            Buy
-                        </button>
+                    <div className="p-4 flex justify-center">
+                        <Link to={`/ticket/details/${_id}`}>
+                            <button className="px-6 py-3 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300 ease-in-out">
+                                Details
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
