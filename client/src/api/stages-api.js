@@ -14,11 +14,14 @@ const create = (stageData) => request.post(`${BASE_URL}`, stageData);
 
 const remove = (stageId) => request.del(`${BASE_URL}/${stageId}`);
 
+const update = (stageId, stageData) => request.put(`${BASE_URL}/${stageId}`, stageData);
+
 const stageAPI = {
     getAll,
     getOne,
     create,
     remove,
+    update,
 };
 
 export default stageAPI;

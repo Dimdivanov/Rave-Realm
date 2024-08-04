@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -63,9 +63,11 @@ export default function StageDetails() {
                         </button>
                         {isOwner ? (
                             <div className="flex justify-center space-x-4">
+                                <Link to={`/stage/edit/${stageId}`}>
                                 <button className="bg-yellow-500 text-black px-4 py-2 rounded-md shadow-md hover:bg-yellow-400 transition-colors">
                                     Edit
                                 </button>
+                                </Link>
                                 <button
                                     onClick={stageDelClickHandler}
                                     className="bg-red-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-400 transition-colors"

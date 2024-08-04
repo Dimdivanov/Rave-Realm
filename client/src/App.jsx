@@ -28,6 +28,7 @@ import ArtistEdit from './components/artists/artists-details/artist-edit/ArtistE
 import ScrollTop from './util/scrollTopUtil';
 
 import AuthenticatorGuard from './components/common/AuthenticatorGuard';
+import StageEdit from './components/stages/stage-details/stage-edit/StageEdit';
 //nested route
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
 
                     <Route path="/stages-list" element={<StageList />} />
                     <Route path="/stage/details/:stageId" element={<StageDetails />} />
+                    <Route path="/stage/edit/:stageId" element={<StageEdit />} />
 
                     <Route path="/login" element={<Login />} />
                     <Route path="/sign-up" element={<Register />} />
