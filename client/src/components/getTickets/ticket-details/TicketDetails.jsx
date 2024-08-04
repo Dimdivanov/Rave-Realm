@@ -89,9 +89,24 @@ export default function TicketDetails() {
                                 >
                                     Delete
                                 </button>
+                                <button
+                                    className="px-5 py-2 bg-green-500 text-white font-medium rounded-full"
+                                >
+                                    Buy
+                                </button>
                             </div>
                         ) : (
-                            ''
+                            <div className="mt-6 flex space-x-4">
+                                {isOwner ? (
+                                    ''
+                                ) : (
+                                    <button
+                                        className="px-5 py-2 bg-green-500 text-white font-medium rounded-full"
+                                    >
+                                        Buy
+                                    </button>
+                                )}
+                            </div>
                         )}
                     </div>
                 </div>
