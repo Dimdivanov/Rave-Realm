@@ -18,7 +18,6 @@ export default function TicketDetails() {
     const { userId } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
 
-    
     const { isLoading, setIsLoading } = useContext(SpinnerContext);
 
     const ticketDelClickHandler = () => {
@@ -27,7 +26,7 @@ export default function TicketDetails() {
 
     const onDeleteClickHandler = async () => {
         setShowModalRemove(false);
-        setIsLoading(true)
+        setIsLoading(true);
         try {
             await ticketAPI.remove(ticketId);
             navigate('/get-tickets');

@@ -1,7 +1,7 @@
 import { useGetAllTickets } from '../../hooks/useTickets';
 
 import TicketCard from './ticket-card/TicketCard';
-/* conditions */
+
 function getLimitedTickets(tickets) {
     const limit = 8;
     return tickets.slice(0, limit);
@@ -9,7 +9,7 @@ function getLimitedTickets(tickets) {
 
 export default function GetTickets() {
     const tickets = useGetAllTickets();
-
+    
     return (
         <>
             <section className="padding bg-tickets">
@@ -28,8 +28,7 @@ export default function GetTickets() {
                                 </h3>
                             </div>
                         )}
-
-                        {/* Repeat the above block for each ticket */}
+                        {/* End Ticket Card */}
                     </div>
                 </div>
             </section>

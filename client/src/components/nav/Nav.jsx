@@ -8,6 +8,7 @@ import { loginRegisterLinks } from '../../constants';
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { isAuthenticated } = useContext(AuthContext);
+
     return (
         <>
             <header className="inset-x-0 top-0 z-50 fixed bg-black bg-opacity-98 ">
@@ -36,7 +37,7 @@ export default function Nav() {
                                 to="/get-tickets"
                                 className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
                             >
-                                Get Tickets
+                                Tickets
                             </Link>
                             <Link
                                 to="/artists"

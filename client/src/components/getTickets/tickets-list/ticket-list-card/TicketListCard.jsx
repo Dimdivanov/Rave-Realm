@@ -8,6 +8,7 @@ export default function TicketListCard({
     type,
     price,
 }) {
+    
     return (
         <>
             <div className="group relative">
