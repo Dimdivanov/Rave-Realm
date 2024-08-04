@@ -23,11 +23,14 @@ const create = (ticketData) => request.post(`${BASE_URL}`, ticketData);
 
 const remove = (ticketId) => request.del(`${BASE_URL}/${ticketId}`);
 
+const update = (ticketId, ticketData) => request.put(`${BASE_URL}/${ticketId}`, ticketData)
+
 const ticketAPI = {
     getAll,
     getOne,
     create,
     remove,
+    update,
     getAllMatching,
 };
 

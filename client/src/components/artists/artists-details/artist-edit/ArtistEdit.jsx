@@ -32,7 +32,7 @@ export default function ArtistEdit() {
 
     useEffect(() => {
         if (artistDetails) {
-            setValues(artistDetails); // Populate form with existing artist data
+            setValues(artistDetails);
         }
     }, [artistDetails, setValues]);
 
