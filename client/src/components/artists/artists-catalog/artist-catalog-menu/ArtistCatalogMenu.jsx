@@ -7,14 +7,16 @@ export default function ArtistCatalogMenu() {
         <>
             {/* artist catalog menu component */}
             <div className="text-center">
-                <h1 className="text-4xl text-white font-bold mb-4 text-center">
-                    Artists
-                </h1>
-                <div className="flex justify-center mb-4 space-x-96">
-                    <button className="bg-purple-700 px-4 py-2 rounded">Full list</button>
-                    <button className="bg-purple-700 px-4 py-2 rounded">My Lineup</button>
-                    <button className="bg-purple-700 px-4 py-2 rounded">
-                        View Stages
+                <h1 className="text-4xl text-white font-bold mb-6">Artists</h1>
+                <div className="flex justify-center mb-4 space-x-4">
+                    <button className="bg-purple-700 px-6 py-2 rounded text-white w-32">
+                        Full list
+                    </button>
+                    <button className="bg-purple-700 px-6 py-2 rounded text-white w-32">
+                        My Lineup
+                    </button>
+                    <button className="bg-purple-700 px-6 py-2 rounded text-white w-32">
+                        My Stages
                     </button>
                 </div>
                 <input
