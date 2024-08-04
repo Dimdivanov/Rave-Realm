@@ -8,22 +8,25 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import { SpinnerContext } from '../../../contexts/SpinnerContext';
 import { useGetOneTicket } from '../../../hooks/useTickets';
 import ticketAPI from '../../../api/tickets-api';
+import { useCreatePurchase, useGetAllPurchase } from '../../../hooks/usePurchase';
 
 export default function TicketDetails() {
     const { ticketId } = useParams();
     const [ticketDetails] = useGetOneTicket(ticketId);
     const [showModalRemove, setShowModalRemove] = useState(false);
     const navigate = useNavigate();
+    const createPurchase = useCreatePurchase();
 
-    const { userId } = useContext(AuthContext);
+    const { userId, email } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
 
+    const [purchased, setPurchased] = useGetAllPurchase(ticketId);
     const { isLoading, setIsLoading } = useContext(SpinnerContext);
 
     const ticketDelClickHandler = () => {
         setShowModalRemove(true);
     };
-
+    console.log(purchased);
     const onDeleteClickHandler = async () => {
         setShowModalRemove(false);
         setIsLoading(true);
@@ -38,6 +41,10 @@ export default function TicketDetails() {
     };
     const modalRemoveCloseHandler = () => {
         setShowModalRemove(false);
+    };
+
+    const onClickBuyHandler = () => {
+        createPurchase(ticketId, email);
     };
 
     return (
@@ -89,7 +96,10 @@ export default function TicketDetails() {
                                 >
                                     Delete
                                 </button>
-                                <button className="px-5 py-2 bg-green-500 text-white font-medium rounded-full">
+                                <button
+                                    onClick={onClickBuyHandler}
+                                    className="px-5 py-2 bg-green-500 text-white font-medium rounded-full"
+                                >
                                     Buy
                                 </button>
                             </div>
@@ -98,7 +108,10 @@ export default function TicketDetails() {
                                 {isOwner ? (
                                     ''
                                 ) : (
-                                    <button className="px-5 py-2 bg-green-500 text-white font-medium rounded-full">
+                                    <button
+                                        onClick={onClickBuyHandler}
+                                        className="px-5 py-2 bg-green-500 text-white font-medium rounded-full"
+                                    >
                                         Buy
                                     </button>
                                 )}

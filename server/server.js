@@ -1535,7 +1535,7 @@
                 price: '500',
                 description:
                     'Exclusive VIP access with private lounge and complimentary drinks.',
-                purchasedBy: [],
+                
                 _createdOn: 1722586198228,
                 _id: '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc',
             },
@@ -1547,7 +1547,7 @@
                 price: '125',
                 description:
                     'General admission with access to all stages and performances.',
-                purchasedBy: [],
+              
                 _createdOn: 1722588750788,
                 _id: 'b4892e56-bafe-4f18-8e07-ff4f882d71fc',
             },
@@ -1558,7 +1558,7 @@
                 type: 'ODP',
                 price: '125',
                 description: 'One day pass ticket mockup',
-                purchasedBy: [],
+               
                 _createdOn: 1722763653234,
                 _id: '085c5560-397b-4861-92d4-c70bf5922b9e',
             },
