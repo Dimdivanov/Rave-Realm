@@ -7,6 +7,8 @@ export default function TicketDetailsContent({
     ticketDelClickHandler,
     onClickBuyHandler,
 }) {
+    console.log(ticketDetails);
+    
     return (
         <div className="w-full max-w-4xl p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg flex flex-col lg:flex-row">
             <div className="w-full lg:w-1/2">

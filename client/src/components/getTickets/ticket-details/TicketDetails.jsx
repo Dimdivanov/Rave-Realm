@@ -15,8 +15,10 @@ export default function TicketDetails() {
     const { ticketId } = useParams();
     const [ticketDetails] = useGetOneTicket(ticketId);
     const [showModalRemove, setShowModalRemove] = useState(false);
+
     const navigate = useNavigate();
     const createPurchase = useCreatePurchase();
+    console.log(ticketDetails);
 
     const { userId, email } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;

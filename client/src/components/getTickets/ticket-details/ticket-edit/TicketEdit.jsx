@@ -15,7 +15,7 @@ const initialValues = {
 
 export default function TicketEdit() {
     const navigate = useNavigate();
-    const { ticketId } = useParams;
+    const { ticketId } = useParams();
     const { values, changeHandler, submitHandler, setValues } = useForm(
         initialValues,
         async (updatedValues) => {

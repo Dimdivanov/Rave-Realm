@@ -13,7 +13,8 @@ export default function ArtistDetails() {
     const { artistId } = useParams();
     const navigate = useNavigate();
     const [artistDetails] = useGetOneArtists(artistId);
-
+    
+    
     const { userId } = useContext(AuthContext);
     const isOwner = userId === artistDetails._ownerId;
 
