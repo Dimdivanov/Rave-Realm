@@ -52,7 +52,7 @@ export default function ArtistEdit() {
                         name="artistName"
                         id="artist-name"
                         placeholder="Artist Name"
-                        value={values.artistName || ''} // Ensure a default empty string
+                        value={values.artistName || ''}
                         onChange={changeHandler}
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                     />
@@ -61,7 +61,7 @@ export default function ArtistEdit() {
                         name="imageUrl"
                         id="image-url"
                         placeholder="Image URL"
-                        value={values.imageUrl || ''} // Ensure a default empty string
+                        value={values.imageUrl || ''}
                         onChange={changeHandler}
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                     />
@@ -70,7 +70,7 @@ export default function ArtistEdit() {
                         name="biography"
                         placeholder="Biography"
                         rows={5}
-                        value={values.biography || ''} // Ensure a default empty string
+                        value={values.biography || ''}
                         onChange={changeHandler}
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                     />
@@ -79,7 +79,7 @@ export default function ArtistEdit() {
                         name="appearanceDate"
                         id="appearance-date"
                         placeholder="Performance Date"
-                        value={values.appearanceDate || ''} // Ensure a default empty string
+                        value={values.appearanceDate || ''}
                         onChange={changeHandler}
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                     />
@@ -88,12 +88,12 @@ export default function ArtistEdit() {
                         name="stage"
                         id="stage"
                         placeholder="Stage"
-                        value={values.stage || ''} // Ensure a default empty string
+                        value={values.stage || ''}
                         onChange={changeHandler}
                         className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
                     />
                     <button
-                        onClick={() => navigate('/artists')}
+                        onClick={() => navigate(`/artist/details/${values._id}`)}
                         className="ml-11 w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
                     >
                         Back
