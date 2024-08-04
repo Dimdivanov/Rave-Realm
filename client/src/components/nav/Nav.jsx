@@ -206,49 +206,49 @@ export default function Nav() {
                                 <div className="space-y-2">
                                     <Link
                                         to="/"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Home
                                     </Link>
                                     <Link
                                         to="/get-tickets"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Get Tickets
                                     </Link>
                                     <Link
                                         to="/artists"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Artists
                                     </Link>
                                     <Link
                                         to="/stages"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Stages
                                     </Link>
                                     <Link
                                         to="/create-ticket"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Create Tickets
                                     </Link>
                                     <Link
                                         to="/create-artist"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Add Artist
                                     </Link>
                                     <Link
                                         to="/create-stage"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Create Stage

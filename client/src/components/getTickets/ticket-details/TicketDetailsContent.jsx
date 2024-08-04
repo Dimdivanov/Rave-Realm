@@ -20,14 +20,14 @@ export default function TicketDetailsContent({
                 <h2 className="text-4xl font-bold text-white mb-4">
                     {ticketDetails.ticketName}
                 </h2>
-                <p className="text-base text-gray-300 mb-2">Type: {ticketDetails.type}</p>
-                <p className="text-base text-gray-300 mb-2">
+                <p className="text-base text-gray-300 mb-5">Type: {ticketDetails.type}</p>
+                <p className="text-base text-gray-300 mb-5">
                     Price: {ticketDetails.price} BGN
                 </p>
-                <p className="text-base text-gray-300 mb-4">
+                <p className="text-base text-yellow-500 mb-5">
                     Purchased: {purchased.length} times!
                 </p>
-                <p className="text-sm text-gray-200 mb-6">{ticketDetails.description}</p>
+                <p className="text-sm text-gray-200 mb-40 line-clamp-6">{ticketDetails.description}</p>
 
                 <div className="flex flex-wrap gap-4">
                     {isOwner && (

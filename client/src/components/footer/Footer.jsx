@@ -9,6 +9,14 @@ export default function Footer() {
                     <div className="flex justify-center space-x-6 mb-6">
                         <Link to="#" className="icon text-xl">
                             <img
+                                src="/src/assets/icons/tiktokIcon.png" // Make sure the file extension is correct
+                                alt="xIcon"
+                                className="w-6 h-6" // Adjust size as needed
+                            />
+                            <i className="fab fa-twitter" />
+                        </Link>
+                        <Link to="#" className="icon text-xl">
+                            <img
                                 src="/src/assets/icons/xIcon.png" // Make sure the file extension is correct
                                 alt="xIcon"
                                 className="w-6 h-6" // Adjust size as needed

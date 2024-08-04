@@ -31,20 +31,19 @@ export default function Hero() {
                                 magic. Secure your ticket today and create memories that
                                 will last forever.
                             </p>
-                            <div className="mt-10 flex items-center justify-center gap-x-6">
+                            <div className="mt-10 flex items-center justify-center gap-x-6 relative">
                                 <Link
                                     to="/get-tickets"
-                                    className="relative rounded-full bg-gradient-to-r from-[rgb(116,47,255)] to-[rgb(230,35,196)] px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:from-[rgb(100,35,255)] hover:to-[rgb(220,35,196)] hover:scale-105 hover:shadow-xl border-2 border-white"
+                                    className="relative z-10 rounded-full bg-gradient-to-r from-[rgb(116,47,255)] to-[rgb(230,35,196)] px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-200 hover:from-[rgb(100,35,255)] hover:to-[rgb(220,35,196)] hover:scale-105 hover:shadow-xl border-2 border-white"
                                 >
                                     Get Your Tickets
-                                    <span className="absolute inset-0 rounded-full border-2 border-[rgb(116,47,255)] opacity-50"></span>
                                 </Link>
                                 <Link
                                     to="/create-stage"
-                                    className="relative rounded-full bg-gradient-to-r from-[rgb(116,47,255)] to-[rgb(230,35,196)] px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:from-[rgb(100,35,255)] hover:to-[rgb(220,35,196)] hover:scale-105 hover:shadow-xl border-2 border-white"
+                                    className="absolute z-10 rounded-full bg-transparent border-2 border-[rgb(116,47,255)] px-4 py-2 text-lg font-bold text-white shadow-md transition-transform duration-200 hover:scale-105 hover:shadow-lg opacity-90"
+                                    style={{ top: '6rem' }}
                                 >
                                     Be a Creator
-                                    <span className="absolute inset-0 rounded-full border-2 border-[rgb(116,47,255)] opacity-50"></span>
                                 </Link>
                             </div>
                         </div>
