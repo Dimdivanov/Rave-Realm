@@ -18,7 +18,6 @@ export default function TicketDetails() {
 
     const navigate = useNavigate();
     const createPurchase = useCreatePurchase();
-    console.log(ticketDetails);
 
     const { userId, email } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;

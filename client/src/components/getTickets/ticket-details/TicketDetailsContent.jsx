@@ -7,8 +7,6 @@ export default function TicketDetailsContent({
     ticketDelClickHandler,
     onClickBuyHandler,
 }) {
-    console.log(ticketDetails);
-    
     return (
         <div className="w-full max-w-4xl p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg flex flex-col lg:flex-row">
             <div className="w-full lg:w-1/2">
@@ -29,7 +27,9 @@ export default function TicketDetailsContent({
                 <p className="text-base text-yellow-500 mb-5">
                     Purchased: {purchased.length} times!
                 </p>
-                <p className="text-sm text-gray-200 mb-40 line-clamp-6">{ticketDetails.description}</p>
+                <p className="text-sm text-gray-200 mb-40 line-clamp-6">
+                    {ticketDetails.description}
+                </p>
 
                 <div className="flex flex-wrap gap-4">
                     {isOwner && (
