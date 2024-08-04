@@ -12,6 +12,7 @@ const initialValues = {
     description: '',
 };
 
+/* Try to reform here */
 const BASE_URL = '/src/assets/images/ticket';
 
 const ticketImgUrlOptions = {
