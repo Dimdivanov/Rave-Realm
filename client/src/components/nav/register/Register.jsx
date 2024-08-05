@@ -20,6 +20,9 @@ export default function Register() {
     const navigate = useNavigate();
 
     const registerHandler = async ({ email, password, rePassword }) => {
+        if(!email || !password || !rePassword){
+            return setError('Missing Fields!')
+        }
         if (password !== rePassword) {
             return setError('Password mismatch!');
         }
