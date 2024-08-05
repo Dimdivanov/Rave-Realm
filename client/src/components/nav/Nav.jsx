@@ -12,7 +12,8 @@ import HamburgerMenu from './hamburger-menu/HamburgerMenu';
 //rework this module separate into 2 more nav-center-menu and mobile-view-menu
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { isAuthenticated } = useContext(AuthContext);
+    const { isAuthenticated, email } = useContext(AuthContext);
+    console.log(email);
 
     return (
         <>
@@ -164,10 +165,11 @@ export default function Nav() {
                             <div className="flex items-center justify-between">
                                 <Link to="/" className="-m-1.5 p-1.5">
                                     <img
-                                        className="h-20 w-auto" // Adjusted logo size for mobile menu
-                                        src="src/assets/icons/logo.ico"
-                                        alt="Logo"
+                                        className="h-12 w-auto" //
+                                        src={profileIcon}
+                                        alt="profile icon"
                                     />
+                                    <p className="text-white">{email}</p>
                                 </Link>
                                 <button
                                     type="button"
@@ -191,7 +193,10 @@ export default function Nav() {
                                     </svg>
                                 </button>
                             </div>
-                            <HamburgerMenu setIsMenuOpen={setIsMenuOpen} isAuthenticated={isAuthenticated}/>
+                            <HamburgerMenu
+                                setIsMenuOpen={setIsMenuOpen}
+                                isAuthenticated={isAuthenticated}
+                            />
                         </div>
                     </div>
                 )}

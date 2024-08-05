@@ -18,6 +18,7 @@ The project is still in progress with the following tasks to be completed:
 -   Add more views for sub-settings-menu
 -   Add abort controllers (bonus)
 -   Style with module.css and refine overall styles and elements
+-   Add proper data handling and error report
 
 ## Technology Stack
 

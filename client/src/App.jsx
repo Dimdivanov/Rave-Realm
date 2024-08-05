@@ -104,18 +104,3 @@ const App = () => {
     );
 };
 export default App;
-
-{
-    /* add backdrop and modular pop up */
-}
-
-{
-    /* in account settings create subroute link to route + with Outlet */
-}
-{
-    /* create abort controller for every fetch + lazy load */
-}
-
-{
-    /* <Edit Artist, Stage, Ticket /> */
-}
