@@ -41,8 +41,7 @@ async function requester(method, url, data) {
 
         return await response.json();
     } catch (err) {
-        console.error('Request failed:', err);
-        throw err;
+        console.log('Request failed:', err);
     }
 }
 

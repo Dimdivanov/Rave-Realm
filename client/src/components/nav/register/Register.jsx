@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from '../../../hooks/useForm';
 import { useRegister } from '../../../hooks/useAuth';
 import useFocusForm from '../../../hooks/useFocusForm';
+import RegisterFooter from './RegisterFooter';
 
 const initialValues = {
     email: '',
@@ -14,7 +15,7 @@ const initialValues = {
 export default function Register() {
     const [error, setError] = useState('');
     const ref = useFocusForm();
-   
+
     const register = useRegister();
     const navigate = useNavigate();
 
@@ -36,10 +37,10 @@ export default function Register() {
     );
 
     return (
-        <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gray-500">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-purple-500">
+            <div className="mt-24 sm:mx-auto sm:w-full sm:max-w-sm">
                 <img
-                    className="mx-auto h-10 w-auto"
+                    className="mx-auto h-20 w-auto"
                     src="src/assets/icons/logo.ico"
                     alt="Your Company"
                 />
@@ -114,21 +115,13 @@ export default function Register() {
                     <div>
                         <button
                             type="submit"
-                            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            className="mt-10 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                             Register
                         </button>
                     </div>
                 </form>
-                <p className="mt-10 text-center text-sm text-white">
-                    Already registered?&nbsp;
-                    <Link
-                        to="/login"
-                        className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-                    >
-                        Login
-                    </Link>
-                </p>
+                <RegisterFooter />
                 {error && (
                     <p className="mt-10 text-center text-lg text-red-600">
                         <span>{error}</span>
