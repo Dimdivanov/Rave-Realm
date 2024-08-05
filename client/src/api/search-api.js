@@ -2,18 +2,17 @@ import * as request from './requester';
 
 const BASE_URL = 'http://localhost:3030/data/artists';
 
-const getAll = (artistName) => {
-    const params = new URLSearchParams({
-        where: `artistName="${artistName}"`,
-        load: `author=_ownerId:users`,
-    });
+const getAllMatching = async (match) => {
+    const result = await request.get(BASE_URL);
+    const artists = Object.values(result).filter((artist) =>
+        artist.artistName === match ? true : false
+    );
 
-    const res = request.get(`${BASE_URL}?${params.toString()}`);
-    console.log(res);
+    return artists;
 };
 
 const searchAPI = {
-    getAll,
+    getAllMatching,
 };
 
 export default searchAPI;

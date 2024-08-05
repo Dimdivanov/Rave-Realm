@@ -10,7 +10,6 @@ const getAll = async () => {
 };
 
 
-
 const getOne = (artistId) => request.get(`${BASE_URL}/${artistId}`);
 
 const create = (artistData) => request.post(`${BASE_URL}`, artistData);
@@ -38,7 +37,7 @@ const artistAPI = {
     remove,
     update,
     getLatest,
-   
+    
 };
 
 export default artistAPI;

@@ -5,9 +5,9 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { loginRegisterLinks } from '../../constants';
 
 import logo from '../../assets/icons/logo.ico';
-import myBag from '../../assets/icons/mybag.ico';
 import profileIcon from '../../assets/icons/profileIcon.png';
 import info from '../../assets/icons/info.png';
+import HamburgerMenu from './hamburger-menu/HamburgerMenu';
 
 //rework this module separate into 2 more nav-center-menu and mobile-view-menu
 export default function Nav() {
@@ -94,13 +94,7 @@ export default function Nav() {
                                     className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
                                 />
                             </Link>
-                            <Link key="mybag" to="/my-bag" className="w-15 pt-2 px-4">
-                                <img
-                                    src={myBag}
-                                    alt="My Bag"
-                                    className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
-                                />
-                            </Link>
+
                             {isAuthenticated ? (
                                 <>
                                     <Link
@@ -197,59 +191,7 @@ export default function Nav() {
                                     </svg>
                                 </button>
                             </div>
-                            <div className="mt-6">
-                                <div className="space-y-2">
-                                    <Link
-                                        to="/"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Home
-                                    </Link>
-                                    <Link
-                                        to="/get-tickets"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Get Tickets
-                                    </Link>
-                                    <Link
-                                        to="/artists"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Artists
-                                    </Link>
-                                    <Link
-                                        to="/stages-list"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Stages
-                                    </Link>
-                                    <Link
-                                        to="/create-ticket"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Create Tickets
-                                    </Link>
-                                    <Link
-                                        to="/create-artist"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Add Artist
-                                    </Link>
-                                    <Link
-                                        to="/create-stage"
-                                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Create Stage
-                                    </Link>
-                                </div>
-                            </div>
+                            <HamburgerMenu setIsMenuOpen={setIsMenuOpen} isAuthenticated={isAuthenticated}/>
                         </div>
                     </div>
                 )}
