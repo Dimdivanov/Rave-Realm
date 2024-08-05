@@ -8,9 +8,10 @@ import Home from './components/home/Home';
 import FollowUs from './components/followUs/FollowUs';
 import Footer from './components/footer/Footer';
 
-import Login from './components/nav/userServices/Login';
-import Register from './components/nav/userServices/Register';
-import Logout from './components/nav/userServices/Logout';
+import Login from './components/nav/login/Login';
+import Register from './components/nav/register/Register';
+import Logout from './components/nav/logout/Logout';
+import AccountSettings from './components/nav/account-settings/AccountSettings';
 
 import ArtistsCatalog from './components/artists/artists-catalog/ArtistsCatalog';
 import ArtistDetails from './components/artists/artists-details/ArtistDetails';
@@ -19,7 +20,6 @@ import StageList from './components/stages/stage-list/StageList';
 import NotFound from './components/notFound/NotFound';
 import StageDetails from './components/stages/stage-details/StageDetails';
 
-import AccountSettings from './components/nav/userServices/AccountSettings';
 import StageCreate from './components/stages/stage-create/StageCreate';
 import ArtistCreate from './components/artists/artists-create/ArtistCreate';
 import SettingsMenu from './components/settingsMenu/SettingsMenu';

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from '../../../hooks/useForm';
 import { useLogin } from '../../../hooks/useAuth';
 import useFocusForm from '../../../hooks/useFocusForm';
+import LoginFooter from './LoginFooter';
 
 const initialValues = { email: '', password: '' };
 export default function Login() {
@@ -16,7 +17,7 @@ export default function Login() {
             await login(email, password);
             navigate('/');
         } catch (err) {
-            alert(err.message);
+            console.log(err.message);
         }
     };
 
@@ -81,21 +82,13 @@ export default function Login() {
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="mt-10 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Login
                             </button>
                         </div>
                     </form>
-                    <p className="mt-10 text-center text-sm text-white">
-                        Not registered?&nbsp;
-                        <Link
-                            to="/register"
-                            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-                        >
-                            Register
-                        </Link>
-                    </p>
+                    <LoginFooter />
                 </div>
             </div>
         </>
