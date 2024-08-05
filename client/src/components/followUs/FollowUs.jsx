@@ -3,7 +3,7 @@ import React from 'react';
 export default function FollowUs() {
     return (
         <section className="padding-x py-10 bg-black">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mt-20 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex items-center space-x-4">
                     <div className="text-white text-6xl">
                             <img
@@ -49,20 +49,7 @@ export default function FollowUs() {
                             <p className="text-sm text-white mt-2">Sept Fest</p>
                         </div>
                     </div>
-                    <div className="flex items-center space-x-4">
-                        <button className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition text-white">
-                            <span className="text-sm">Prev</span>
-                        </button>
-                        <div className="flex-1 bg-gray-800 h-1 rounded-lg overflow-hidden relative">
-                            <div
-                                className="bg-yellow-500 h-full absolute top-0 left-0"
-                                style={{ width: '33%' }}
-                            ></div>
-                        </div>
-                        <button className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition text-white">
-                            <span className="text-sm">Next</span>
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </section>

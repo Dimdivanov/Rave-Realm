@@ -10,9 +10,9 @@ export default function ArtistsCatalog() {
         <>
             <section
                 id="hero"
-                className="w-full flex xl:flex-row flex-col justify-center items-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400"
+                className="md:min-h-[50vh] w-full flex xl:flex-row flex-col justify-center items-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400"
             >
-                <div className="container mx-auto px-4 py-8">
+                <div className="container mx-auto px-4 py-8 mt-24">
                     <ArtistCatalogMenu />
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                         {/* Artist Card */}

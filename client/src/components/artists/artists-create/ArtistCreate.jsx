@@ -1,5 +1,6 @@
-import React from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import { useCreateArtist } from '../../../hooks/useArtists';
 import { useForm } from '../../../hooks/useForm';
 import useFocusForm from '../../../hooks/useFocusForm';
@@ -14,16 +15,22 @@ const initialValues = {
 };
 
 export default function ArtistCreate() {
+    const [error, setError] = useState('');
     const navigate = useNavigate();
     const createArtist = useCreateArtist();
     const ref = useFocusForm();
 
     const createHandler = async (values) => {
+        const { artistName, imageUrl, appearanceDate, stage, biography } = values;
+        if (!artistName || !imageUrl || !appearanceDate || !stage || !biography) {
+            return setError('Missing fields!');
+        }
+
         try {
             await createArtist(values);
             navigate('/artists');
         } catch (err) {
-            console.log(err.message);
+            setError(err.message);
         }
     };
 
@@ -42,6 +49,7 @@ export default function ArtistCreate() {
                 changeHandler={changeHandler}
                 submitHandler={submitHandler}
                 ref={ref}
+                error={error}
             />
         </section>
     );

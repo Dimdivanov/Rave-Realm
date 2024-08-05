@@ -1,7 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+
 import { useCreateTicket } from '../../../hooks/useTickets';
 import { useForm } from '../../../hooks/useForm';
 import useFocusForm from '../../../hooks/useFocusForm';
+
 
 const initialValues = {
     _id: '',
@@ -37,7 +39,7 @@ export default function TicketCreate() {
 
     const { values, changeHandler, submitHandler } = useForm(
         initialValues,
-        createHandler
+        createHandler,
     );
 
     return (
