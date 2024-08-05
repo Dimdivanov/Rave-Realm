@@ -32,7 +32,7 @@ export default function TicketDetailsContent({
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                    {isOwner && (
+                    {isOwner ? (
                         <>
                             <Link
                                 to={`/ticket/edit/${ticketDetails._id}`}
@@ -47,13 +47,14 @@ export default function TicketDetailsContent({
                                 Delete
                             </button>
                         </>
+                    ) : (
+                        <button
+                            onClick={onClickBuyHandler}
+                            className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 transition duration-200"
+                        >
+                            Buy
+                        </button>
                     )}
-                    <button
-                        onClick={onClickBuyHandler}
-                        className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 transition duration-200"
-                    >
-                        Buy
-                    </button>
                 </div>
             </div>
         </div>

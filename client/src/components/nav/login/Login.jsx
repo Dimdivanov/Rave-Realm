@@ -33,7 +33,7 @@ export default function Login() {
             <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gradient-to-b from-purple-800 to-black text-white">
                 <div className="mt-24 sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
-                        className="mx-auto h-10 w-auto"
+                        className="mx-auto h-20 w-auto"
                         src="src/assets/icons/logo.ico"
                         alt="Your Company"
                     />

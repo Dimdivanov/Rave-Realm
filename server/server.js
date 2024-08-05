@@ -1535,7 +1535,7 @@
                 price: '500',
                 description:
                     'Exclusive VIP access with private lounge and complimentary drinks.',
-                
+                purchased: [],
                 _createdOn: 1722586198228,
                 _id: '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc',
             },
@@ -1547,7 +1547,7 @@
                 price: '125',
                 description:
                     'General admission with access to all stages and performances.',
-              
+                purchased: [],
                 _createdOn: 1722588750788,
                 _id: 'b4892e56-bafe-4f18-8e07-ff4f882d71fc',
             },
@@ -1558,11 +1558,21 @@
                 type: 'ODP',
                 price: '125',
                 description: 'One day pass ticket mockup',
-               
+                purchased: [],
                 _createdOn: 1722763653234,
                 _id: '085c5560-397b-4861-92d4-c70bf5922b9e',
             },
         },
+        purchased: {
+            '430048fe-f9d2-4e03-a13e-796afdd698fe': {
+                _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+                email: 'admin@abv.bg',
+                password: 'admin',
+                _createdOn: 1722860823406,
+                _id: '430048fe-f9d2-4e03-a13e-796afdd698fe',
+            },
+        },
+
         // recipes: {
         // 	"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
         // 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

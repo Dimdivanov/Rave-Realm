@@ -19,11 +19,11 @@ export default function ArtistCatalogCard({
                         />
                     </div>
                 </Link>
-                <h2 className="text-xl font-bold">{artistName}</h2>
+                <h2 className="text-white text-xl font-bold">{artistName}</h2>
                 <p className="text-gray-400">
                     {appearanceDate} - {stage}
                 </p>
-                <button className="bg-purple-700 px-4 py-2 rounded mt-2">
+                <button className="bg-yellow-500 px-4 py-2 rounded-full mt-2">
                     Add to My Lineup
                 </button>
             </div>
