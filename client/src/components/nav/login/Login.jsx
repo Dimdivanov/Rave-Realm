@@ -1,4 +1,5 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useForm } from '../../../hooks/useForm';
 import { useLogin } from '../../../hooks/useAuth';
@@ -6,13 +7,17 @@ import useFocusForm from '../../../hooks/useFocusForm';
 import LoginFooter from './LoginFooter';
 
 const initialValues = { email: '', password: '' };
-export default function Login() {
-    const ref = useFocusForm();
 
+export default function Login() {
+    const [error, setError] = useState('');
+    const ref = useFocusForm();
     const login = useLogin();
     const navigate = useNavigate();
 
     const loginHandler = async ({ email, password }) => {
+        if (!email || !password) {
+            return setError('Missing Fields!');
+        }
         try {
             await login(email, password);
             navigate('/');
@@ -25,14 +30,14 @@ export default function Login() {
 
     return (
         <>
-            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gray-500">
-                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gradient-to-b from-purple-800 to-black text-white">
+                <div className="mt-24 sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         className="mx-auto h-10 w-auto"
                         src="src/assets/icons/logo.ico"
                         alt="Your Company"
                     />
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-100">
                         Login
                     </h2>
                 </div>
@@ -41,7 +46,7 @@ export default function Login() {
                         <div>
                             <label
                                 htmlFor="email"
-                                className="block text-sm font-medium leading-6 text-gray-900"
+                                className="block text-sm font-medium leading-6 text-gray-100"
                             >
                                 Email address
                             </label>
@@ -62,7 +67,7 @@ export default function Login() {
                             <div className="flex items-center justify-between">
                                 <label
                                     htmlFor="password"
-                                    className="block text-sm font-medium leading-6 text-gray-900"
+                                    className="block text-sm font-medium leading-6 text-gray-100"
                                 >
                                     Password
                                 </label>
@@ -89,6 +94,11 @@ export default function Login() {
                         </div>
                     </form>
                     <LoginFooter />
+                    {error && (
+                        <p className="mt-10 text-center text-lg text-red-600">
+                            <span>{error}</span>
+                        </p>
+                    )}
                 </div>
             </div>
         </>

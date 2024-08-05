@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 import { useForm } from '../../../hooks/useForm';
@@ -15,13 +15,12 @@ const initialValues = {
 export default function Register() {
     const [error, setError] = useState('');
     const ref = useFocusForm();
-
     const register = useRegister();
     const navigate = useNavigate();
 
     const registerHandler = async ({ email, password, rePassword }) => {
-        if(!email || !password || !rePassword){
-            return setError('Missing Fields!')
+        if (!email || !password || !rePassword) {
+            return setError('Missing Fields!');
         }
         if (password !== rePassword) {
             return setError('Password mismatch!');
@@ -40,14 +39,14 @@ export default function Register() {
     );
 
     return (
-        <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-purple-500">
+        <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gradient-to-b from-purple-800 to-black text-white">
             <div className="mt-24 sm:mx-auto sm:w-full sm:max-w-sm">
                 <img
                     className="mx-auto h-20 w-auto"
                     src="src/assets/icons/logo.ico"
                     alt="Your Company"
                 />
-                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-100">
                     Register
                 </h2>
             </div>
@@ -56,13 +55,13 @@ export default function Register() {
                     <div>
                         <label
                             htmlFor="email"
-                            className="block text-sm font-medium leading-6 text-gray-900"
+                            className="block text-sm font-medium leading-6 text-gray-100"
                         >
                             Email address
                         </label>
                         <div className="mt-2">
                             <input
-                                id="email" // Added id attribute
+                                id="email"
                                 name="email"
                                 type="email"
                                 autoComplete="email"
@@ -76,15 +75,15 @@ export default function Register() {
                     <div>
                         <div className="flex items-center justify-between">
                             <label
-                                htmlFor="password" // Updated to match id
-                                className="block text-sm font-medium leading-6 text-gray-900"
+                                htmlFor="password"
+                                className="block text-sm font-medium leading-6 text-gray-100"
                             >
                                 Password
                             </label>
                         </div>
                         <div className="mt-2">
                             <input
-                                id="password" // Added id attribute
+                                id="password"
                                 name="password"
                                 type="password"
                                 autoComplete="current-password"
@@ -97,15 +96,15 @@ export default function Register() {
                     <div>
                         <div className="flex items-center justify-between">
                             <label
-                                htmlFor="rePassword" // Updated to match id
-                                className="block text-sm font-medium leading-6 text-gray-900"
+                                htmlFor="rePassword"
+                                className="block text-sm font-medium leading-6 text-gray-100"
                             >
                                 Confirm Password
                             </label>
                         </div>
                         <div className="mt-2">
                             <input
-                                id="rePassword" // Added id attribute
+                                id="rePassword"
                                 name="rePassword"
                                 type="password"
                                 autoComplete="confirm-password"
