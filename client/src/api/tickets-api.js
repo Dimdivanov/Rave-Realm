@@ -8,6 +8,7 @@ const getAll = async () => {
     return tickets;
 };
 
+/* this is basically a search  */
 const getAllMatching = async (match) => {
     const result = await request.get(BASE_URL);
     const tickets = Object.values(result).filter((ticket) =>
