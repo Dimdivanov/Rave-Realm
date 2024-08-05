@@ -46,7 +46,6 @@ export default function ArtistsCatalog() {
                         {/* Artist Card Component */}
                         {artists
                             .filter((artist) => {
-                                // Ensure we are filtering based on the artistName property
                                 return artist.artistName
                                     .toLowerCase()
                                     .includes(searchedWord.toLowerCase());
