@@ -6,11 +6,7 @@ export default function ArtistCatalogCard({
     artistName,
     stage,
     appearanceDate,
-    _ownerId,
-    userId,
 }) {
-    const isOwner = userId === _ownerId;
-
     return (
         <>
             <div className="text-center">
@@ -27,14 +23,6 @@ export default function ArtistCatalogCard({
                 <p className="text-gray-400">
                     {appearanceDate} - {stage}
                 </p>
-                {isOwner ? (
-                    ''
-                ) : (
-                    <button 
-                    className="bg-yellow-500 px-4 py-2 rounded-full mt-2">
-                        Add to My Lineup
-                    </button>
-                )}
             </div>
         </>
     );

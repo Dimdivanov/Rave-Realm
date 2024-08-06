@@ -5,6 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import { useGetOneArtists } from '../../../hooks/useArtists';
 import ModalRemove from '../../modal/ModalRemove';
 import artistAPI from '../../../api/artists-api';
+import { useCreateAddToLine } from '../../../hooks/useLineup';
 
 export default function ArtistDetails() {
     const [showModalRemove, setShowModalRemove] = useState(false);
@@ -13,7 +14,7 @@ export default function ArtistDetails() {
     const navigate = useNavigate();
     const [artistDetails] = useGetOneArtists(artistId);
 
-    const { userId } = useContext(AuthContext);
+    const { userId, email } = useContext(AuthContext);
     const isOwner = userId === artistDetails._ownerId;
 
     const artistDelClickHandler = () => {
@@ -32,6 +33,13 @@ export default function ArtistDetails() {
 
     const modalRemoveCloseHandler = () => {
         setShowModalRemove(false);
+    };
+
+    /* Creating add to line up */
+    const createAddToLine = useCreateAddToLine();
+    
+    const onClickAddToLineHandler = () => {
+        createAddToLine(artistId, email);
     };
 
     return (
@@ -88,7 +96,11 @@ export default function ArtistDetails() {
                                 {isOwner ? (
                                     ''
                                 ) : (
-                                    <button className="bg-yellow-500 text-black px-4 py-2 rounded-lg ml-40">
+
+                                    <button
+                                        onClick={onClickAddToLineHandler}
+                                        className="bg-yellow-500 text-black px-4 py-2 rounded-lg ml-40"
+                                    >
                                         Add to My Lineup
                                     </button>
                                 )}

@@ -53,7 +53,7 @@ export default function ArtistsCatalog() {
                                     .toLowerCase()
                                     .includes(searchedWord.toLowerCase());
                             })
-                            .map((artist) => (
+                            .map((artist) => (                                
                                 <ArtistCatalogCard key={artist._id} {...artist} userId={userId} />
                             ))}
                     </div>

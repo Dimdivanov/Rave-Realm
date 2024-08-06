@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import addedToLineAPI from '../api/purchase-api';
+import addedToLineAPI from '../api/addToLine-api';
 
 export function useCreateAddToLine() {
     const createHandler = (artistId, addedToLine) => {
@@ -20,4 +20,12 @@ export function useGetAllToLine(artistId) {
     }, [addToLine]);
 
     return [addToLine, setAddToLine];
+}
+
+export function useRemoveAddToLine() {
+    const createHandler = (artistId) => {
+        addedToLineAPI.remove(artistId);
+    };
+
+    return createHandler;
 }

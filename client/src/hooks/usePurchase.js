@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import purchaseAPI from '../api/purchase-api';
 
-
 export function useCreatePurchase() {
     const createHandler = (ticketId, purchasedBy) => {
         purchaseAPI.create(ticketId, purchasedBy);
@@ -14,12 +13,11 @@ export function useGetAllPurchase(ticketId) {
     const [purchase, setPurchase] = useState([]);
 
     useEffect(() => {
-        (async() => {
+        (async () => {
             const result = await purchaseAPI.getAll(ticketId);
             setPurchase(result);
         })();
-    }, [purchase]);
+    }, [ticketId]);
 
     return [purchase, setPurchase];
 }
-
