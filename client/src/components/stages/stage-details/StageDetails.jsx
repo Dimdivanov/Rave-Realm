@@ -45,6 +45,7 @@ export default function StageDetails() {
                 className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-20" // Adjusted py-10 to py-20 for more top padding
             >
                 <StageDetailsContent
+                    {...stageDetails}
                     stageDetails={stageDetails}
                     stageId={stageId}
                     stageDelClickHandler={stageDelClickHandler}
