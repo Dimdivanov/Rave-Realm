@@ -2,15 +2,21 @@
 .navLink {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #ffffff; /* Default color */
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.3s, border-bottom 0.3s;
 }
 
 .navLink:hover {
   color: #ff6f61; /* Hover color */
   transform: scale(1.05);
+}
+
+/* Active link style */
+.navLinkActive {
+  color: #ff6f61; /* Active color */
+  border-bottom: 2px solid #ff6f61; /* Underline effect */
 }
 
 /* Styles for the desktop menu */
@@ -19,11 +25,6 @@
   gap: 1.5rem;
   padding: 1rem;
   justify-content: center;
-}
-
-/* Styles for the desktop menu items */
-.desktopMenuItem {
-  padding: 0.5rem;
 }
 
 /* Styles for the profile and settings icons in desktop view */
@@ -69,56 +70,4 @@
 .authButton:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Styles for the mobile menu overlay */
-.mobileMenuOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 50;
-}
-
-/* Styles for the mobile menu content */
-.mobileMenuContent {
-  position: absolute;
-  top: 16px;
-  right: 0;
-  width: 100%;
-  max-width: 16rem;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  backdrop-filter: blur(10px);
-  z-index: 50;
-}
-
-/* Styles for the close button in mobile view */
-.mobileMenuCloseButton {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: background 0.3s;
-}
-
-.mobileMenuCloseButton:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Styles for mobile menu items */
-.mobileMenuItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.mobileMenuItem:hover {
-  color: #ff6f61;
-  transform: scale(1.05);
 }
