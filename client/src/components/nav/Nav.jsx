@@ -111,14 +111,15 @@ export default function Nav() {
                             {isAuthenticated ? (
                                 <>
                                     <Link
-                                        key="account-sttings-test"
+                                        key=""
                                         to="/account-settings-test"
                                         className="pt-2 px-4"
                                     >
                                         <img
-                                            src={profileIcon}
                                             alt="My Profile"
+                                            src={profileIcon}
                                             className={styles.iconImage}
+                                            onClick={() => setIsMenuOpen(isMenuOpen) }
                                         />
                                     </Link>
                                 </>

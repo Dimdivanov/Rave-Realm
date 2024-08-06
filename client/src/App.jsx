@@ -11,7 +11,7 @@ import Footer from './components/footer/Footer';
 import Login from './components/nav/login/Login';
 import Register from './components/nav/register/Register';
 import Logout from './components/nav/logout/Logout';
-import AccountSettings from './components/nav/account-settings/AccountSettings';
+
 
 import ArtistsCatalog from './components/artists/artists-catalog/ArtistsCatalog';
 import ArtistDetails from './components/artists/artists-details/ArtistDetails';
@@ -22,7 +22,7 @@ import StageDetails from './components/stages/stage-details/StageDetails';
 
 import StageCreate from './components/stages/stage-create/StageCreate';
 import ArtistCreate from './components/artists/artists-create/ArtistCreate';
-import SettingsMenu from './components/settingsMenu/SettingsMenu';
+
 import TicketCreate from './components/getTickets/ticket-create/TicketCreate';
 import TicketDetails from './components/getTickets/ticket-details/TicketDetails';
 import ArtistEdit from './components/artists/artists-details/artist-edit/ArtistEdit';
@@ -53,10 +53,7 @@ const App = () => {
                                 path="/ticket/edit/:ticketId"
                                 element={<TicketEdit />}
                             />
-                            <Route
-                                path="/account-settings-test"
-                                element={<AccountSettings />}
-                            />
+                           
                             <Route
                                 path="/artist/edit/:artistId"
                                 element={<ArtistEdit />}
@@ -76,7 +73,6 @@ const App = () => {
 
                         <Route path="/" element={<Home />} />
                         <Route path="/home" element={<Navigate to="/" />} />
-                        <Route path="/settings-menu" element={<SettingsMenu />} />
                         <Route path="/*" element={<NotFound />} />
 
                         <Route path="/artists" element={<ArtistsCatalog />} />
