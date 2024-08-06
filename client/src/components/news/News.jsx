@@ -57,11 +57,7 @@ export default function News() {
                         </div>
                         {/* News Card End */}
                     </div>
-                    <div className="flex justify-center mt-6">
-                        <button className="bg-white text-black py-2 px-4 rounded-full shadow-lg hover:bg-gray-200">
-                            View All
-                        </button>
-                    </div>
+                    
                 </div>
             </section>
         </>

@@ -17,17 +17,17 @@ export default function MobileApp() {
 
                     <div className="flex-1 text-left mb-8 lg:mb-0 z-10 lg:w-1/2 lg:ml-8 relative">
                         <div className="mb-8 lg:-ml-24">
-                            <h2 className="text-2xl font-bold">
+                            <h2 className="text-2xl font-bold text-white drop-shadow-lg">
                                 Manage your tickets with our app
                             </h2>
                         </div>
                         <div className="mb-8 lg:-ml-24">
-                            <p>Get it on:</p>
+                            <p className='font-bold'>Get it on:</p>
                             <div className="flex space-x-4 mt-4">
-                                <button className="bg-black text-white px-4 py-2 rounded">
+                                <button className="bg-black text-white font-bold px-4 py-2 rounded">
                                     App Store
                                 </button>
-                                <button className="bg-black text-white px-4 py-2 rounded">
+                                <button className="bg-black text-white font-bold px-4 py-2 rounded">
                                     Google Store
                                 </button>
                             </div>
@@ -45,7 +45,7 @@ export default function MobileApp() {
                             Are You Ready to Make Memories?
                         </h2>
                         <Link to="/get-tickets">
-                            <button className="bg-black text-white px-4 py-2 rounded">
+                            <button className="bg-black text-white px-4 py-2 rounded font-bold">
                                 Get Your Tickets
                             </button>
                         </Link>

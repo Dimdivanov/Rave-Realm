@@ -9,12 +9,38 @@ export default function StageDetailsContent({
     stageDelClickHandler,
 }) {
     return (
-        <div className="mt-16 container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+        <div className="relative mt-16 container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+            {/* Back Button */}
+            <div className="absolute top-4 left-4">
+                <Link to="/stages-list">
+                    <button
+                        onClick={() => navigate('/stages')}
+                        className="mb-4 text-white"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="2"
+                            stroke="currentColor"
+                            className="w-10 h-10 rounded-full hover:bg-purple-500 hover:bg-opacity-50"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                    </button>
+                </Link>
+            </div>
+            {/* Title */}
             <div className="text-center mb-6">
                 <h2 className="text-3xl font-semibold text-white mb-4">
                     {stageDetails.stageName}
                 </h2>
             </div>
+            {/* Image and Details */}
             <div className="relative mb-6 w-full max-w-lg mx-auto">
                 <div className="image-container relative overflow-hidden rounded-lg shadow-lg border-2 border-gray-400">
                     <img
@@ -30,9 +56,11 @@ export default function StageDetailsContent({
                     </div>
                 </div>
             </div>
+            {/* Description */}
             <div className="description text-white text-center mb-6">
                 <p className="text-lg mb-4">{stageDetails.description}</p>
             </div>
+            {/* Actions */}
             <div className="flex justify-center space-x-4 mb-6">
                 {isOwner ? (
                     <>
