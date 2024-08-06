@@ -8,7 +8,7 @@ import info from '../../assets/icons/info.png';
 import profileIcon from '../../assets/icons/profileIcon.png';
 import styles from './Nav.module.css';
 
-import HamburgerMenu from './hamburger-menu/HamburgerMenu';
+import HamburgerMenu from './hamburger-menu-profile/HamburgerMenu';
 import NavigationMainMenu from './navigation-main-menu/NavigationMainMenu';
 import ProfileMenu from './profile-menu/ProfileMenu';
 import MobileMenu from './mobile-menu/MobileMenu';

@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
-import HamburgerMenu from "../hamburger-menu/HamburgerMenu";
+import { Link } from 'react-router-dom';
+import HamburgerMenu from '../hamburger-menu-profile/HamburgerMenu';
 
-export default function MobileMenu({isMenuOpen, setIsMenuOpen, profileIcon, email, isAuthenticated}) {
+export default function MobileMenu({
+    isMenuOpen,
+    setIsMenuOpen,
+    profileIcon,
+    email,
+    isAuthenticated,
+}) {
     return (
         <>
             {/* Mobile Menu */}
@@ -13,14 +19,12 @@ export default function MobileMenu({isMenuOpen, setIsMenuOpen, profileIcon, emai
                     />
                     <div className="backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg">
                         <div className="flex items-center justify-between">
-                            <Link to="/" className="-m-1.5 p-1.5">
-                                <img
-                                    className="h-12 w-auto"
-                                    src={profileIcon}
-                                    alt="profile icon"
-                                />
-                                <p className="text-white">{email}</p>
-                            </Link>
+                            <img
+                                className="h-12 w-auto"
+                                src={profileIcon}
+                                alt="profile icon"
+                            />
+                            <p className="text-white">{email}</p>
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-white"

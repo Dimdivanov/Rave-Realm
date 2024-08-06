@@ -8,7 +8,7 @@ export default function ProfileMenu({
     loginRegisterLinks,
     setIsMenuOpen,
     isAuthenticated,
-    isMenuOpen
+    isMenuOpen,
 }) {
     return (
         <>
@@ -20,14 +20,16 @@ export default function ProfileMenu({
 
                     {isAuthenticated ? (
                         <>
-                            <div key="profileIcon" className="pt-2 px-4">
-                                <img
-                                    alt="My Profile"
-                                    src={profileIcon}
-                                    className={styles.iconImage}
-                                    onClick={handleProfileClick}
-                                />
-                            </div>
+                            
+                                <div key="profileIcon" className="pt-2 px-4">
+                                    <img
+                                        alt="My Profile"
+                                        src={profileIcon}
+                                        className={styles.iconImage}
+                                        onClick={handleProfileClick}
+                                    />
+                                </div>
+                           
                         </>
                     ) : (
                         <>

@@ -53,14 +53,13 @@ const App = () => {
                                 path="/ticket/edit/:ticketId"
                                 element={<TicketEdit />}
                             />
-
                             <Route
                                 path="/artist/edit/:artistId"
                                 element={<ArtistEdit />}
                             />
                             <Route path="/create-artist" element={<ArtistCreate />} />
                             <Route path="/stage/edit/:stageId" element={<StageEdit />} />
-
+                            <Route path="/my-lineup" element={<MyLineUp />} />
                             <Route path="/logout" element={<Logout />} />
                         </Route>
                         {/* End Protected routes */}
@@ -76,7 +75,7 @@ const App = () => {
                         <Route path="/home" element={<Navigate to="/" />} />
                         <Route path="/*" element={<NotFound />} />
 
-                        <Route path="/artists" element={<ArtistsCatalog />}/>
+                        <Route path="/artists" element={<ArtistsCatalog />} />
                         <Route path="/stages-list" element={<StageList />} />
                         <Route path="/get-tickets" element={<TicketsList />} />
 
