@@ -1,6 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-
 import { useForm } from '../../../../hooks/useForm';
 import { useGetOneArtists } from '../../../../hooks/useArtists';
 import artistAPI from '../../../../api/artists-api';
@@ -39,15 +38,15 @@ export default function ArtistEdit() {
     return (
         <section
             id="edit-artist"
-            className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10"
+            className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-8"
         >
-            <div className="w-full max-w-3xl mx-auto p-6 mt-28 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
-                <h2 className="text-3xl font-semibold mb-6 text-center text-white">
+            <div className="w-full max-w-xl mx-auto p-4 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+                <h2 className="text-2xl font-semibold mb-4 text-center text-white">
                     Edit Artist
                 </h2>
-                <form onSubmit={submitHandler} className="space-y-6">
-                    <div className="space-y-2">
-                        <label htmlFor="artist-name" className="text-white">
+                <form onSubmit={submitHandler} className="space-y-4">
+                    <div className="space-y-1">
+                        <label htmlFor="artist-name" className="text-white text-sm font-medium">
                             Artist Name
                         </label>
                         <input
@@ -57,11 +56,11 @@ export default function ArtistEdit() {
                             placeholder="Artist Name"
                             value={values.artistName || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="image-url" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="image-url" className="text-white text-sm font-medium">
                             Image URL
                         </label>
                         <input
@@ -71,25 +70,25 @@ export default function ArtistEdit() {
                             placeholder="Image URL"
                             value={values.imageUrl || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="biography" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="biography" className="text-white text-sm font-medium">
                             Biography
                         </label>
                         <textarea
                             id="biography"
                             name="biography"
                             placeholder="Biography"
-                            rows={5}
+                            rows={4}
                             value={values.biography || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="appearance-date" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="appearance-date" className="text-white text-sm font-medium">
                             Performance Date
                         </label>
                         <input
@@ -99,11 +98,11 @@ export default function ArtistEdit() {
                             placeholder="Performance Date"
                             value={values.appearanceDate || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="stage" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="stage" className="text-white text-sm font-medium">
                             Stage
                         </label>
                         <input
@@ -113,19 +112,19 @@ export default function ArtistEdit() {
                             placeholder="Stage"
                             value={values.stage || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
                     <div className="flex gap-4">
                         <button
                             onClick={() => navigate(`/artist/details/${values._id}`)}
-                            className="w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                            className="w-32 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
                         >
                             Back
                         </button>
                         <button
                             type="submit"
-                            className="w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                            className="w-32 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
                         >
                             Edit
                         </button>

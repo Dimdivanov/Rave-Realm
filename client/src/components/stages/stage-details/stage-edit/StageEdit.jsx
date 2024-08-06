@@ -39,15 +39,15 @@ export default function StageEdit() {
     return (
         <section
             id="edit-stage"
-            className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10"
+            className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-8"
         >
-            <div className="w-full max-w-3xl mx-auto p-6 mt-28 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
-                <h2 className="text-3xl font-semibold mb-6 text-center text-white">
+            <div className="w-full max-w-xl mx-auto p-4 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+                <h2 className="text-2xl font-semibold mb-4 text-center text-white">
                     Edit Stage
                 </h2>
-                <form onSubmit={submitHandler} className="space-y-6">
-                    <div className="space-y-2">
-                        <label htmlFor="stage-name" className="text-white font-medium">
+                <form onSubmit={submitHandler} className="space-y-4">
+                    <div className="space-y-1">
+                        <label htmlFor="stage-name" className="text-white text-sm font-medium">
                             Stage Name
                         </label>
                         <input
@@ -57,14 +57,11 @@ export default function StageEdit() {
                             placeholder="Stage Name"
                             value={values.stageName || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label
-                            htmlFor="stage-image-url"
-                            className="text-white font-medium"
-                        >
+                    <div className="space-y-1">
+                        <label htmlFor="stage-image-url" className="text-white text-sm font-medium">
                             Image URL
                         </label>
                         <input
@@ -74,25 +71,25 @@ export default function StageEdit() {
                             placeholder="Image URL"
                             value={values.stageImageUrl || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="description" className="text-white font-medium">
+                    <div className="space-y-1">
+                        <label htmlFor="description" className="text-white text-sm font-medium">
                             Description
                         </label>
                         <textarea
                             id="description"
                             name="description"
                             placeholder="Description"
-                            rows={5}
+                            rows={4}
                             value={values.description || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="capacity" className="text-white font-medium">
+                    <div className="space-y-1">
+                        <label htmlFor="capacity" className="text-white text-sm font-medium">
                             Capacity
                         </label>
                         <input
@@ -102,11 +99,11 @@ export default function StageEdit() {
                             placeholder="Capacity"
                             value={values.capacity || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="space-y-2">
-                        <label htmlFor="category" className="text-white font-medium">
+                    <div className="space-y-1">
+                        <label htmlFor="category" className="text-white text-sm font-medium">
                             Category
                         </label>
                         <input
@@ -116,20 +113,20 @@ export default function StageEdit() {
                             placeholder="Category"
                             value={values.category || ''}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
                     <div className="flex justify-between">
                         <button
                             type="button"
                             onClick={() => navigate(`/stage/details/${values._id}`)}
-                            className="w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                            className="w-32 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
                         >
                             Back
                         </button>
                         <button
                             type="submit"
-                            className="w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                            className="w-32 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
                         >
                             Edit
                         </button>
