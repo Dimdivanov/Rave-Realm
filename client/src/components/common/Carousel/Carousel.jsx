@@ -11,7 +11,7 @@ export default function Carousel({ slides }) {
     };
 
     const goToNext = () => {
-        const isLastSlide = currentIndex === slides.length - 1;
+        const isLastSlide = currentIndex === slides.length - 3;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
