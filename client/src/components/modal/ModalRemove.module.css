@@ -1,0 +1,82 @@
+/* ModalRemove.module.css */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modalContent {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.modalContainer {
+  position: relative;
+  background: #2d2d2d; /* Dark gray background */
+  border-radius: 0.75rem; /* Slightly more rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+.modalHeader {
+  padding: 1.25rem;
+  border-bottom: 1px solid #444;
+}
+
+.modalTitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.modalBody {
+  padding: 1.25rem;
+}
+
+.modalFooter {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  border-top: 1px solid #444;
+}
+
+.modalButton {
+  border-radius: 0.375rem; /* Slightly more rounded */
+  padding: 0.5rem 1rem; /* Smaller padding */
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Set button width for separation */
+}
+
+.deleteButton {
+  background: #e63946; /* Red color for delete */
+}
+
+.deleteButton:hover {
+  background: #d62839; /* Darker red on hover */
+}
+
+.cancelButton {
+  background: #6c757d; /* Gray color for cancel */
+}
+
+.cancelButton:hover {
+  background: #5a636c; /* Darker gray on hover */
+}
