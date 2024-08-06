@@ -17,7 +17,7 @@ export function useGetAllPurchase(ticketId) {
             const result = await purchaseAPI.getAll(ticketId);
             setPurchase(result);
         })();
-    }, [ticketId]);
+    }, [purchase]);
 
     return [purchase, setPurchase];
 }

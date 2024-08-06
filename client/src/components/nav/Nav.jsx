@@ -13,7 +13,6 @@ import HamburgerMenu from './hamburger-menu/HamburgerMenu';
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { isAuthenticated, email } = useContext(AuthContext);
-    console.log(email);
 
     return (
         <>
