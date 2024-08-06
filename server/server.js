@@ -1619,6 +1619,58 @@
                 _createdOn: 1722951040169,
                 _id: '6a903b29-87bd-4ea2-9b59-924a62da293b',
             },
+            '37cd0736-55e3-4fda-ab0a-9228af7b8219': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                artistName: 'Zedd',
+                imageUrl:
+                    'https://i.discogs.com/Xx33uhQDl-doCAKOCpUjmXep8zY3D4Pgy6uZgTEDRQ0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA1/NzEtMTYzNDY5NjUy/Mi03Mjg0LnBuZw.jpeg',
+                appearanceDate: '2024-08-07',
+                stage: 'Starlight Grove',
+                biography:
+                    "Zedd is a Russian-German DJ, record producer, and songwriter known for his hit songs 'Clarity' and 'Stay'.",
+                lineup: [],
+                _createdOn: 1722963491730,
+                _id: '37cd0736-55e3-4fda-ab0a-9228af7b8219',
+            },
+            '8b62a446-218e-47d6-ae41-12b2028eff9f': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                artistName: 'Marshmello',
+                imageUrl:
+                    'https://cdns-images.dzcdn.net/images/artist/7990773a89df9f06fc2b871ad1de00bf/500x500.jpg',
+                appearanceDate: '2024-08-08',
+                stage: 'Solar Sanctuary',
+                biography:
+                    "Marshmello is an American electronic music producer and DJ known for his iconic marshmallow helmet and hit tracks like 'Alone'.",
+                lineup: [],
+                _createdOn: 1722963530365,
+                _id: '8b62a446-218e-47d6-ae41-12b2028eff9f',
+            },
+            'c99e45f5-a2cf-4b35-a977-aaf040afc91d': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                artistName: 'Steve Aoki',
+                imageUrl:
+                    'https://www.usmagazine.com/wp-content/uploads/2022/05/Steve-Aoki-Inside-A-Day-in-My-Life.jpg?quality=40&strip=all',
+                appearanceDate: '2024-08-09',
+                stage: 'Twilight Temple',
+                biography:
+                    'Steve Aoki is an American DJ, record producer, and music executive known for his energetic shows and collaborations with various artists.',
+                lineup: [],
+                _createdOn: 1722963559680,
+                _id: 'c99e45f5-a2cf-4b35-a977-aaf040afc91d',
+            },
+            'f785d6b1-8504-4104-a8a1-595ab3ea901f': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                artistName: 'Kygo',
+                imageUrl:
+                    'https://images.squarespace-cdn.com/content/v1/66146e5c2f8d4448140d4fe9/89e7f6bb-cc80-4f4b-9fbe-539fd10c4e2d/Kygo-Palm-Tree-MGMT.jpg',
+                appearanceDate: '2024-08-10',
+                stage: 'Solar Sanctuary',
+                biography:
+                    'Kygo is a Norwegian DJ, record producer, and songwriter known for his tropical house tracks and remixes.',
+                lineup: [],
+                _createdOn: 1722963593978,
+                _id: 'f785d6b1-8504-4104-a8a1-595ab3ea901f',
+            },
         },
         tickets: {
             '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc': {
