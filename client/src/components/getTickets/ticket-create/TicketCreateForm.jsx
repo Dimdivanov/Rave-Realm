@@ -11,13 +11,13 @@ const ticketImgUrlOptions = {
 const TicketCreateForm = forwardRef(
     ({ values, changeHandler, submitHandler, error }, ref) => {
         return (
-            <div className="form w-full max-w-3xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
-                <h2 className="text-3xl font-semibold mb-6 text-center text-white">
+            <div className="form w-full max-w-xl mx-auto p-4 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
+                <h2 className="text-2xl font-semibold mb-4 text-center text-white">
                     Create Ticket
                 </h2>
-                <form onSubmit={submitHandler} className="create-form space-y-6">
-                    <div className="space-y-2">
-                        <label htmlFor="ticketName" className="text-white">
+                <form onSubmit={submitHandler} className="create-form space-y-4">
+                    <div className="space-y-1">
+                        <label htmlFor="ticketName" className="text-white text-sm">
                             Ticket Name
                         </label>
                         <input
@@ -27,12 +27,12 @@ const TicketCreateForm = forwardRef(
                             ref={ref}
                             value={values.ticketName}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white text-sm"
                         />
                     </div>
 
-                    <div className="space-y-2">
-                        <label htmlFor="ticket-image" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="ticket-image" className="text-white text-sm">
                             Ticket Image
                         </label>
                         <select
@@ -40,7 +40,7 @@ const TicketCreateForm = forwardRef(
                             id="ticket-image"
                             value={values.ticketImgUrl}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-black text-white"
+                            className="w-full p-2 bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 bg-black text-white text-sm"
                         >
                             <option value="">Select Ticket Image</option>
                             {Object.entries(ticketImgUrlOptions).map(([key, url]) => (
@@ -51,22 +51,22 @@ const TicketCreateForm = forwardRef(
                         </select>
                     </div>
 
-                    <div className="space-y-2">
-                        <label htmlFor="ticket-description" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="ticket-description" className="text-white text-sm">
                             Description
                         </label>
                         <textarea
                             id="ticket-description"
                             name="description"
-                            rows={5}
+                            rows={4}
                             value={values.description}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white text-sm"
                         />
                     </div>
 
-                    <div className="space-y-2">
-                        <label htmlFor="ticket-type" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="ticket-type" className="text-white text-sm">
                             Ticket Type
                         </label>
                         <input
@@ -75,12 +75,12 @@ const TicketCreateForm = forwardRef(
                             id="ticket-type"
                             value={values.type}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white text-sm"
                         />
                     </div>
 
-                    <div className="space-y-2">
-                        <label htmlFor="ticket-price" className="text-white">
+                    <div className="space-y-1">
+                        <label htmlFor="ticket-price" className="text-white text-sm">
                             Ticket Price
                         </label>
                         <input
@@ -89,20 +89,20 @@ const TicketCreateForm = forwardRef(
                             id="ticket-price"
                             value={values.price}
                             onChange={changeHandler}
-                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                            className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white text-sm"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700 transition-colors"
+                        className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition-colors text-sm"
                     >
                         Create Ticket
                     </button>
                 </form>
 
                 {error && (
-                    <p className="mt-6 text-center text-lg text-red-600">{error}</p>
+                    <p className="mt-4 text-center text-sm text-red-600">{error}</p>
                 )}
             </div>
         );

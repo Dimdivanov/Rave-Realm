@@ -22,7 +22,6 @@ export default function TicketsList() {
     const ticketGA = useGetAllMatching('GA');
     const ticketODP = useGetAllMatching('ODP');
 
-
     return (
         <div className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400">
             <div className="mt-20 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
