@@ -76,11 +76,11 @@ export default function ArtistDetails() {
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex flex-col items-center">
-                            <div className="w-full h-72">
+                            <div className="w-full h-72 rounded border-4 border-gray-500 overflow-hidden mb-4">
                                 <img
                                     src={artistDetails.imageUrl}
                                     alt={artistDetails.artistName}
-                                    className="rounded-lg mb-4 w-full h-full object-cover"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                             <div className="flex justify-between items-center mb-4 w-full">
@@ -96,7 +96,6 @@ export default function ArtistDetails() {
                                 {isOwner ? (
                                     ''
                                 ) : (
-
                                     <button
                                         onClick={onClickAddToLineHandler}
                                         className="bg-yellow-500 text-black px-4 py-2 rounded-lg ml-40"

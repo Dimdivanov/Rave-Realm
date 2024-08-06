@@ -23,6 +23,8 @@ export default function TicketDetails() {
     const isOwner = userId === ticketDetails._ownerId;
 
     const [purchased] = useGetAllPurchase(ticketId);
+    console.log(purchased);
+    
     const { isLoading, setIsLoading } = useContext(SpinnerContext);
 
     const ticketDelClickHandler = () => setShowModalRemove(true);

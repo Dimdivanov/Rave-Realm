@@ -17,7 +17,7 @@ export function useGetAllToLine(artistId) {
             const result = await addedToLineAPI.getAll(artistId);
             setAddToLine(result);
         })();
-    }, [addToLine]);
+    }, []);
 
     return [addToLine, setAddToLine];
 }

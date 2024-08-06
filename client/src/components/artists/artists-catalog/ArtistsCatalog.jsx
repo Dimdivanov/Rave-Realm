@@ -7,7 +7,9 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 export default function ArtistsCatalog() {
     const [searchedWord, setSearchedWord] = useState('');
+
     const artists = useGetAllArtists();
+
     const ref = useFocusForm();
     const { userId } = useContext(AuthContext);
 
@@ -18,9 +20,9 @@ export default function ArtistsCatalog() {
                 <div className="text-center mb-8 mt-24">
                     <h1 className="text-4xl text-white font-bold mb-6">Artists</h1>
                     <div className="flex justify-center mb-4 space-x-4">
-                        <button className="bg-purple-700 px-6 py-2 rounded text-white w-32">Full list</button>
-                        <button className="bg-purple-700 px-6 py-2 rounded text-white w-32">My Lineup</button>
-                        <button className="bg-purple-700 px-6 py-2 rounded text-white w-32">My Stages</button>
+                        <p className="text-lg text-white mb-4 font-semibold">
+                            Look up your favorite artist
+                        </p>
                     </div>
                     <input
                         type="text"
@@ -33,15 +35,22 @@ export default function ArtistsCatalog() {
                     />
                 </div>
             </div>
-            
             {/* Artist Catalog Section */}
             <section className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {/* Artist Card Component */}
                     {artists
-                        .filter((artist) => artist.artistName.toLowerCase().includes(searchedWord.toLowerCase()))
+                        .filter((artist) =>
+                            artist.artistName
+                                .toLowerCase()
+                                .includes(searchedWord.toLowerCase())
+                        )
                         .map((artist) => (
-                            <ArtistCatalogCard key={artist._id} {...artist} userId={userId} />
+                            <ArtistCatalogCard
+                                key={artist._id}
+                                {...artist}
+                                userId={userId}
+                            />
                         ))}
                 </div>
             </section>

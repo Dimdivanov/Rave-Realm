@@ -40,9 +40,9 @@ const TicketCreateForm = forwardRef(
                             id="ticket-image"
                             value={values.ticketImgUrl}
                             onChange={changeHandler}
-                            className="w-full p-2 bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 bg-black text-white text-sm"
+                            className="w-full p-2 bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 bg-black text-black text-sm"
                         >
-                            <option value="">Select Ticket Image</option>
+                            <option>Select Ticket Image</option>
                             {Object.entries(ticketImgUrlOptions).map(([key, url]) => (
                                 <option key={key} value={url}>
                                     {key}
@@ -52,7 +52,10 @@ const TicketCreateForm = forwardRef(
                     </div>
 
                     <div className="space-y-1">
-                        <label htmlFor="ticket-description" className="text-white text-sm">
+                        <label
+                            htmlFor="ticket-description"
+                            className="text-white text-sm"
+                        >
                             Description
                         </label>
                         <textarea

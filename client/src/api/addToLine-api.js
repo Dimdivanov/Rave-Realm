@@ -2,17 +2,20 @@ import * as request from './requester';
 
 const BASE_URL = 'http://localhost:3030/data/lineup';
 
-
 const create = (artistId, addedToLine) =>
     request.post(BASE_URL, { artistId, addedToLine });
 
-const getAll = (artistId) => {
+// finds all lined up
+const getAll = async (email) => {
     const params = new URLSearchParams({
-        where: `artistId="${artistId}"`,
-        load: `author=_ownerId:users`,
+        where: `addedToLine="${email}"`,
     });
-    return request.get(`${BASE_URL}?${params.toString()}`);
+
+    const response = await request.get(`${BASE_URL}?${params.toString()}`);
+  
+    return response;
 };
+
 
 const remove = (artistId) => request.del(`${BASE_URL}/${artistId}`);
 

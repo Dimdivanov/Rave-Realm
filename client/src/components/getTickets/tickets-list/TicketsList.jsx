@@ -1,37 +1,31 @@
-import { useGetAllMatching } from '../../../hooks/useTickets';
+import { useGetAllTickets } from '../../../hooks/useTickets';
 import TicketListCard from './ticket-list-card/TicketListCard';
 
-const TicketGrid = ({ tickets }) => (
-    <div className="mt-6 border-b pb-4 mb-4">
-        {tickets.length === 0 ? (
-            <div className="flex items-center justify-center h-64 text-center text-white">
-                <span className="text-xl font-semibold">No tickets yet</span>
-            </div>
-        ) : (
-            <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                {tickets.map((ticket) => (
-                    <TicketListCard key={ticket._id} {...ticket} />
-                ))}
-            </div>
-        )}
-    </div>
-);
-
 export default function TicketsList() {
-    const ticketVIP = useGetAllMatching('VIP');
-    const ticketGA = useGetAllMatching('GA');
-    const ticketODP = useGetAllMatching('ODP');
+    const tickets = useGetAllTickets();
 
     return (
-        <div className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400">
-            <div className="mt-20 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                <h1 className="text-3xl font-bold mb-6 text-white text-center">
-                    Get Your Tickets
-                </h1>
-                <TicketGrid tickets={ticketGA} />
-                <TicketGrid tickets={ticketODP} />
-                <TicketGrid tickets={ticketVIP} />
+        <section className="relative bg-black bg-gradient-to-b from-purple-800 to-rgb-400 min-h-screen pt-20">
+            <div className="container mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+                {/* Header Section */}
+                <header className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+                        Get Your Tickets
+                    </h2>
+                    <p className="text-lg text-gray-300 mx-auto max-w-2xl">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+                        praesentium cumque iure dicta incidunt est ipsam, officia dolor
+                        fugit natus?
+                    </p>
+                </header>
+
+                {/* Ticket List Section */}
+                <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {tickets.map(ticket => (
+                        <TicketListCard key={ticket._id} {...ticket} />
+                    ))}
+                </ul>
             </div>
-        </div>
+        </section>
     );
 }
