@@ -9,7 +9,7 @@ function getLimitedTickets(tickets) {
 
 export default function GetTickets() {
     const tickets = useGetAllTickets();
-    
+
     return (
         <>
             <section className="padding bg-tickets">
