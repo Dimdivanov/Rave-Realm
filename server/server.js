@@ -1479,6 +1479,66 @@
                 _createdOn: 1722537388377,
                 _id: 'c3fcd524-6035-44ec-b1c0-31c9d65cdd3b',
             },
+            '9ab06b6d-3f83-4919-9840-0a6ea142386c': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                stageName: 'Lunar Lagoon',
+                stageImageUrl: '/src/assets/images/stageBanner/lunarLagoon.jpg',
+                category: 'ChillStep',
+                capacity: '15000',
+                description:
+                    'An ethereal retreat under the moonlight, where soothing, tropical beats blend with chill vibes. A perfect spot for those who want to float away on waves of relaxed, uplifting rhythms.',
+                likedBy: [],
+                _createdOn: 1722962131031,
+                _id: '9ab06b6d-3f83-4919-9840-0a6ea142386c',
+            },
+            'ccbc10ca-4a47-406b-8770-67183e9fbed6': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                stageName: 'Euphoria Field',
+                stageImageUrl: '/src/assets/images/stageBanner/euphoriaField.jpg',
+                category: 'Techno, Trance',
+                capacity: '24000',
+                description:
+                    'An expansive expanse dedicated to trance enthusiasts, where euphoric melodies and driving rhythms create a transcendent experience. A field of pure bliss and high-energy beats.',
+                likedBy: [],
+                _createdOn: 1722962404174,
+                _id: 'ccbc10ca-4a47-406b-8770-67183e9fbed6',
+            },
+            '90323a93-8970-44ce-857b-c556aa393f28': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                stageName: 'Starlight Grove',
+                stageImageUrl: '/src/assets/images/stageBanner/starlightGrove.jpg',
+                category: 'House, Space Disco',
+                capacity: '8000',
+                description:
+                    'A celestial realm where the beats are as vast as the universe. Perfect for those who want to dance among the stars and experience a fusion of cosmic sounds and dreamy rhythms.',
+                likedBy: [],
+                _createdOn: 1722962471380,
+                _id: '90323a93-8970-44ce-857b-c556aa393f28',
+            },
+            '4518e865-2c96-49c8-b299-55fb596ec18e': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                stageName: 'Solar Sanctuary',
+                stageImageUrl: '/src/assets/images/stageBanner/solarSanctuary.jpg',
+                category: 'Groove House, Retro EDM',
+                capacity: '10000',
+                description:
+                    'A radiant retreat celebrating the golden age of dance music with a modern twist. Groove to infectious rhythms and funky beats in a vibrant, sunlit environment.',
+                likedBy: [],
+                _createdOn: 1722962515437,
+                _id: '4518e865-2c96-49c8-b299-55fb596ec18e',
+            },
+            '55279640-67bd-46f2-8e1f-86e0cf55445b': {
+                _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+                stageName: 'Twilight Temple',
+                stageImageUrl: '/src/assets/images/stageBanner/twilightTemple.jpg',
+                category: 'Dark Electro',
+                capacity: '6000',
+                description:
+                    'An enigmatic space where shadows dance with heavy beats and dark melodies. Ideal for those who appreciate a more intense, atmospheric experience with a touch of the mysterious.',
+                likedBy: [],
+                _createdOn: 1722962554685,
+                _id: '55279640-67bd-46f2-8e1f-86e0cf55445b',
+            },
         },
         artists: {
             'a46c48e1-4269-4668-868f-bc6c49124901': {
