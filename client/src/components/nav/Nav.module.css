@@ -1,44 +1,124 @@
-.navMenu {
-  background-color: #333;
-  padding: 1rem;
-}
-
-.navMenu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.navMenu li {
-  margin: 0 1rem;
-}
-
+/* Common styles for all links */
 .navLink {
-  text-decoration: none;
-  color: #fff;
   font-size: 1.2rem;
-  position: relative;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-
-.navLink::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ff6f61;
-  transition: width 0.3s ease;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .navLink:hover {
-  color: #ff6f61;
+  color: #ff6f61; /* Hover color */
+  transform: scale(1.05);
 }
 
-.navLink:hover::before {
+/* Styles for the desktop menu */
+.desktopMenu {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+/* Styles for the desktop menu items */
+.desktopMenuItem {
+  padding: 0.5rem;
+}
+
+/* Styles for the profile and settings icons in desktop view */
+.iconLink {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.iconImage {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.iconImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the login and signup buttons in desktop view */
+.authButton {
+  border: 1px solid #ffffff;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.signUpButton {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.logInButton {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Hover effect for buttons */
+.authButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the mobile menu overlay */
+.mobileMenuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 50;
+}
+
+/* Styles for the mobile menu content */
+.mobileMenuContent {
+  position: absolute;
+  top: 16px;
+  right: 0;
   width: 100%;
+  max-width: 16rem;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}
+
+/* Styles for the close button in mobile view */
+.mobileMenuCloseButton {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.mobileMenuCloseButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Styles for mobile menu items */
+.mobileMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.mobileMenuItem:hover {
+  color: #ff6f61;
+  transform: scale(1.05);
 }

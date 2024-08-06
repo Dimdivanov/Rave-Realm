@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useContext, useState } from 'react';
 
 import { AuthContext } from '../../contexts/AuthContext';
@@ -8,6 +8,8 @@ import logo from '../../assets/icons/logo.ico';
 import profileIcon from '../../assets/icons/profileIcon.png';
 import info from '../../assets/icons/info.png';
 import HamburgerMenu from './hamburger-menu/HamburgerMenu';
+
+import styles from './Nav.module.css';
 
 //rework this module separate into 2 more nav-center-menu and mobile-view-menu
 export default function Nav() {
@@ -30,14 +32,14 @@ export default function Nav() {
                             />
                         </Link>
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-6 lg:px-6 lg:py-6">
+                    <div className={`${styles.desktopMenu}hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-6 lg:px-6 lg:py-6`}>
                         <>
-                            <Link
+                            <NavLink
                                 to="/"
-                                className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
+                                className={styles.navLink}
                             >
                                 Home
-                            </Link>
+                            </NavLink>
                             <Link
                                 to="/get-tickets"
                                 className="text-xl font-semibold leading-5 text-white whitespace-nowrap"
