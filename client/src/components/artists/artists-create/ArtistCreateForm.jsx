@@ -53,7 +53,7 @@ const ArtistCreateForm = forwardRef(
 
                     <div className="space-y-1">
                         <label htmlFor="appearance-date" className="text-white text-sm">
-                            Performance Date (dd/mm/yy)
+                            Performance Date (dd-mm-yy)
                         </label>
                         <input
                             type="text"
