@@ -8,12 +8,18 @@ import logo from '../../assets/icons/logo.ico';
 import profileIcon from '../../assets/icons/profileIcon.png';
 import info from '../../assets/icons/info.png';
 import HamburgerMenu from './hamburger-menu/HamburgerMenu';
-
 import styles from './Nav.module.css';
-
+//TO DO break it down!
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+
     const { isAuthenticated, email } = useContext(AuthContext);
+
+    const handleProfileClick = () => {
+        setIsProfileMenuOpen((prevState) => !prevState);
+        setIsMenuOpen(false); // Close the mobile menu if it's open
+    };
 
     return (
         <>
@@ -35,7 +41,9 @@ export default function Nav() {
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
-                                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                `${styles.navLink} ${
+                                    isActive ? styles.navLinkActive : ''
+                                }`
                             }
                         >
                             Home
@@ -43,7 +51,9 @@ export default function Nav() {
                         <NavLink
                             to="/get-tickets"
                             className={({ isActive }) =>
-                                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                `${styles.navLink} ${
+                                    isActive ? styles.navLinkActive : ''
+                                }`
                             }
                         >
                             Tickets
@@ -51,7 +61,9 @@ export default function Nav() {
                         <NavLink
                             to="/artists"
                             className={({ isActive }) =>
-                                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                `${styles.navLink} ${
+                                    isActive ? styles.navLinkActive : ''
+                                }`
                             }
                         >
                             Artists
@@ -59,7 +71,9 @@ export default function Nav() {
                         <NavLink
                             to="/stages-list"
                             className={({ isActive }) =>
-                                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                `${styles.navLink} ${
+                                    isActive ? styles.navLinkActive : ''
+                                }`
                             }
                         >
                             Stages
@@ -69,7 +83,9 @@ export default function Nav() {
                                 <NavLink
                                     to="/create-ticket"
                                     className={({ isActive }) =>
-                                        `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                        `${styles.navLink} ${
+                                            isActive ? styles.navLinkActive : ''
+                                        }`
                                     }
                                 >
                                     Create Tickets
@@ -77,7 +93,9 @@ export default function Nav() {
                                 <NavLink
                                     to="/create-artist"
                                     className={({ isActive }) =>
-                                        `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                        `${styles.navLink} ${
+                                            isActive ? styles.navLinkActive : ''
+                                        }`
                                     }
                                 >
                                     Add Artist
@@ -85,7 +103,9 @@ export default function Nav() {
                                 <NavLink
                                     to="/create-stage"
                                     className={({ isActive }) =>
-                                        `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+                                        `${styles.navLink} ${
+                                            isActive ? styles.navLinkActive : ''
+                                        }`
                                     }
                                 >
                                     Create Stage
@@ -96,32 +116,20 @@ export default function Nav() {
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end p-2">
                         <div className="flex space-x-4 p-2">
-                            <Link
-                                key="testPage"
-                                to="/settings-menu"
-                                className="w-15 pt-2 px-4 p-2"
-                            >
-                                <img
-                                    src={info}
-                                    alt="Settings-menu"
-                                    className={styles.iconImage}
-                                />
+                            <Link key="testPage" to="/" className="w-15 pt-2 px-4 p-2">
+                                <img src={info} alt="/" className={styles.iconImage} />
                             </Link>
 
                             {isAuthenticated ? (
                                 <>
-                                    <Link
-                                        key=""
-                                        to="/account-settings-test"
-                                        className="pt-2 px-4"
-                                    >
+                                    <div key="profileIcon" className="pt-2 px-4">
                                         <img
                                             alt="My Profile"
                                             src={profileIcon}
                                             className={styles.iconImage}
-                                            onClick={() => setIsMenuOpen(isMenuOpen) }
+                                            onClick={handleProfileClick}
                                         />
-                                    </Link>
+                                    </div>
                                 </>
                             ) : (
                                 <>
@@ -168,6 +176,57 @@ export default function Nav() {
                     </div>
                 </nav>
 
+                {/* Profile Menu */}
+                {isProfileMenuOpen && (
+                    <div
+                        className="fixed inset-0 z-50"
+                        onClick={() => setIsProfileMenuOpen(false)}
+                    >
+                        <div
+                            className="backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg"
+                            role="dialog"
+                            aria-modal="true"
+                        >
+                            <div className="flex items-center justify-between">
+                                <div className="-m-1.5 p-1.5 flex items-center">
+                                    <img
+                                        className="h-12 w-auto"
+                                        src={profileIcon}
+                                        alt="profile icon"
+                                    />
+                                    <p className="text-white ml-2">{email}</p>
+                                </div>
+                                <button
+                                    type="button"
+                                    className="-m-2.5 rounded-md p-2.5 text-white"
+                                    onClick={() => setIsProfileMenuOpen(false)}
+                                >
+                                    <span className="sr-only">Close menu</span>
+                                    <svg
+                                        className="h-6 w-6 hover:bg-gray-800"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                            <HamburgerMenu
+                                setIsProfileMenuOpen={setIsProfileMenuOpen}
+                                isAuthenticated={isAuthenticated}
+                            />
+                        </div>
+                    </div>
+                )}
+
+                {/* Mobile Menu */}
                 {isMenuOpen && (
                     <div className="lg:hidden" role="dialog" aria-modal="true">
                         <div
@@ -206,7 +265,10 @@ export default function Nav() {
                                     </svg>
                                 </button>
                             </div>
+
                             <HamburgerMenu
+                                profileIcon={profileIcon}
+                                email={email}
                                 setIsMenuOpen={setIsMenuOpen}
                                 isAuthenticated={isAuthenticated}
                             />

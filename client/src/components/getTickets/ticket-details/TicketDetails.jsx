@@ -17,11 +17,12 @@ export default function TicketDetails() {
     const [showModalRemove, setShowModalRemove] = useState(false);
 
     const navigate = useNavigate();
+    //create buy
     const createPurchase = useCreatePurchase();
 
     const { userId, email } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
-
+    
     const [purchased] = useGetAllPurchase(ticketId);
     const { isLoading, setIsLoading } = useContext(SpinnerContext);
 

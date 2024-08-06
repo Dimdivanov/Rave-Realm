@@ -5,6 +5,7 @@ import { useGetAllArtists } from '../../../hooks/useArtists';
 import useFocusForm from '../../../hooks/useFocusForm';
 import { AuthContext } from '../../../contexts/AuthContext';
 
+
 export default function ArtistsCatalog() {
     const [searchedWord, setSearchedWord] = useState('');
     const artists = useGetAllArtists();
@@ -17,7 +18,7 @@ export default function ArtistsCatalog() {
                 id="hero"
                 className="w-full flex xl:flex-row flex-col justify-center items-center min-h-screen gap-10 bg-black relative bg-gradient-to-b from-purple-800 to-rgb-400"
             >
-                <div className="container mx-auto px-4 py-8 mt-24">
+                <div className="container mx-auto px-4 py-8">
                     {/* artist catalog menu component */}
                     <div className="text-center">
                         <h1 className="mt-4 text-4xl text-white font-bold mb-6">

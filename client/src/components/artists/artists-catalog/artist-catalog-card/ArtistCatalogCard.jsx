@@ -30,7 +30,8 @@ export default function ArtistCatalogCard({
                 {isOwner ? (
                     ''
                 ) : (
-                    <button className="bg-yellow-500 px-4 py-2 rounded-full mt-2">
+                    <button 
+                    className="bg-yellow-500 px-4 py-2 rounded-full mt-2">
                         Add to My Lineup
                     </button>
                 )}
