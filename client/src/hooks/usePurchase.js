@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import purchaseAPI from '../api/purchase-api';
 
+//move to useTickets hook!
 export function useCreatePurchase() {
     const createHandler = (ticketId, purchasedBy) => {
         purchaseAPI.create(ticketId, purchasedBy);
@@ -21,3 +22,4 @@ export function useGetAllPurchase(ticketId) {
 
     return [purchase, setPurchase];
 }
+

@@ -30,6 +30,8 @@ const getLatest = async () => {
     return result;
 };
 
+
+
 const artistAPI = {
     getAll,
     getOne,

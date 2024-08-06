@@ -45,64 +45,91 @@ export default function ArtistEdit() {
                 <h2 className="text-3xl font-semibold mb-6 text-center text-white">
                     Edit Artist
                 </h2>
-                <form onSubmit={submitHandler} className="space-y-4">
-                    <input
-                        type="text"
-                        name="artistName"
-                        id="artist-name"
-                        placeholder="Artist Name"
-                        value={values.artistName || ''}
-                        onChange={changeHandler}
-                        className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                    />
-                    <input
-                        type="text"
-                        name="imageUrl"
-                        id="image-url"
-                        placeholder="Image URL"
-                        value={values.imageUrl || ''}
-                        onChange={changeHandler}
-                        className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                    />
-                    <textarea
-                        id="biography"
-                        name="biography"
-                        placeholder="Biography"
-                        rows={5}
-                        value={values.biography || ''}
-                        onChange={changeHandler}
-                        className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                    />
-                    <input
-                        type="text"
-                        name="appearanceDate"
-                        id="appearance-date"
-                        placeholder="Performance Date"
-                        value={values.appearanceDate || ''}
-                        onChange={changeHandler}
-                        className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                    />
-                    <input
-                        type="text"
-                        name="stage"
-                        id="stage"
-                        placeholder="Stage"
-                        value={values.stage || ''}
-                        onChange={changeHandler}
-                        className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
-                    />
-                    <button
-                        onClick={() => navigate(`/artist/details/${values._id}`)}
-                        className="ml-11 w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
-                    >
-                        Back
-                    </button>
-                    <button
-                        type="submit"
-                        className="ml-80 w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
-                    >
-                        Edit
-                    </button>
+                <form onSubmit={submitHandler} className="space-y-6">
+                    <div className="space-y-2">
+                        <label htmlFor="artist-name" className="text-white">
+                            Artist Name
+                        </label>
+                        <input
+                            type="text"
+                            name="artistName"
+                            id="artist-name"
+                            placeholder="Artist Name"
+                            value={values.artistName || ''}
+                            onChange={changeHandler}
+                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label htmlFor="image-url" className="text-white">
+                            Image URL
+                        </label>
+                        <input
+                            type="text"
+                            name="imageUrl"
+                            id="image-url"
+                            placeholder="Image URL"
+                            value={values.imageUrl || ''}
+                            onChange={changeHandler}
+                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label htmlFor="biography" className="text-white">
+                            Biography
+                        </label>
+                        <textarea
+                            id="biography"
+                            name="biography"
+                            placeholder="Biography"
+                            rows={5}
+                            value={values.biography || ''}
+                            onChange={changeHandler}
+                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label htmlFor="appearance-date" className="text-white">
+                            Performance Date
+                        </label>
+                        <input
+                            type="text"
+                            name="appearanceDate"
+                            id="appearance-date"
+                            placeholder="Performance Date"
+                            value={values.appearanceDate || ''}
+                            onChange={changeHandler}
+                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label htmlFor="stage" className="text-white">
+                            Stage
+                        </label>
+                        <input
+                            type="text"
+                            name="stage"
+                            id="stage"
+                            placeholder="Stage"
+                            value={values.stage || ''}
+                            onChange={changeHandler}
+                            className="w-full p-3 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-300"
+                        />
+                    </div>
+                    <div className="flex gap-4">
+                        <button
+                            onClick={() => navigate(`/artist/details/${values._id}`)}
+                            className="w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                        >
+                            Back
+                        </button>
+                        <button
+                            type="submit"
+                            className="w-40 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors"
+                        >
+                            Edit
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>

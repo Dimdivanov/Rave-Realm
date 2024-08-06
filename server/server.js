@@ -1437,6 +1437,7 @@
                 stageImageUrl: '/src/assets/images/stageBanner/raveRealmMainStage.jpg',
                 category: 'Electronic Music',
                 capacity: '25000',
+                likedBy: [],
                 description:
                     'The heart of the festival, where high-energy beats and massive drops create an electrifying atmosphere. A pulsating beacon for those who thrive on epic drops and euphoric dance moments.',
                 _createdOn: 1722528928467,
@@ -1449,7 +1450,8 @@
                 category: 'Chillwave',
                 capacity: '10000',
                 description:
-                    'A serene escape into a world of lush soundscapes and dreamy melodies. Perfect for those who want to unwind and let their minds wander amidst a peaceful, otherworldly ambiance.',
+                'A serene escape into a world of lush soundscapes and dreamy melodies. Perfect for those who want to unwind and let their minds wander amidst a peaceful, otherworldly ambiance.',
+                likedBy: [],
                 _createdOn: 1722536679272,
                 _id: '39678929-667e-4497-b37c-fadb4117df75',
             },
@@ -1460,7 +1462,8 @@
                 category: 'Synthwave',
                 capacity: '15000',
                 description:
-                    'An immersive realm of vibrant, pulsating lights and futuristic sounds. Where the rhythms are infectious and the melodies transport you to a neon-drenched, high-energy wonderland.',
+                'An immersive realm of vibrant, pulsating lights and futuristic sounds. Where the rhythms are infectious and the melodies transport you to a neon-drenched, high-energy wonderland.',
+                likedBy: [],
                 _createdOn: 1722537180444,
                 _id: 'a8b2539a-43ea-4796-a1ff-70d5a4b625aa',
             },
@@ -1471,7 +1474,8 @@
                 category: 'Dubstep, Trap',
                 capacity: '8000',
                 description:
-                    'A dazzling oasis of colorful lights and throbbing basslines. This stage is all about intense drops and experimental beats, offering a wild escape into the heart of modern bass music.',
+                'A dazzling oasis of colorful lights and throbbing basslines. This stage is all about intense drops and experimental beats, offering a wild escape into the heart of modern bass music.',
+                likedBy: [],
                 _createdOn: 1722537388377,
                 _id: 'c3fcd524-6035-44ec-b1c0-31c9d65cdd3b',
             },
@@ -1485,7 +1489,8 @@
                 appearanceDate: '8/1/2024',
                 stage: 'Main Stage',
                 biography:
-                    "Martijn Gerard Garritsen, known professionally as Martin Garrix and also as Ytram and GRX, is a Dutch DJ and record producer who was ranked number one on DJ Mag's Top 100 DJs list for three consecutive years—2016, 2017, and 2018",
+                "Martijn Gerard Garritsen, known professionally as Martin Garrix and also as Ytram and GRX, is a Dutch DJ and record producer who was ranked number one on DJ Mag's Top 100 DJs list for three consecutive years—2016, 2017, and 2018",
+                addedToLine:[],
                 _createdOn: 1722530638017,
                 _id: 'a46c48e1-4269-4668-868f-bc6c49124901',
             },
@@ -1497,7 +1502,8 @@
                 appearanceDate: '8/2/2024',
                 stage: 'Main Stage',
                 biography:
-                    'David Guetta is a French DJ, record producer, and songwriter who has sold over nine million albums and thirty million singles worldwide.',
+                'David Guetta is a French DJ, record producer, and songwriter who has sold over nine million albums and thirty million singles worldwide.',
+                addedToLine:[],
                 _createdOn: 1722531145605,
                 _id: '7a10a9fa-6b65-4a89-ac86-dddd8171ebb3',
             },
@@ -1505,11 +1511,12 @@
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 artistName: 'Calvin Harris',
                 imageUrl:
-                    'https://www.billboard.com/wp-content/uploads/media/calvin-harris-press-2015-billboard-1548-b.jpg',
+                'https://www.billboard.com/wp-content/uploads/media/calvin-harris-press-2015-billboard-1548-b.jpg',
                 appearanceDate: '2024-08-03',
                 stage: 'Electric Forest',
                 biography:
-                    'Calvin Harris is a Scottish DJ, record producer, singer, and songwriter known for his collaboration with artists like Rihanna and Dua Lipa.',
+                'Calvin Harris is a Scottish DJ, record producer, singer, and songwriter known for his collaboration with artists like Rihanna and Dua Lipa.',
+                addedToLine:[],
                 _createdOn: 1722531666580,
                 _id: 'cb6b5dc7-d6f2-4300-bbbb-e68bce282b66',
             },
@@ -1517,11 +1524,12 @@
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 artistName: 'Skrillex',
                 imageUrl:
-                    'https://piolog.com/wp-content/uploads/2023/03/vcld8s07iu4pw5bcra1u.jpg',
+                'https://piolog.com/wp-content/uploads/2023/03/vcld8s07iu4pw5bcra1u.jpg',
                 appearanceDate: '2024-08-04',
                 stage: 'Neon Oasis',
                 biography:
-                    'Skrillex is an American DJ, record producer, and musician known for his work in electronic dance music and his influence on the genre.',
+                'Skrillex is an American DJ, record producer, and musician known for his work in electronic dance music and his influence on the genre.',
+                addedToLine:[],
                 _createdOn: 1722538961662,
                 _id: '205c157c-44d2-46fd-8c91-84864d9bac2c',
             },

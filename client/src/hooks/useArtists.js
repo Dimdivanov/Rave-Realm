@@ -32,3 +32,10 @@ export function useCreateArtist() {
 
     return artistCreateHandler;
 }
+
+export function useCreateAddToLine(artistId) {
+    const createHandler = (artistId, addedToLine) => {
+        
+    }
+
+}

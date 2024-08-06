@@ -104,7 +104,7 @@ export default function Nav() {
                                 <img
                                     src={info}
                                     alt="Settings-menu"
-                                    className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+                                    className={styles.iconImage}
                                 />
                             </Link>
 
@@ -118,7 +118,7 @@ export default function Nav() {
                                         <img
                                             src={profileIcon}
                                             alt="My Profile"
-                                            className="w-8 h-8 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+                                            className={styles.iconImage}
                                         />
                                     </Link>
                                 </>
@@ -170,10 +170,10 @@ export default function Nav() {
                 {isMenuOpen && (
                     <div className="lg:hidden" role="dialog" aria-modal="true">
                         <div
-                            className={styles.mobileMenuOverlay}
+                            className="fixed inset-0 z-50 bg-black bg-opacity-25"
                             onClick={() => setIsMenuOpen(false)}
                         />
-                        <div className={styles.mobileMenuContent}>
+                        <div className="backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg">
                             <div className="flex items-center justify-between">
                                 <Link to="/" className="-m-1.5 p-1.5">
                                     <img
@@ -185,12 +185,12 @@ export default function Nav() {
                                 </Link>
                                 <button
                                     type="button"
-                                    className={styles.mobileMenuCloseButton}
+                                    className="-m-2.5 rounded-md p-2.5 text-white"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     <span className="sr-only">Close menu</span>
                                     <svg
-                                        className="h-6 w-6"
+                                        className="h-6 w-6 hover:bg-gray-800"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         strokeWidth="1.5"
