@@ -1,4 +1,5 @@
 export default function ModalRemove({ onClose, onDeleteClick }) {
+    
     return (
         <>
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">

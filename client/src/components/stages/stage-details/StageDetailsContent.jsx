@@ -9,7 +9,9 @@ export default function StageDetailsContent({
     return (
         <div className="mt-16 container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
             <div className="text-center mb-6">
-                <h2 className="text-3xl font-semibold text-white mb-4">{stageDetails.stageName}</h2>
+                <h2 className="text-3xl font-semibold text-white mb-4">
+                    {stageDetails.stageName}
+                </h2>
             </div>
             <div className="image-container relative overflow-hidden rounded-lg shadow-lg mb-6 w-full max-w-lg mx-auto border-2 border-gray-400">
                 <img
@@ -22,10 +24,8 @@ export default function StageDetailsContent({
                 <p className="text-lg mb-4">{stageDetails.description}</p>
             </div>
             <div className="flex justify-center space-x-4 mb-6">
-                <button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-2 px-4 rounded-md shadow-md hover:from-purple-600 hover:to-purple-800 transition-colors">
-                    Like
-                </button>
-                {isOwner && (
+                {isOwner ? (
+                    // Owner's view
                     <>
                         <Link to={`/stage/edit/${stageId}`}>
                             <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-2 px-4 rounded-md shadow-md hover:from-yellow-500 hover:to-yellow-700 transition-colors">
@@ -39,6 +39,11 @@ export default function StageDetailsContent({
                             Delete
                         </button>
                     </>
+                ) : (
+                    // Non-owner's view
+                    <button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-2 px-4 rounded-md shadow-md hover:from-purple-600 hover:to-purple-800 transition-colors">
+                        Like
+                    </button>
                 )}
             </div>
         </div>

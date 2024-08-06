@@ -1,6 +1,5 @@
-import { useParams, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../../../contexts/AuthContext';
 import { useGetOneArtists } from '../../../hooks/useArtists';
@@ -13,8 +12,7 @@ export default function ArtistDetails() {
     const { artistId } = useParams();
     const navigate = useNavigate();
     const [artistDetails] = useGetOneArtists(artistId);
-    
-    
+
     const { userId } = useContext(AuthContext);
     const isOwner = userId === artistDetails._ownerId;
 
@@ -87,9 +85,13 @@ export default function ArtistDetails() {
                                 <span className="text-yellow-500 mr-2">
                                     {artistDetails.stage}
                                 </span>
-                                <button className="bg-yellow-500 text-black px-4 py-2 rounded-lg ml-40">
-                                    Add to My Lineup
-                                </button>
+                                {isOwner ? (
+                                    ''
+                                ) : (
+                                    <button className="bg-yellow-500 text-black px-4 py-2 rounded-lg ml-40">
+                                        Add to My Lineup
+                                    </button>
+                                )}
                             </div>
                             {isOwner ? (
                                 <div className="mt-6 flex space-x-4">

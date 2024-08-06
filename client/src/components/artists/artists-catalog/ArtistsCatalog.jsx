@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+
 import ArtistCatalogCard from './artist-catalog-card/ArtistCatalogCard';
 import { useGetAllArtists } from '../../../hooks/useArtists';
 import useFocusForm from '../../../hooks/useFocusForm';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 export default function ArtistsCatalog() {
     const [searchedWord, setSearchedWord] = useState('');
-
     const artists = useGetAllArtists();
     const ref = useFocusForm();
+    const { userId } = useContext(AuthContext);
 
     return (
         <>
@@ -51,7 +53,7 @@ export default function ArtistsCatalog() {
                                     .includes(searchedWord.toLowerCase());
                             })
                             .map((artist) => (
-                                <ArtistCatalogCard key={artist._id} {...artist} />
+                                <ArtistCatalogCard key={artist._id} {...artist} userId={userId} />
                             ))}
                     </div>
                 </div>
