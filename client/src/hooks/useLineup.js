@@ -5,7 +5,7 @@ export function useCreateAddToLine() {
     const createHandler = (artistId, addedToLine) => {
         try {
             addedToLineAPI.create(artistId, addedToLine);
-        } catch (err) {
+        } catch (error) {
             console.error('Error creating addToLine:', err);
             throw err;
         }
@@ -33,14 +33,7 @@ export function useGetAllToLine(artistId) {
 }
 
 export function useRemoveAddToLine() {
-    const createHandler = (artistId) => {
-        try {
-            addedToLineAPI.remove(artistId);
-        } catch (err) {
-            console.error('Error useRemoveAddToLine', err);
-            throw err;
-        }
-    };
+    const removeHandler = (artistId) => addedToLineAPI.remove(artistId);
 
-    return createHandler;
+    return removeHandler;
 }

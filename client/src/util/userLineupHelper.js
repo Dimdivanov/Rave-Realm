@@ -18,3 +18,4 @@ export function getFilteredArtistDetails(email) {
   
   return artists.filter((artist) => artistIds.includes(artist._id));
 }
+

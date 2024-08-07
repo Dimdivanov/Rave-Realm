@@ -51,7 +51,7 @@ export default function Footer() {
                         <Link to="/terms-conditions" className="hover:underline">
                             Terms &amp; Conditions
                         </Link>
-                        <Link to="/contact" className="hover:underline">
+                        <Link to="/contacts" className="hover:underline">
                             Contacts
                         </Link>
                     </div>

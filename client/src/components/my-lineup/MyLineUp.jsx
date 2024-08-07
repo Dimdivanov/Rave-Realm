@@ -8,7 +8,7 @@ import { getFilteredArtistDetails } from '../../util/userLineupHelper';
 export default function MyLineUp() {
     const { email } = useContext(AuthContext);
     const filteredArtistDetails = getFilteredArtistDetails(email)
-
+    
     return (
         <div className="relative bg-black bg-gradient-to-b from-purple-800 to-rgb-400 min-h-screen">
             {/* Header Section */}
@@ -31,5 +31,4 @@ export default function MyLineUp() {
     );
 }
 
-/*
- */
+
