@@ -132,7 +132,7 @@ export default function ArtistEdit() {
                     <div className="flex justify-between mt-6">
                         <button
                             onClick={() => navigate('/artists')}
-                            className="flex items-center gap-2 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
+                            className="flex items-center gap-2 bg-purple-600 text-white py-2 px-4 rounded-full hover:bg-purple-700 transition-colors text-sm"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -148,11 +148,10 @@ export default function ArtistEdit() {
                                     d="M15 19l-7-7 7-7"
                                 />
                             </svg>
-                            <span>Back</span>
                         </button>
                         <button
                             type="submit"
-                            className="bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
+                            className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-2 px-4 rounded-lg shadow-md hover:from-yellow-500 hover:to-yellow-700 transition-colors"
                         >
                             Edit
                         </button>
