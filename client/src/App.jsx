@@ -17,6 +17,8 @@ import Logout from './components/nav/logout/Logout';
 // import TicketsList from './components/getTickets/tickets-list/TicketsList';
 // import StageList from './components/stages/stage-list/StageList';
 // import StageDetails from './components/stages/stage-details/StageDetails';
+// import MyLineUp from './components/my-lineup/MyLineUp';
+
 import NotFound from './components/notFound/NotFound';
 
 import StageCreate from './components/stages/stage-create/StageCreate';
@@ -34,7 +36,6 @@ import {
 
 import StageEdit from './components/stages/stage-details/stage-edit/StageEdit';
 import TicketEdit from './components/getTickets/ticket-details/ticket-edit/TicketEdit';
-import MyLineUp from './components/my-lineup/MyLineUp';
 
 import { lazy, Suspense } from 'react';
 import Spinner from './components/common/spinner/Spinner';
@@ -50,8 +51,8 @@ const ArtistsCatalog = lazy(() =>
 const ArtistDetails = lazy(() =>
     import('./components/artists/artists-details/ArtistDetails')
 );
-
 const StageDetails = lazy(() => import('./components/stages/stage-details/StageDetails'));
+const MyLineUp = lazy(() => import('./components/my-lineup/MyLineUp'));
 
 const App = () => {
     return (
