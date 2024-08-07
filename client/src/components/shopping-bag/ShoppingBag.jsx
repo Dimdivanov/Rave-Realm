@@ -1,8 +1,10 @@
-import { useGetAllPurchase } from "../../hooks/usePurchase";
+import { useGetAllTickets } from "../../hooks/useTickets";
 import ShoppingBagContent from "./ShoppingBagContent";
 
 export default function ShoppingBag() {
-  
+    const tickets = useGetAllTickets();
+    console.log(tickets);
+    
     return (
         <>
             <section className="relative bg-black bg-gradient-to-b from-purple-800 to-rgb-400 min-h-screen pt-20">
@@ -18,7 +20,7 @@ export default function ShoppingBag() {
                     </header>
 
                     {/* Cart Items Section */}
-                    <ShoppingBagContent />
+                    {tickets.map(ticket=> <ShoppingBagContent {...ticket}/>)}
 
                     {/* Checkout Button */}
                     <div className="text-center mt-12">
