@@ -34,7 +34,7 @@ export function useGetOneArtists(artistId) {
         })();
     }, [artistId]);
 
-    return artistDetails;
+    return [artistDetails];
 }
 
 export function useCreateArtist() {
