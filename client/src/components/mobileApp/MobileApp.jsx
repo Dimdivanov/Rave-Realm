@@ -22,14 +22,18 @@ export default function MobileApp() {
                             </h2>
                         </div>
                         <div className="mb-8 lg:-ml-24">
-                            <p className='font-bold'>Get it on:</p>
+                            <p className="font-bold">Get it on:</p>
                             <div className="flex space-x-4 mt-4">
-                                <button className="bg-black text-white font-bold px-4 py-2 rounded">
-                                    App Store
-                                </button>
-                                <button className="bg-black text-white font-bold px-4 py-2 rounded">
-                                    Google Store
-                                </button>
+                                <Link to={'https://www.apple.com/app-store/'}>
+                                    <button className="bg-black text-white font-bold px-4 py-2 rounded">
+                                        App Store
+                                    </button>
+                                </Link>
+                                <Link to={'https://play.google.com/store/games?hl=en'}>
+                                    <button className="bg-black text-white font-bold px-4 py-2 rounded">
+                                        Google Store
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
