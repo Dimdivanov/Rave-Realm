@@ -18,7 +18,6 @@ import Logout from './components/nav/logout/Logout';
 // import StageList from './components/stages/stage-list/StageList';
 // import StageDetails from './components/stages/stage-details/StageDetails';
 // import MyLineUp from './components/my-lineup/MyLineUp';
-
 import NotFound from './components/notFound/NotFound';
 
 import StageCreate from './components/stages/stage-create/StageCreate';
@@ -42,7 +41,7 @@ import Spinner from './components/common/spinner/Spinner';
 import wait from './util/slowOnPurpose';
 
 const TicketsList = lazy(() =>
-   () => import('./components/getTickets/tickets-list/TicketsList')
+    import('./components/getTickets/tickets-list/TicketsList')
 );
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
 const ArtistsCatalog = lazy(() =>
