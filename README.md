@@ -10,7 +10,6 @@ This React project is designed to streamline the ticket purchasing and event cre
 -   **Stage Creation:** Stage organizers can create event, specifying stages, artists, and ticket details.
 -   **Pre-loaded Data:** The platform comes with pre-loaded data to ensure a smooth user experience from the start.
 
-
 ## Technology Stack
 
 -   **Languages:** HTML, JavaScript
@@ -59,3 +58,7 @@ ctrl + shift + ` - to open terminal (2nd terminal)
 cd client
 npm run dev
 ```
+
+### Deployed at
+
+https://git.heroku.com/rave-realm.git
