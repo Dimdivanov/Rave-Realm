@@ -15,14 +15,18 @@ export default function TicketDetails() {
     const { ticketId } = useParams();
     const [ticketDetails] = useGetOneTicket(ticketId);
     const [showModalRemove, setShowModalRemove] = useState(false);
-    
+
     const navigate = useNavigate();
     const createPurchase = useCreatePurchase();
 
+    if (!ticketDetails) {
+        return navigate('/*');
+    }
+
     const { userId, email } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
-    const [purchase, setPurchase] = useGetAllPurchase(ticketId);
-   
+    const [purchase] = useGetAllPurchase(ticketId);
+
     const { isLoading, setIsLoading } = useContext(SpinnerContext);
     const ticketDelClickHandler = () => setShowModalRemove(true);
 

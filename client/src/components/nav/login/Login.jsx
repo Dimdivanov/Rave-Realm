@@ -5,6 +5,7 @@ import { useForm } from '../../../hooks/useForm';
 import { useLogin } from '../../../hooks/useAuth';
 import useFocusForm from '../../../hooks/useFocusForm';
 import LoginFooter from './LoginFooter';
+import { validateLogin } from '../../../util/loginValidator';
 
 const initialValues = { email: '', password: '' };
 
@@ -12,12 +13,15 @@ export default function Login() {
     const [error, setError] = useState('');
     const ref = useFocusForm();
     const login = useLogin();
+
     const navigate = useNavigate();
 
-    const loginHandler = async ({ email, password }) => {
-        if (!email || !password) {
-            return setError('Missing Fields!');
+    const loginHandler = async (values) => {
+        const error = validateLogin(values);
+        if (error) {
+            return setError(error);
         }
+
         try {
             await login(email, password);
             navigate('/');
@@ -25,6 +29,8 @@ export default function Login() {
             console.log(err.message);
         }
     };
+
+    console.log(error);
 
     const { values, changeHandler, submitHandler } = useForm(initialValues, loginHandler);
 
@@ -54,7 +60,6 @@ export default function Login() {
                                 <input
                                     id="email"
                                     name="email"
-                                    type="email"
                                     autoComplete="email"
                                     ref={ref}
                                     value={values.email}
@@ -95,9 +100,9 @@ export default function Login() {
                     </form>
                     <LoginFooter />
                     {error && (
-                        <p className="mt-10 text-center text-lg text-red-600">
-                            <span>{error}</span>
-                        </p>
+                        <div className="mt-6 p-4 bg-red-100 border border-red-500 rounded-md text-red-700">
+                            <p className="text-lg font-semibold">{error}</p>
+                        </div>
                     )}
                 </div>
             </div>

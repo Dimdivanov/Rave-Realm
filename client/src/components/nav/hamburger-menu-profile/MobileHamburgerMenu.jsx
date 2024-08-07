@@ -33,6 +33,20 @@ export default function MobileHamburgerMenu({ isAuthenticated, setIsMenuOpen }) 
                 >
                     Stages
                 </Link>
+                <Link
+                    to="/sign-up"
+                    className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    Sign Up
+                </Link>
+                <Link
+                    to="/login"
+                    className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    Login
+                </Link>
                 {isAuthenticated && (
                     <>
                         <Link

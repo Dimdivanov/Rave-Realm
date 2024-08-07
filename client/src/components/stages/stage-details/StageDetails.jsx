@@ -15,6 +15,9 @@ export default function StageDetails() {
 
     const { userId } = useContext(AuthContext);
     const isOwner = userId === stageDetails._ownerId;
+    if (!stageDetails) {
+        return navigate('/*');
+    }
 
     const stageDelClickHandler = () => {
         setShowModalRemove(true);

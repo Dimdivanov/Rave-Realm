@@ -2,12 +2,12 @@
     font-size: 3rem;
     font-weight: bold;
     color: #ffffff;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Add drop shadow */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); 
     line-height: 1.2;
 }
 
 .title span {
-    color: #ff4081; /* Highlight color for the word "Tickets" */
+    color: #ff4081; 
     font-weight: bold;
 }
 

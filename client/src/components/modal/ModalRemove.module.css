@@ -1,4 +1,3 @@
-/* ModalRemove.module.css */
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -25,8 +24,8 @@
 
 .modalContainer {
   position: relative;
-  background: #2d2d2d; /* Dark gray background */
-  border-radius: 0.75rem; /* Slightly more rounded corners */
+  background: #2d2d2d; 
+  border-radius: 0.75rem; 
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -51,32 +50,32 @@
 .modalFooter {
   padding: 1.25rem;
   display: flex;
-  justify-content: space-between; /* Space between buttons */
+  justify-content: space-between; 
   border-top: 1px solid #444;
 }
 
 .modalButton {
-  border-radius: 0.375rem; /* Slightly more rounded */
-  padding: 0.5rem 1rem; /* Smaller padding */
+  border-radius: 0.375rem; 
+  padding: 0.5rem 1rem; 
   font-weight: bold;
   text-align: center;
   color: #fff;
   transition: background-color 0.3s ease;
-  width: 48%; /* Set button width for separation */
+  width: 48%; 
 }
 
 .deleteButton {
-  background: #e63946; /* Red color for delete */
+  background: #e63946; 
 }
 
 .deleteButton:hover {
-  background: #d62839; /* Darker red on hover */
+  background: #d62839; 
 }
 
 .cancelButton {
-  background: #6c757d; /* Gray color for cancel */
+  background: #6c757d; 
 }
 
 .cancelButton:hover {
-  background: #5a636c; /* Darker gray on hover */
+  background: #5a636c; 
 }
