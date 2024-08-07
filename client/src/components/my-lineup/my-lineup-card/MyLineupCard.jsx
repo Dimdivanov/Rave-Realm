@@ -23,12 +23,6 @@ export default function MyLineupCard({
                 </Link>
                 <h2 className="text-white text-xl font-bold">{artistName}</h2>
                 
-                <button
-                    onClick={() => removeFromLineUp(_id)} 
-                    className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-                >
-                    Remove
-                </button>
             </div>
         </>
     );
