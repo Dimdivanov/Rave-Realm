@@ -28,7 +28,9 @@ export default function ArtistEdit() {
     );
 
     const [artistDetails] = useGetOneArtists(artistId);
-
+    if (!artistDetails) {
+        return navigate('/*');
+    }
     useEffect(() => {
         if (artistDetails) {
             setValues(artistDetails);
@@ -46,7 +48,10 @@ export default function ArtistEdit() {
                 </h2>
                 <form onSubmit={submitHandler} className="space-y-4">
                     <div className="space-y-1">
-                        <label htmlFor="artist-name" className="text-white text-sm font-medium">
+                        <label
+                            htmlFor="artist-name"
+                            className="text-white text-sm font-medium"
+                        >
                             Artist Name
                         </label>
                         <input
@@ -60,7 +65,10 @@ export default function ArtistEdit() {
                         />
                     </div>
                     <div className="space-y-1">
-                        <label htmlFor="image-url" className="text-white text-sm font-medium">
+                        <label
+                            htmlFor="image-url"
+                            className="text-white text-sm font-medium"
+                        >
                             Image URL
                         </label>
                         <input
@@ -74,7 +82,10 @@ export default function ArtistEdit() {
                         />
                     </div>
                     <div className="space-y-1">
-                        <label htmlFor="biography" className="text-white text-sm font-medium">
+                        <label
+                            htmlFor="biography"
+                            className="text-white text-sm font-medium"
+                        >
                             Biography
                         </label>
                         <textarea
@@ -88,7 +99,10 @@ export default function ArtistEdit() {
                         />
                     </div>
                     <div className="space-y-1">
-                        <label htmlFor="appearance-date" className="text-white text-sm font-medium">
+                        <label
+                            htmlFor="appearance-date"
+                            className="text-white text-sm font-medium"
+                        >
                             Performance Date
                         </label>
                         <input

@@ -16,7 +16,7 @@ export function useGetAllArtists() {
         })();
     }, []);
 
-    return artist; // Return error state along with artists
+    return artist; 
 }
 
 export function useGetOneArtists(artistId) {
