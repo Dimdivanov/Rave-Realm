@@ -1,0 +1,19 @@
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Add drop shadow */
+    line-height: 1.2;
+}
+
+.title span {
+    color: #ff4081; /* Highlight color for the word "Tickets" */
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    color: #d3d3d3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
