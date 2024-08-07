@@ -116,17 +116,31 @@ export default function StageEdit() {
                             className="w-full p-2 bg-white bg-opacity-20 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-300 text-sm"
                         />
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between mt-6">
                         <button
                             type="button"
                             onClick={() => navigate(`/stage/details/${values._id}`)}
-                            className="w-32 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
+                            className="flex items-center gap-2 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
                         >
-                            Back
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="currentColor"
+                                className="w-6 h-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg>
+                            <span>Back</span>
                         </button>
                         <button
                             type="submit"
-                            className="w-32 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
+                            className="bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors text-sm"
                         >
                             Edit
                         </button>
