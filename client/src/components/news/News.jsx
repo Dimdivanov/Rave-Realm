@@ -7,7 +7,6 @@ export default function News() {
                         <h2 className="text-3xl font-bold mb-6">News</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
-                        {/* News Card Start */}
                         <div className="border-4 border-gray-700 rounded-lg overflow-hidden shadow-lg">
                             <img
                                 src="https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/sites/21/2019/06/23060359/EDCLV2019_0518_230104-9031_TJH-callout-lrg.jpg"
@@ -23,8 +22,6 @@ export default function News() {
                                 <p className="text-sm text-gray-400">Today</p>
                             </div>
                         </div>
-                        {/* News Card End */}
-                        {/* News Card Start */}
                         <div className="border-4 border-gray-700 rounded-lg overflow-hidden shadow-lg">
                             <img
                                 src="https://t3.ftcdn.net/jpg/08/18/53/60/360_F_818536084_Ri6bO9jFcaBhQzUWvOH5RFfVR6B7KvuI.jpg"
@@ -39,8 +36,6 @@ export default function News() {
                                 <p className="text-sm text-gray-400">18 days ago</p>
                             </div>
                         </div>
-                        {/* News Card End */}
-                        {/* News Card Start */}
                         <div className="border-4 border-gray-700 rounded-lg overflow-hidden shadow-lg">
                             <img
                                 src="https://globalnews.ca/wp-content/uploads/2018/09/171503561.jpg?quality=85&strip=all&w=720&h=379&crop=1"
@@ -55,9 +50,7 @@ export default function News() {
                                 <p className="text-sm text-gray-400">57 days ago</p>
                             </div>
                         </div>
-                        {/* News Card End */}
                     </div>
-                    
                 </div>
             </section>
         </>

@@ -1,0 +1,101 @@
+.section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #000;
+}
+
+.container {
+  margin-top: 5rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) { /* Tailwind's md breakpoint */
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.iconImage {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.textTitle {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.textHandle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.partnersSection {
+  margin-top: 1rem;
+}
+
+.partnersTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.partnersSubtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.partner:hover {
+  transform: scale(1.05);
+}
+
+.partnerImage {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.partnerName {
+  font-size: 0.875rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
