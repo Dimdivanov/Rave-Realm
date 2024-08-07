@@ -1,38 +1,37 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function StageDetailsContent({
     stageDetails,
     stageId,
     category,
     capacity,
-    isOwner,
+
     stageDelClickHandler,
 }) {
+    const navigate = useNavigate();
     return (
         <div className="relative mt-16 container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
             {/* Back Button */}
             <div className="absolute top-4 left-4">
-                <Link to="/stages-list">
-                    <button
-                        onClick={() => navigate('/stages')}
-                        className="mb-4 text-white"
+                <button
+                    onClick={() => navigate('/stages-list')}
+                    className="mb-4 text-white"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        className="w-10 h-10 rounded-full hover:bg-purple-500 hover:bg-opacity-50"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="currentColor"
-                            className="w-10 h-10 rounded-full hover:bg-purple-500 hover:bg-opacity-50"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                </Link>
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15 19l-7-7 7-7"
+                        />
+                    </svg>
+                </button>
             </div>
             {/* Title */}
             <div className="text-center mb-6">
@@ -62,27 +61,23 @@ export default function StageDetailsContent({
             </div>
             {/* Actions */}
             <div className="flex justify-center space-x-4 mb-6">
-               
-                    <>
-                        <Link to={`/stage/edit/${stageId}`}>
-                            <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-2 px-4 rounded-md shadow-md hover:from-yellow-500 hover:to-yellow-700 transition-colors">
-                                Edit
-                            </button>
-                        </Link>
-                        <button
-                            onClick={stageDelClickHandler}
-                            className="bg-gradient-to-r from-red-500 to-red-700 text-white py-2 px-4 rounded-md shadow-md hover:from-red-600 hover:to-red-800 transition-colors"
-                        >
-                            Delete
+                <>
+                    <Link to={`/stage/edit/${stageId}`}>
+                        <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-2 px-4 rounded-md shadow-md hover:from-yellow-500 hover:to-yellow-700 transition-colors">
+                            Edit
                         </button>
-                    </>
-              
-                    {
-                        /*<button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-2 px-4 rounded-md shadow-md hover:from-purple-600 hover:to-purple-800 transition-colors">
+                    </Link>
+                    <button
+                        onClick={stageDelClickHandler}
+                        className="bg-gradient-to-r from-red-500 to-red-700 text-white py-2 px-4 rounded-md shadow-md hover:from-red-600 hover:to-red-800 transition-colors"
+                    >
+                        Delete
+                    </button>
+                </>
+
+                {/*<button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-2 px-4 rounded-md shadow-md hover:from-purple-600 hover:to-purple-800 transition-colors">
                         Like
-                    </button> */
-                    }
-                
+                    </button> */}
             </div>
         </div>
     );

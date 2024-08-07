@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import MyLineupCard from './my-lineup-card/MyLineupCard';
 import { getFilteredArtistDetails } from '../../util/userLineupHelper';
 
+
 export default function MyLineUp() {
     const { email } = useContext(AuthContext);
     const filteredArtistDetails = getFilteredArtistDetails(email)
@@ -21,7 +22,7 @@ export default function MyLineUp() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {/* Artist Card Component */}
                     {filteredArtistDetails.map((filteredArtistDetails) => (
-                        <MyLineupCard key={filteredArtistDetails._id} {...filteredArtistDetails} />
+                        <MyLineupCard key={filteredArtistDetails._id} {...filteredArtistDetails}/>
                     ))}
                 </div>
             </section>

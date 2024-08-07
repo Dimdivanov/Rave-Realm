@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import HamburgerMenu from '../hamburger-menu-profile/HamburgerMenu';
+import MobileHamburgerMenu from '../hamburger-menu-profile/MobileHamburgerMenu';
 
 export default function MobileMenu({
     isMenuOpen,
@@ -8,6 +8,7 @@ export default function MobileMenu({
     email,
     isAuthenticated,
 }) {
+    
     return (
         <>
             {/* Mobile Menu */}
@@ -17,7 +18,7 @@ export default function MobileMenu({
                         className="fixed inset-0 z-50 bg-black bg-opacity-25"
                         onClick={() => setIsMenuOpen(false)}
                     />
-                    <div className="backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg">
+                    <div className="mt-5 backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg">
                         <div className="flex items-center justify-between">
                             <img
                                 className="h-12 w-auto"
@@ -48,11 +49,9 @@ export default function MobileMenu({
                             </button>
                         </div>
                         
-                        <HamburgerMenu
-                            profileIcon={profileIcon}
-                            email={email}
-                            setIsMenuOpen={setIsMenuOpen}
+                        <MobileHamburgerMenu
                             isAuthenticated={isAuthenticated}
+                            setIsMenuOpen={setIsMenuOpen}
                         />
                     </div>
                 </div>

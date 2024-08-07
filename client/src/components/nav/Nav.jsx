@@ -13,7 +13,7 @@ import NavigationMainMenu from './navigation-main-menu/NavigationMainMenu';
 import ProfileMenu from './profile-menu/ProfileMenu';
 import MobileMenu from './mobile-menu/MobileMenu';
 
-//TO DO break it down!
+
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -65,7 +65,7 @@ export default function Nav() {
                         onClick={() => setIsProfileMenuOpen(false)}
                     >
                         <div
-                            className="backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg"
+                            className="mt-5 backdrop-blur-sm bg-opacity-15 absolute top-16 right-0 z-50 w-full max-w-sm bg-black p-6 ring-1 ring-gray-900/10 rounded-lg"
                             role="dialog"
                             aria-modal="true"
                         >

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function TicketDetailsContent({
     ticketDetails,
@@ -7,12 +7,31 @@ export default function TicketDetailsContent({
     ticketDelClickHandler,
     onClickBuyHandler,
 }) {
+    const navigate = useNavigate();
+
     return (
         <div className="w-full max-w-4xl p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg flex flex-col lg:flex-row">
+            <button onClick={() => navigate('/get-tickets')} className="mb-96 text-white">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="w-10 h-10 rounded-full hover:bg-purple-500 hover:bg-opacity-50"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 19l-7-7 7-7"
+                    />
+                </svg>
+            </button>
+
             <div className="w-full lg:w-1/2">
                 <img
                     src={ticketDetails.ticketImgUrl}
-                    alt={`Ticket for ${ticketDetails.ticketName}`} // Improved alt text
+                    alt={`Ticket for ${ticketDetails.ticketName}`}
                     className="rounded-lg w-full h-64 lg:h-auto object-cover lg:object-contain"
                 />
             </div>
