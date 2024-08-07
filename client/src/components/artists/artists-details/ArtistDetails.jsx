@@ -96,7 +96,7 @@ export default function ArtistDetails() {
                                 {!isOwner && (
                                     <button
                                         onClick={onClickAddToLineHandler}
-                                        className="bg-teal-500 text-white px-4 py-2 rounded-lg ml-40 hover:bg-teal-600 transition-colors"
+                                        className="bg-teal-500 text-white px-4 py-2 rounded-lg ml-48 hover:bg-teal-600 transition-colors"
                                     >
                                         Add to My Lineup
                                     </button>
