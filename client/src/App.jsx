@@ -29,6 +29,7 @@ import TicketEdit from './components/getTickets/ticket-details/ticket-edit/Ticke
 import NotFound from './components/notFound/NotFound';
 import Spinner from './components/common/spinner/Spinner';
 import wait from './util/slowOnPurpose';
+import ShoppingBag from './components/shopping-bag/ShoppingBag';
 
 const StageDetails = lazy(() => import('./components/stages/stage-details/StageDetails'));
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
@@ -75,6 +76,7 @@ const App = () => {
                                 />
                                 <Route path="/my-lineup" element={<MyLineUp />} />
                                 <Route path="/logout" element={<Logout />} />
+                                <Route path="/shopping-bag" element={<ShoppingBag />} />
                             </Route>
                             {/* End Protected routes */}
 

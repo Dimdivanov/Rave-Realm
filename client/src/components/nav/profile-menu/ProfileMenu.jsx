@@ -14,7 +14,7 @@ export default function ProfileMenu({
         <>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end p-2">
                 <div className="flex space-x-4 p-2">
-                    <Link key="testPage" to="/" className="w-15 pt-2 px-4 p-2">
+                    <Link key="testPage" to="/shopping-bag" className="w-15 pt-2 px-4 p-2">
                         <img src={info} alt="/" className={styles.iconImage} />
                     </Link>
 
