@@ -15,7 +15,10 @@ export default function StageDetails() {
 
     const { userId } = useContext(AuthContext);
     const isOwner = userId === stageDetails._ownerId;
+
     if (!stageDetails) {
+        console.log('dsadsasdsadsadsd heleeoe');
+
         return navigate('/*');
     }
 

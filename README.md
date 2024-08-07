@@ -10,12 +10,6 @@ This React project is designed to streamline the ticket purchasing and event cre
 -   **Stage Creation:** Stage organizers can create event, specifying stages, artists, and ticket details.
 -   **Pre-loaded Data:** The platform comes with pre-loaded data to ensure a smooth user experience from the start.
 
-## To Do
-
-The project is still in progress with the following tasks to be completed:
-
--   Add more views for sub-settings-menu
--   Add proper data handling and error report
 
 ## Technology Stack
 
