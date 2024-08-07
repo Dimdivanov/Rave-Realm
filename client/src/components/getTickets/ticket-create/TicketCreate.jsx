@@ -5,7 +5,7 @@ import { useCreateTicket } from '../../../hooks/useTickets';
 import { useForm } from '../../../hooks/useForm';
 import useFocusForm from '../../../hooks/useFocusForm';
 import TicketCreateForm from './TicketCreateForm';
-
+import { validateTicketCreateForm } from '../../../util/validateCreateForm';
 
 const initialValues = {
     ticketName: '',
@@ -22,12 +22,13 @@ export default function TicketCreate() {
     const ref = useFocusForm();
 
     const createHandler = async (values) => {
-        const {ticketName, ticketImgUrl, type, price, description} = values;
-        if(!ticketName || !ticketImgUrl || !type || !price || !description){
-            return setError('Missing fields!');
+        const { ticketName, ticketImgUrl, type, price, description } = values;
+        const error = validateTicketCreateForm(values);
+        if (error) {
+            return setError(error);
         }
         try {
-            await createTicket(values);
+            createTicket(values);
             navigate('/get-tickets');
         } catch (err) {
             console.log(err.message);
@@ -36,7 +37,7 @@ export default function TicketCreate() {
 
     const { values, changeHandler, submitHandler } = useForm(
         initialValues,
-        createHandler,
+        createHandler
     );
 
     return (
@@ -44,7 +45,7 @@ export default function TicketCreate() {
             id="create"
             className="w-full min-h-screen bg-gradient-to-b from-purple-700 to-black flex items-center justify-center py-10"
         >
-            <TicketCreateForm 
+            <TicketCreateForm
                 values={values}
                 changeHandler={changeHandler}
                 submitHandler={submitHandler}
