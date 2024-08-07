@@ -20,12 +20,14 @@ export default function Register() {
     const navigate = useNavigate();
 
     const registerHandler = async (values) => {
+        console.log(values);
+
         const error = registerValidator(values);
         if (error) {
             return setError(error);
         }
         try {
-            await register(email, password);
+            await register(values.email, values.password);
             navigate('/');
         } catch (err) {
             setError(err.message);

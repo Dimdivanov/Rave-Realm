@@ -10,8 +10,8 @@ export const registerValidator = ({ email, password, rePassword }) => {
     if (password !== rePassword) {
         return 'Password missmatch!';
     }
-    if (password.length < 6) {
-        return 'Password must be at least 6 characters long!';
+    if (password.length < 3) {
+        return 'Password must be at least 3 characters long!';
     }
 
     return '';

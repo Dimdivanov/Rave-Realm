@@ -21,9 +21,8 @@ export default function Login() {
         if (error) {
             return setError(error);
         }
-
         try {
-            await login(email, password);
+            await login(values.email, values.password);
             navigate('/');
         } catch (err) {
             console.log(err.message);
@@ -61,6 +60,7 @@ export default function Login() {
                                     id="email"
                                     name="email"
                                     autoComplete="email"
+                                    
                                     ref={ref}
                                     value={values.email}
                                     onChange={changeHandler}

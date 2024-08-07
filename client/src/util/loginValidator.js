@@ -7,8 +7,8 @@ export const validateLogin = ({ email, password }) => {
     if (!emailRegex.test(email)) {
         return 'Invalid email address!';
     }
-    if (password.length < 6) {
-        return 'Password must be at least 6 characters long!';
+    if (password.length < 3) {
+        return 'Password must be at least 3 characters long!';
     }
 
     return '';
