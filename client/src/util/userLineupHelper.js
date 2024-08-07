@@ -15,6 +15,6 @@ export function getFilteredArtistDetails(email) {
   );
 
   const artistIds = filteredArtists.map((artist) => artist.artistId);
-
+  
   return artists.filter((artist) => artistIds.includes(artist._id));
 }

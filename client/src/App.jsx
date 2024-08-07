@@ -12,10 +12,10 @@ import Login from './components/nav/login/Login';
 import Register from './components/nav/register/Register';
 import Logout from './components/nav/logout/Logout';
 
-import ArtistsCatalog from './components/artists/artists-catalog/ArtistsCatalog';
+// import ArtistsCatalog from './components/artists/artists-catalog/ArtistsCatalog';
 import ArtistDetails from './components/artists/artists-details/ArtistDetails';
-import TicketsList from './components/getTickets/tickets-list/TicketsList';
-import StageList from './components/stages/stage-list/StageList';
+// import TicketsList from './components/getTickets/tickets-list/TicketsList';
+// import StageList from './components/stages/stage-list/StageList';
 import NotFound from './components/notFound/NotFound';
 import StageDetails from './components/stages/stage-details/StageDetails';
 
@@ -31,72 +31,89 @@ import {
     AuthenticatorGuard,
     AuthRedirectGuard,
 } from './components/common/AuthenticatorGuard';
+
 import StageEdit from './components/stages/stage-details/stage-edit/StageEdit';
 import TicketEdit from './components/getTickets/ticket-details/ticket-edit/TicketEdit';
 import MyLineUp from './components/my-lineup/MyLineUp';
 
-//nested route
+import { lazy, Suspense } from 'react';
+import Spinner from './components/common/spinner/Spinner';
+import wait from './util/slowOnPurpose';
+
+const TicketsList = lazy(() =>
+    import('./components/getTickets/tickets-list/TicketsList')
+);
+const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
+const ArtistsCatalog = lazy(() =>
+    import('./components/artists/artists-catalog/ArtistsCatalog')
+);
 
 const App = () => {
     return (
         <AuthContextProvider>
             <SpinnerContextProvider>
-                <ScrollTop />
-                <main className="relative">
-                    <Nav />
-                    <Routes>
-                        {/* Start Protected routes */}
-                        <Route element={<AuthenticatorGuard />}>
-                            <Route path="/create-stage" element={<StageCreate />} />
-                            <Route path="/create-ticket" element={<TicketCreate />} />
+                <Suspense fallback={<Spinner />}>
+                    <ScrollTop />
+                    <main className="relative">
+                        <Nav />
+                        <Routes>
+                            {/* Start Protected routes */}
+                            <Route element={<AuthenticatorGuard />}>
+                                <Route path="/create-stage" element={<StageCreate />} />
+                                <Route path="/create-ticket" element={<TicketCreate />} />
+                                <Route
+                                    path="/ticket/edit/:ticketId"
+                                    element={<TicketEdit />}
+                                />
+                                <Route
+                                    path="/artist/edit/:artistId"
+                                    element={<ArtistEdit />}
+                                />
+                                <Route path="/create-artist" element={<ArtistCreate />} />
+                                <Route
+                                    path="/stage/edit/:stageId"
+                                    element={<StageEdit />}
+                                />
+                                <Route path="/my-lineup" element={<MyLineUp />} />
+                                <Route path="/logout" element={<Logout />} />
+                            </Route>
+                            {/* End Protected routes */}
+
+                            {/* Start Public routes */}
+                            <Route element={<AuthRedirectGuard />}>
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/sign-up" element={<Register />} />
+                            </Route>
+                            {/* End Public routes */}
+
+                            <Route path="/" element={<Home />} />
+                            <Route path="/home" element={<Navigate to="/" />} />
+                            <Route path="/*" element={<NotFound />} />
+
+                            <Route path="/artists" element={<ArtistsCatalog />} />
+                            <Route path="/stages-list" element={<StageList />} />
+                            <Route path="/get-tickets" element={<TicketsList />} />
+
                             <Route
-                                path="/ticket/edit/:ticketId"
-                                element={<TicketEdit />}
+                                path="/ticket/details/:ticketId"
+                                element={<TicketDetails />}
                             />
                             <Route
-                                path="/artist/edit/:artistId"
-                                element={<ArtistEdit />}
+                                path="/artist/details/:artistId"
+                                element={<ArtistDetails />}
                             />
-                            <Route path="/create-artist" element={<ArtistCreate />} />
-                            <Route path="/stage/edit/:stageId" element={<StageEdit />} />
-                            <Route path="/my-lineup" element={<MyLineUp />} />
-                            <Route path="/logout" element={<Logout />} />
-                        </Route>
-                        {/* End Protected routes */}
-
-                        {/* Start Public routes */}
-                        <Route element={<AuthRedirectGuard />}>
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/sign-up" element={<Register />} />
-                        </Route>
-                        {/* End Public routes */}
-
-                        <Route path="/" element={<Home />} />
-                        <Route path="/home" element={<Navigate to="/" />} />
-                        <Route path="/*" element={<NotFound />} />
-
-                        <Route path="/artists" element={<ArtistsCatalog />} />
-                        <Route path="/stages-list" element={<StageList />} />
-                        <Route path="/get-tickets" element={<TicketsList />} />
-
-                        <Route
-                            path="/ticket/details/:ticketId"
-                            element={<TicketDetails />}
-                        />
-                        <Route
-                            path="/artist/details/:artistId"
-                            element={<ArtistDetails />}
-                        />
-                        <Route
-                            path="/stage/details/:stageId"
-                            element={<StageDetails />}
-                        />
-                    </Routes>
-                    <FollowUs />
-                    <Footer />
-                </main>
+                            <Route
+                                path="/stage/details/:stageId"
+                                element={<StageDetails />}
+                            />
+                        </Routes>
+                        <FollowUs />
+                        <Footer />
+                    </main>
+                </Suspense>
             </SpinnerContextProvider>
         </AuthContextProvider>
     );
 };
+
 export default App;
