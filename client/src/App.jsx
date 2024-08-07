@@ -41,7 +41,7 @@ import Spinner from './components/common/spinner/Spinner';
 import wait from './util/slowOnPurpose';
 
 const TicketsList = lazy(() =>
-    wait(4000).then(() => import('./components/getTickets/tickets-list/TicketsList'))
+   () => import('./components/getTickets/tickets-list/TicketsList')
 );
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
 const ArtistsCatalog = lazy(() =>
