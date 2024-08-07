@@ -32,6 +32,7 @@ import Spinner from './components/common/spinner/Spinner';
 import ShoppingBag from './components/shopping-bag/ShoppingBag';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import Contacts from './components/contacts/Contacts';
+import FrequentQuestions from './components/frequent-questions/FrequentQuestions';
 
 const StageDetails = lazy(() => import('./components/stages/stage-details/StageDetails'));
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
@@ -109,7 +110,9 @@ const App = () => {
                                 <Route path="/artists" element={<ArtistsCatalog />} />
                                 <Route path="/stages-list" element={<StageList />} />
                                 <Route path="/get-tickets" element={<TicketsList />} />
+
                                 <Route path="/contacts" element={<Contacts />} />
+                                <Route path="FAQ" element={<FrequentQuestions />} />
                                 <Route
                                     path="/ticket/details/:ticketId"
                                     element={<TicketDetails />}
