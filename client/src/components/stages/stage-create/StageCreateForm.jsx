@@ -87,7 +87,9 @@ const StageCreateForm = forwardRef(
                     </button>
 
                     {error && (
-                        <p className="mt-4 text-center text-sm text-red-600">{error}</p>
+                        <div className="mt-6 p-4 bg-red-100 border border-red-500 rounded-md text-red-700">
+                            <p className="text-lg font-semibold">{error}</p>
+                        </div>
                     )}
                 </form>
             </div>

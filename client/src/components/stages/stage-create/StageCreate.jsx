@@ -5,6 +5,7 @@ import { useCreateStage } from '../../../hooks/useStages';
 import { useForm } from '../../../hooks/useForm';
 import useFocusForm from '../../../hooks/useFocusForm';
 import StageCreateForm from './StageCreateForm';
+import { validateStageCreateForm } from '../../../util/stageValidator';
 
 const initialValues = {
     stageName: '',
@@ -19,17 +20,17 @@ export default function StageCreate() {
     const createStage = useCreateStage();
     const ref = useFocusForm();
 
-
     const createHandler = async (values) => {
-        const {stageName, stageImageUrl, category, capacity, description} = values;
-        if(!stageName || !stageImageUrl || !category || !capacity || !description){
-            return setError('Missing fields');
+        const { stageName, stageImageUrl, category, capacity, description } = values;
+        const error = validateStageCreateForm(values);
+        if (error) {
+            return setError(error);
         }
         try {
             await createStage(values);
             navigate('/stages-list');
         } catch (err) {
-            setError(err.message)
+            setError(err.message);
         }
     };
 

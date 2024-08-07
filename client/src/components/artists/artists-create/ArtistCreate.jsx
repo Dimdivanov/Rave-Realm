@@ -5,6 +5,7 @@ import { useCreateArtist } from '../../../hooks/useArtists';
 import { useForm } from '../../../hooks/useForm';
 import useFocusForm from '../../../hooks/useFocusForm';
 import ArtistCreateForm from './ArtistCreateForm';
+import { validateArtistCreateForm } from '../../../util/artistValidator';
 
 const initialValues = {
     artistName: '',
@@ -22,10 +23,10 @@ export default function ArtistCreate() {
 
     const createHandler = async (values) => {
         const { artistName, imageUrl, appearanceDate, stage, biography } = values;
-        if (!artistName || !imageUrl || !appearanceDate || !stage || !biography) {
-            return setError('Missing fields!');
+        const error = validateArtistCreateForm(values);
+        if (error) {
+            return setError(error);
         }
-
         try {
             await createArtist(values);
             navigate('/artists');

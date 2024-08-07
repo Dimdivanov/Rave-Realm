@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 
 const ArtistCreateForm = forwardRef(
     ({ values, changeHandler, submitHandler, error }, ref) => {
+        
         return (
             <div className="form w-full max-w-xl mx-auto p-4 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
                 <h2 className="text-2xl font-semibold mb-4 text-center text-white">
@@ -88,7 +89,9 @@ const ArtistCreateForm = forwardRef(
                 </form>
 
                 {error && (
-                    <p className="mt-4 text-center text-sm text-red-600">{error}</p>
+                    <div className="mt-6 p-4 bg-red-100 border border-red-500 rounded-md text-red-700">
+                        <p className="text-lg font-semibold">{error}</p>
+                    </div>
                 )}
             </div>
         );
