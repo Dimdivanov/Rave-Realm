@@ -30,6 +30,7 @@ import NotFound from './components/notFound/NotFound';
 import Spinner from './components/common/spinner/Spinner';
 import wait from './util/slowOnPurpose';
 import ShoppingBag from './components/shopping-bag/ShoppingBag';
+import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 
 const StageDetails = lazy(() => import('./components/stages/stage-details/StageDetails'));
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
@@ -50,6 +51,8 @@ const ArtistDetails = lazy(() =>
 
 const App = () => {
     return (
+        <ErrorBoundary>
+        
         <AuthContextProvider>
             <SpinnerContextProvider>
                 <Suspense fallback={<Spinner />}>
@@ -114,6 +117,7 @@ const App = () => {
                 </Suspense>
             </SpinnerContextProvider>
         </AuthContextProvider>
+        </ErrorBoundary>
     );
 };
 

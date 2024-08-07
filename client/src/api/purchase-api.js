@@ -2,29 +2,54 @@ import * as request from './requester';
 
 const BASE_URL = 'http://localhost:3030/data/purchased';
 
-
-const create = (ticketId, purchasedBy) => request.post(BASE_URL, { ticketId, purchasedBy });
-
-const getAll = (ticketId) => {
-    const params = new URLSearchParams({
-        where: `ticketId="${ticketId}"`,
-        load: `author=_ownerId:users`,
-    });
-   
-    
-    return request.get(`${BASE_URL}?${params.toString()}`)
+const create = async (ticketId, purchasedBy) => {
+    try {
+        const result = await request.post(BASE_URL, { ticketId, purchasedBy });
+        return result;
+    } catch (err) {
+        console.error('Error fetching create:', err);
+        throw err;
+    }
 };
 
-const getAllPurchased = (ticketId) => {
-    const params = new URLSearchParams({
-        where: `ticketId="${ticketId}"`,
-    });
-   
-    return request.get(`${BASE_URL}?${params.toString()}`)
+const getAll = async (ticketId) => {
+    try {
+        const params = new URLSearchParams({
+            where: `ticketId="${ticketId}"`,
+            load: `author=_ownerId:users`,
+        });
+
+        const result = await request.get(`${BASE_URL}?${params.toString()}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching getAll:', err);
+        throw err;
+    }
 };
 
+const getAllPurchased = async (ticketId) => {
+    try {
+        const params = new URLSearchParams({
+            where: `ticketId="${ticketId}"`,
+        });
 
-const remove = (ticketId) => request.del(`${BASE_URL}/${ticketId}`);
+        const result = await request.get(`${BASE_URL}?${params.toString()}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching getAllPurchased:', err);
+        throw err;
+    }
+};
+
+const remove = async (ticketId) => {
+    try {
+        const result = await request.del(`${BASE_URL}/${ticketId}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching remove:', err);
+        throw err;
+    }
+};
 
 const purchaseAPI = {
     create,

@@ -2,10 +2,32 @@ import * as request from './requester';
 
 const BASE_URL = 'http://localhost:3030/users';
 
-export const login = (email, password) =>
-    request.post(`${BASE_URL}/login`, { email, password });
+export const login = async (email, password) => {
+    try {
+        const response = await request.post(`${BASE_URL}/login`, { email, password });
+        return response;
+    } catch (error) {
+        console.error('Error during login:', error);
+        throw error; 
+    }
+};
 
-export const register = (email, password) =>
-    request.post(`${BASE_URL}/register`, { email, password });
+export const register = async (email, password) => {
+    try {
+        const response = await request.post(`${BASE_URL}/register`, { email, password });
+        return response;
+    } catch (error) {
+        console.error('Error during registration:', error);
+        throw error; 
+    }
+};
 
-export const logout = () => request.get(`${BASE_URL}/logout`);
+export const logout = async () => {
+    try {
+        const response = await request.get(`${BASE_URL}/logout`);
+        return response;
+    } catch (error) {
+        console.error('Error during logout:', error);
+        throw error; 
+    }
+};

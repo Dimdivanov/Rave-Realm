@@ -3,28 +3,70 @@ import * as request from './requester';
 const BASE_URL = 'http://localhost:3030/data/tickets';
 
 const getAll = async () => {
-    const result = await request.get(BASE_URL);
-    const tickets = Object.values(result);
-    return tickets;
+    try {
+        const result = await request.get(BASE_URL);
+        const tickets = Object.values(result);
+        return tickets;
+    } catch (err) {
+        console.error('Error fetching getAll:', err);
+        throw err;
+    }
 };
 
-/* this is basically a search  */
+/* this is basically a search */
 const getAllMatching = async (match) => {
-    const result = await request.get(BASE_URL);
-    const tickets = Object.values(result).filter((ticket) =>
-        ticket.type === match ? true : false
-    );
+    try {
+        const result = await request.get(BASE_URL);
+        const tickets = Object.values(result).filter((ticket) =>
+            ticket.type === match ? true : false
+        );
 
-    return tickets;
+        return tickets;
+    } catch (err) {
+        console.error('Error fetching getAllMatching:', err);
+        throw err;
+    }
 };
 
-const getOne = (ticketId) => request.get(`${BASE_URL}/${ticketId}`);
+const getOne = async (ticketId) => {
+    try {
+        const result = await request.get(`${BASE_URL}/${ticketId}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching getOne:', err);
+        throw err;
+    }
+};
 
-const create = (ticketData) => request.post(`${BASE_URL}`, ticketData);
+const create = async (ticketData) => {
+    try {
+        const result = await request.post(`${BASE_URL}`, ticketData);
+        return result;
+    } catch (err) {
+        console.error('Error fetching create:', err);
+        throw err;
+    }
+};
 
-const remove = (ticketId) => request.del(`${BASE_URL}/${ticketId}`);
+const remove = async (ticketId) => {
+    try {
+        const result = await request.del(`${BASE_URL}/${ticketId}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching remove:', err);
+        throw err;
+    }
+};
 
-const update = (ticketId, ticketData) => request.put(`${BASE_URL}/${ticketId}`, ticketData)
+const update = async (ticketId, ticketData) => {
+    try {
+        const result = await request.put(`${BASE_URL}/${ticketId}`, ticketData);
+        return result;
+    } catch (err) {
+        console.error('Error fetching update:', err);
+        throw err;
+    }
+};
 
 const ticketAPI = {
     getAll,

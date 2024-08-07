@@ -2,18 +2,40 @@ import * as request from './requester';
 
 const BASE_URL = 'http://localhost:3030/data/likedBy';
 
-const create = (stageId) => request.post(BASE_URL, { stageId });
-
-const getAll = (stageId) => {
-    const params = new URLSearchParams({
-        where: `stageId="${stageId}"`,
-        load: `author=_ownerId:users`,
-    });
-
-    return request.get(`${BASE_URL}?${params.toString()}`);
+const create = async (stageId) => {
+    try {
+        const result = await request.post(BASE_URL, { stageId });
+        return result;
+    } catch (err) {
+        console.error('Error fetching create:', err);
+        throw err;
+    }
 };
 
-const remove = (likeId = request.del(`${BASE_URL}/${likeId}`));
+const getAll = async (stageId) => {
+    try {
+        const params = new URLSearchParams({
+            where: `stageId="${stageId}"`,
+            load: `author=_ownerId:users`,
+        });
+
+        const result = await request.get(`${BASE_URL}?${params.toString()}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching getAll:', err);
+        throw err;
+    }
+};
+
+const remove = async (likeId) => {
+    try {
+        const result = await request.del(`${BASE_URL}/${likeId}`);
+        return result;
+    } catch (err) {
+        console.error('Error fetching remove:', err);
+        throw err;
+    }
+};
 
 const likedApi = {
     create,

@@ -1,15 +1,12 @@
-import { Link } from 'react-router-dom';
-
-import notFoundPortal from '/src/assets/images/decorations/notFoundPortal.png';
-
-export default function NotFound() {
-    return (
+export default function SomethingWentWrong(){
+     return(
+       <>
         <section
             id="notfound"
             className="w-full flex items-center justify-center min-h-screen bg-black relative bg-gradient-to-b from-purple-800 to-black"
         >
             <div className="text-center">
-                <img src={notFoundPortal} alt="Not-Found" className="relative z-20" />
+                <img src="" alt="Not-Found" className="relative z-20" />
 
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <Link
@@ -21,5 +18,6 @@ export default function NotFound() {
                 </div>
             </div>
         </section>
-    );
+       </>
+       );
 }
