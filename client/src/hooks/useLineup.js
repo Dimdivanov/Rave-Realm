@@ -19,7 +19,7 @@ export function useGetAllToLine(artistId) {
         })();
     }, []);
 
-    return [addToLine, setAddToLine];
+    return [addToLine];
 }
 
 export function useRemoveAddToLine() {
@@ -29,3 +29,4 @@ export function useRemoveAddToLine() {
 
     return createHandler;
 }
+

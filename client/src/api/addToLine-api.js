@@ -16,6 +16,16 @@ const getAll = async (email) => {
     return response;
 };
 
+const getAllByLinedUp = async (lineup) => {
+    const params = new URLSearchParams({
+        where: `addedToLine="${lineup}"`,
+        load: `author=_ownerId:users`
+    });
+
+    const response = await request.get(`${BASE_URL}?${params.toString()}`);
+  
+    return response;
+};
 
 const remove = (artistId) => request.del(`${BASE_URL}/${artistId}`);
 

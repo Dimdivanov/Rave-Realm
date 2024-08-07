@@ -24,7 +24,7 @@ export function useGetOneStage(stageId) {
             setStageDetails(result);
         })();
     }, [stageId]);
-    
+
     return [stageDetails];
 }
 

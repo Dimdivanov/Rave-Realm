@@ -62,7 +62,7 @@ export default function StageDetailsContent({
             </div>
             {/* Actions */}
             <div className="flex justify-center space-x-4 mb-6">
-                {isOwner ? (
+               
                     <>
                         <Link to={`/stage/edit/${stageId}`}>
                             <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-2 px-4 rounded-md shadow-md hover:from-yellow-500 hover:to-yellow-700 transition-colors">
@@ -76,11 +76,13 @@ export default function StageDetailsContent({
                             Delete
                         </button>
                     </>
-                ) : (
-                    <button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-2 px-4 rounded-md shadow-md hover:from-purple-600 hover:to-purple-800 transition-colors">
+              
+                    {
+                        /*<button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-2 px-4 rounded-md shadow-md hover:from-purple-600 hover:to-purple-800 transition-colors">
                         Like
-                    </button>
-                )}
+                    </button> */
+                    }
+                
             </div>
         </div>
     );

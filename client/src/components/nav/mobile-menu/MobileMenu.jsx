@@ -47,7 +47,7 @@ export default function MobileMenu({
                                 </svg>
                             </button>
                         </div>
-
+                        
                         <HamburgerMenu
                             profileIcon={profileIcon}
                             email={email}
