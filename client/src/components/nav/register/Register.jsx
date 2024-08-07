@@ -20,8 +20,6 @@ export default function Register() {
     const navigate = useNavigate();
 
     const registerHandler = async (values) => {
-        console.log(values);
-
         const error = registerValidator(values);
         if (error) {
             return setError(error);

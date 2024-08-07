@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext} from 'react';
 
 import { AuthContext } from '../../contexts/AuthContext';
 import MyLineupCard from './my-lineup-card/MyLineupCard';
@@ -8,8 +8,7 @@ import { getFilteredArtistDetails } from '../../util/userLineupHelper';
 export default function MyLineUp() {
     const { email } = useContext(AuthContext);
     const filteredArtistDetails = getFilteredArtistDetails(email)
-    console.log(filteredArtistDetails);
-    
+
     return (
         <div className="relative bg-black bg-gradient-to-b from-purple-800 to-rgb-400 min-h-screen">
             {/* Header Section */}
@@ -19,6 +18,7 @@ export default function MyLineUp() {
                 </div>
             </div>
             {/* Artist Catalog Section */}
+
             <section className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {/* Artist Card Component */}
