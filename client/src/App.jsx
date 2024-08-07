@@ -33,6 +33,8 @@ import ShoppingBag from './components/shopping-bag/ShoppingBag';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import Contacts from './components/contacts/Contacts';
 import FrequentQuestions from './components/frequent-questions/FrequentQuestions';
+import TermsConditions from './components/terms-conditions/TermsConditions';
+import PrivacyPolicy from './components/privacy-policy/PrivacyPolicy';
 
 const StageDetails = lazy(() => import('./components/stages/stage-details/StageDetails'));
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
@@ -111,12 +113,6 @@ const App = () => {
                                 <Route path="/stages-list" element={<StageList />} />
                                 <Route path="/get-tickets" element={<TicketsList />} />
 
-                                <Route path="/contacts" element={<Contacts />} />
-                                <Route path="FAQ" element={<FrequentQuestions />} />
-                                <Route
-                                    path="/ticket/details/:ticketId"
-                                    element={<TicketDetails />}
-                                />
                                 <Route
                                     path="/artist/details/:artistId"
                                     element={<ArtistDetails />}
@@ -124,6 +120,21 @@ const App = () => {
                                 <Route
                                     path="/stage/details/:stageId"
                                     element={<StageDetails />}
+                                />
+                                {/* Footer routes */}
+                                <Route
+                                    path="/privacy-policy"
+                                    element={<PrivacyPolicy />}
+                                />
+                                <Route
+                                    path="/terms-conditions"
+                                    element={<TermsConditions />}
+                                />
+                                <Route path="/contacts" element={<Contacts />} />
+                                <Route path="FAQ" element={<FrequentQuestions />} />
+                                <Route
+                                    path="/ticket/details/:ticketId"
+                                    element={<TicketDetails />}
                                 />
                             </Routes>
                             <FollowUs />
