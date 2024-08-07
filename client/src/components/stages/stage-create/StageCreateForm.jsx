@@ -81,7 +81,7 @@ const StageCreateForm = forwardRef(
 
                     <button
                         type="submit"
-                        className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition-colors text-sm"
+                        className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 rounded-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 transition-colors text-sm"
                     >
                         Add Stage
                     </button>

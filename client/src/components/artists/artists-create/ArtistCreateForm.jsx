@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react';
 
 const ArtistCreateForm = forwardRef(
     ({ values, changeHandler, submitHandler, error }, ref) => {
-        
         return (
             <div className="form w-full max-w-xl mx-auto p-4 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
                 <h2 className="text-2xl font-semibold mb-4 text-center text-white">
@@ -82,7 +81,7 @@ const ArtistCreateForm = forwardRef(
 
                     <button
                         type="submit"
-                        className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition-colors text-sm"
+                        className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 rounded-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 transition-colors text-sm"
                     >
                         Add Artist
                     </button>
