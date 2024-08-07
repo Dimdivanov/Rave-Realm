@@ -13,11 +13,11 @@ import Register from './components/nav/register/Register';
 import Logout from './components/nav/logout/Logout';
 
 // import ArtistsCatalog from './components/artists/artists-catalog/ArtistsCatalog';
-import ArtistDetails from './components/artists/artists-details/ArtistDetails';
+// import ArtistDetails from './components/artists/artists-details/ArtistDetails';
 // import TicketsList from './components/getTickets/tickets-list/TicketsList';
 // import StageList from './components/stages/stage-list/StageList';
+// import StageDetails from './components/stages/stage-details/StageDetails';
 import NotFound from './components/notFound/NotFound';
-import StageDetails from './components/stages/stage-details/StageDetails';
 
 import StageCreate from './components/stages/stage-create/StageCreate';
 import ArtistCreate from './components/artists/artists-create/ArtistCreate';
@@ -41,12 +41,17 @@ import Spinner from './components/common/spinner/Spinner';
 import wait from './util/slowOnPurpose';
 
 const TicketsList = lazy(() =>
-    import('./components/getTickets/tickets-list/TicketsList')
+    wait(4000).then(() => import('./components/getTickets/tickets-list/TicketsList'))
 );
 const StageList = lazy(() => import('./components/stages/stage-list/StageList'));
 const ArtistsCatalog = lazy(() =>
     import('./components/artists/artists-catalog/ArtistsCatalog')
 );
+const ArtistDetails = lazy(() =>
+    import('./components/artists/artists-details/ArtistDetails')
+);
+
+const StageDetails = lazy(() => import('./components/stages/stage-details/StageDetails'));
 
 const App = () => {
     return (
