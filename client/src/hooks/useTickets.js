@@ -6,8 +6,13 @@ export function useGetAllTickets() {
 
     useEffect(() => {
         (async () => {
-            const result = await ticketAPI.getAll();
-            setTickets(result);
+            try {
+                const result = await ticketAPI.getAll();
+                setTickets(result);
+            } catch (err) {
+                console.error('Error to useGetAllTickets', err);
+                throw err;
+            }
         })();
     }, []);
 
@@ -19,8 +24,13 @@ export function useGetAllMatching(match) {
 
     useEffect(() => {
         (async () => {
-            const result = await ticketAPI.getAllMatching(match);
-            setTickets(result);
+            try {
+                const result = await ticketAPI.getAllMatching(match);
+                setTickets(result);
+            } catch (err) {
+                console.error('Error to useGetAllMatching', err);
+                throw err;
+            }
         })();
     }, []);
 
@@ -31,8 +41,13 @@ export function useGetOneTicket(ticketId) {
 
     useEffect(() => {
         (async () => {
-            const result = await ticketAPI.getOne(ticketId);
-            setTicketDetails(result);
+            try {
+                const result = await ticketAPI.getOne(ticketId);
+                setTicketDetails(result);
+            } catch (error) {
+                console.error('Error to useGetOneTicket', err);
+                throw err;
+            }
         })();
     }, [ticketId]);
 
@@ -40,11 +55,16 @@ export function useGetOneTicket(ticketId) {
 }
 
 export function useCreateTicket() {
-    const ticketHandler = (ticketData) => ticketAPI.create(ticketData);
+    const ticketHandler = (ticketData) => {
+        try {
+            ticketAPI.create(ticketData);
+        } catch (error) {
+            console.error('Error in useCreateTicket', err);
+            throw err;
+        }
+    };
 
     return ticketHandler;
 }
 
-export function useDeleteTicket() {
-    
-}
+export function useDeleteTicket() {}

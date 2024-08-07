@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import artistAPI from '../api/artists-api';
 
 export function useGetAllArtists() {
@@ -7,30 +6,47 @@ export function useGetAllArtists() {
 
     useEffect(() => {
         (async () => {
-            const result = await artistAPI.getAll();
-            setArtists(result);
+            try {
+                const result = await artistAPI.getAll();
+                setArtists(result);
+            } catch (err) {
+                console.error('Error fetching artists:', err);
+                throw err;
+            }
         })();
     }, []);
 
-    return artist;
+    return artist; // Return error state along with artists
 }
 
 export function useGetOneArtists(artistId) {
     const [artistDetails, setArtistDetails] = useState({});
+
     useEffect(() => {
         (async () => {
-            const result = await artistAPI.getOne(artistId);
-
-            setArtistDetails(result);
+            try {
+                const result = await artistAPI.getOne(artistId);
+                setArtistDetails(result);
+            } catch (err) {
+                console.error('Error fetching artist details:', err);
+                throw err;
+            }
         })();
     }, [artistId]);
-    return [artistDetails];
+
+    return artistDetails;
 }
 
 export function useCreateArtist() {
-    const artistCreateHandler = (artistData) => artistAPI.create(artistData);
+    const artistCreateHandler = async (artistData) => {
+        try {
+            const result = await artistAPI.create(artistData);
+            return result;
+        } catch (err) {
+            console.error('Error creating artist:', err);
+            throw err;
+        }
+    };
 
     return artistCreateHandler;
 }
-
-

@@ -7,8 +7,13 @@ export function useGetAllStages() {
 
     useEffect(() => {
         (async () => {
-            const result = await stageAPI.getAll();
-            setStages(result);
+            try {
+                const result = await stageAPI.getAll();
+                setStages(result);
+            } catch (err) {
+                console.error('Error to useGetAllStages', err);
+                throw err;
+            }
         })();
     }, []);
 
@@ -20,8 +25,13 @@ export function useGetOneStage(stageId) {
 
     useEffect(() => {
         (async () => {
-            const result = await stageAPI.getOne(stageId);
-            setStageDetails(result);
+            try {
+                const result = await stageAPI.getOne(stageId);
+                setStageDetails(result);
+            } catch (err) {
+                console.error('Error to useGetOneStage', err);
+                throw err;
+            }
         })();
     }, [stageId]);
 
@@ -29,7 +39,11 @@ export function useGetOneStage(stageId) {
 }
 
 export function useCreateStage() {
-    const stageHandler = (stageData) => stageAPI.create(stageData);
-
-    return stageHandler;
+    try {
+        const stageHandler = (stageData) => stageAPI.create(stageData);
+        return stageHandler;
+    } catch (err) {
+        console.error('Error creating stage:', err);
+        throw err;
+    }
 }
