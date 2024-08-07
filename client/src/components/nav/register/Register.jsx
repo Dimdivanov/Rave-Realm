@@ -5,6 +5,7 @@ import { useForm } from '../../../hooks/useForm';
 import { useRegister } from '../../../hooks/useAuth';
 import useFocusForm from '../../../hooks/useFocusForm';
 import RegisterFooter from './RegisterFooter';
+import { registerValidator } from '../../../util/registerValidator';
 
 const initialValues = {
     email: '',
@@ -18,12 +19,10 @@ export default function Register() {
     const register = useRegister();
     const navigate = useNavigate();
 
-    const registerHandler = async ({ email, password, rePassword }) => {
-        if (!email || !password || !rePassword) {
-            return setError('Missing Fields!');
-        }
-        if (password !== rePassword) {
-            return setError('Password mismatch!');
+    const registerHandler = async (values) => {
+        const error = registerValidator(values);
+        if (error) {
+            return setError(error);
         }
         try {
             await register(email, password);
@@ -63,7 +62,6 @@ export default function Register() {
                             <input
                                 id="email"
                                 name="email"
-                                type="email"
                                 autoComplete="email"
                                 ref={ref}
                                 value={values.email}
@@ -125,9 +123,9 @@ export default function Register() {
                 </form>
                 <RegisterFooter />
                 {error && (
-                    <p className="mt-10 text-center text-lg text-red-600">
-                        <span>{error}</span>
-                    </p>
+                    <div className="mt-6 p-4 bg-red-100 border border-red-500 rounded-md text-red-700">
+                        <p className="text-lg font-semibold">{error}</p>
+                    </div>
                 )}
             </div>
         </div>
