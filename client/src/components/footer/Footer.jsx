@@ -7,7 +7,7 @@ export default function Footer() {
                 <footer className="py-6">
                     {/* Social Media Icons */}
                     <div className="flex justify-center space-x-6 mb-6">
-                        <Link to="#" className="icon text-xl">
+                        <Link to="https://www.tiktok.com/en/" className="icon text-xl">
                             <img
                                 src="/src/assets/icons/tiktokIcon.png" // Make sure the file extension is correct
                                 alt="xIcon"
@@ -15,7 +15,7 @@ export default function Footer() {
                             />
                             <i className="fab fa-twitter" />
                         </Link>
-                        <Link to="#" className="icon text-xl">
+                        <Link to="https://x.com/home?lang=en" className="icon text-xl">
                             <img
                                 src="/src/assets/icons/xIcon.png" // Make sure the file extension is correct
                                 alt="xIcon"
@@ -23,7 +23,10 @@ export default function Footer() {
                             />
                             <i className="fab fa-twitter" />
                         </Link>
-                        <Link to="#" className="icon text-xl">
+                        <Link
+                            to="https://www.instagram.com/?hl=en"
+                            className="icon text-xl"
+                        >
                             <img
                                 src="/src/assets/icons/instaIcon.png" // Make sure the file extension is correct
                                 alt="xIcon"
@@ -31,7 +34,7 @@ export default function Footer() {
                             />
                             <i className="fab fa-tiktok" />
                         </Link>
-                        <Link to="#" className="icon text-xl">
+                        <Link to="https://www.youtube.com/" className="icon text-xl">
                             <img
                                 src="/src/assets/icons/utubeIcon.png" // Make sure the file extension is correct
                                 alt="xIcon"
