@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useRemoveAddToLine } from '../../../hooks/useLineup';
 
 export default function MyLineupCard({ _id, imageUrl, artistName, artistId }) {
-    console.log(artistId);
     
     const removeFromLineUp = useRemoveAddToLine(artistId);
 

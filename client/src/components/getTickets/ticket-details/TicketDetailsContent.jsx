@@ -6,6 +6,7 @@ export default function TicketDetailsContent({
     isOwner,
     ticketDelClickHandler,
     onClickBuyHandler,
+    setPurchase,
 }) {
     const navigate = useNavigate();
 
@@ -46,7 +47,9 @@ export default function TicketDetailsContent({
                 <p className="text-base text-gray-300 mb-5">
                     Price: {ticketDetails.price} BGN
                 </p>
-                <p className="text-base text-yellow-500 mb-5">
+                <p
+                onClick={setPurchase} 
+                className="text-base text-yellow-500 mb-5">
                     Purchased: {purchased.length} times!
                 </p>
                 <p className="text-sm text-gray-200 mb-40 line-clamp-6">

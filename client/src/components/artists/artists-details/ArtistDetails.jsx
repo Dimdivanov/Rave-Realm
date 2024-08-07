@@ -52,28 +52,32 @@ export default function ArtistDetails() {
             )}
             <div className="bg-gradient-to-b from-purple-800 to-black text-white min-h-screen p-8 flex items-center justify-center">
                 <div className="max-w-4xl mx-auto">
-                    <button
-                        onClick={() => navigate('/artists')}
-                        className="absolute top-4 left-4 text-white"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="currentColor"
-                            className="w-10 h-10 rounded-full hover:bg-purple-500 hover:bg-opacity-50"
+                    {/* Header Section */}
+                    <div className="flex items-center mb-12">
+                        <button
+                            onClick={() => navigate('/artists')}
+                            className="text-white mr-4"
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                    <h1 className="text-4xl font-bold mb-12 text-center">
-                        {artistDetails.artistName}
-                    </h1>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="currentColor"
+                                className="w-8 h-8 rounded-full hover:bg-purple-500 hover:bg-opacity-50"
+                            >
+                                
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg> 
+                        </button>
+                        <h1 className="text-4xl font-bold flex-grow text-center">
+                            {artistDetails.artistName}
+                        </h1>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex flex-col items-center">
                             <div className="w-full h-72 rounded border-4 border-gray-500 overflow-hidden mb-4">

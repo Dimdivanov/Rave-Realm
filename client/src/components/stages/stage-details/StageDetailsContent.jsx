@@ -13,7 +13,10 @@ export default function StageDetailsContent({
         <div className="relative mt-16 container max-w-5xl mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-md backdrop-blur-md">
             {/* Back Button */}
             <div className="absolute top-4 left-4">
-                <button onClick={() => navigate('/stages')} className="mb-4 text-white">
+                <button
+                    onClick={() => navigate('/stages-list')}
+                    className="mb-4 text-white"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

@@ -14,10 +14,12 @@ export function useGetAllPurchase(ticketId) {
 
     useEffect(() => {
         (async () => {
-            const result = await purchaseAPI.getAll(ticketId);
+            const result = await purchaseAPI.getAllPurchased(ticketId);
             setPurchase(result);
         })();
     }, []);
+
+    
 
     return [purchase, setPurchase];
 }

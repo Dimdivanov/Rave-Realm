@@ -15,12 +15,22 @@ const getAll = (ticketId) => {
     return request.get(`${BASE_URL}?${params.toString()}`)
 };
 
+const getAllPurchased = (ticketId) => {
+    const params = new URLSearchParams({
+        where: `ticketId="${ticketId}"`,
+    });
+   
+    return request.get(`${BASE_URL}?${params.toString()}`)
+};
+
+
 const remove = (ticketId) => request.del(`${BASE_URL}/${ticketId}`);
 
 const purchaseAPI = {
     create,
     getAll,
     remove,
+    getAllPurchased
 };
 
 export default purchaseAPI;

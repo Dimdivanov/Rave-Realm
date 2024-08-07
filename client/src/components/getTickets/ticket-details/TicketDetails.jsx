@@ -15,6 +15,7 @@ export default function TicketDetails() {
     const { ticketId } = useParams();
     const [ticketDetails] = useGetOneTicket(ticketId);
     const [showModalRemove, setShowModalRemove] = useState(false);
+    const [ticketNum, setTicketNum] = useState([])
 
     const navigate = useNavigate();
     const createPurchase = useCreatePurchase();
@@ -22,11 +23,10 @@ export default function TicketDetails() {
     const { userId, email } = useContext(AuthContext);
     const isOwner = userId === ticketDetails._ownerId;
 
-    const [purchased] = useGetAllPurchase(ticketId);
-    console.log(purchased);
+    const [purchase] = useGetAllPurchase(ticketId);
+    console.log(purchase);
     
     const { isLoading, setIsLoading } = useContext(SpinnerContext);
-
     const ticketDelClickHandler = () => setShowModalRemove(true);
 
     const onDeleteClickHandler = async () => {
@@ -58,7 +58,7 @@ export default function TicketDetails() {
             <div className="min-h-screen bg-gradient-to-b from-purple-800 via-purple-900 to-black flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <TicketDetailsContent
                     ticketDetails={ticketDetails}
-                    purchased={purchased}
+                    purchased={ticketNum}
                     isOwner={isOwner}
                     ticketDelClickHandler={ticketDelClickHandler}
                     onClickBuyHandler={onClickBuyHandler}
