@@ -1,0 +1,13 @@
+{
+  "name": "rave-realm",
+  "version": "1.0.0",
+  "description": "This React project is designed to streamline the ticket purchasing and event creation process. The platform allows users to easily buy tickets for various events and provides event organizers with the tools to create events, including details such as stages, artists, and ticket information. By connecting individuals with similar music tastes, this platform fosters community and brings people together through shared events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
