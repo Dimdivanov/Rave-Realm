@@ -9,9 +9,7 @@ export default function StageList() {
             {/* Header Section */}
             <div className="container mx-auto px-4 py-8">
                 <div className="text-center mb-8 mt-24">
-                    <h2 className="text-4xl text-white font-bold mb-6">
-                        Stages List
-                    </h2>
+                    <h2 className="text-4xl text-white font-bold mb-6">Stages List</h2>
                 </div>
             </div>
 

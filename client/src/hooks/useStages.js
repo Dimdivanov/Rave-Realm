@@ -16,7 +16,7 @@ export function useGetAllStages() {
             }
         })();
     }, []);
-
+   
     return stages;
 }
 

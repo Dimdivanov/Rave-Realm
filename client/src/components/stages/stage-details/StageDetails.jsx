@@ -14,11 +14,10 @@ export default function StageDetails() {
     const navigate = useNavigate();
 
     const { userId } = useContext(AuthContext);
-    const isOwner = userId === stageDetails._ownerId;
+    //crash on wrong details fixed
+    const isOwner = userId === stageDetails?._ownerId;
 
     if (!stageDetails) {
-        console.log('dsadsasdsadsadsd heleeoe');
-
         return navigate('/*');
     }
 

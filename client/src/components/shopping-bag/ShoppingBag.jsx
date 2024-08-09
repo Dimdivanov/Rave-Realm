@@ -20,7 +20,7 @@ export default function ShoppingBag() {
                     </header>
 
                     {/* Cart Items Section */}
-                    {tickets.map(ticket=> <ShoppingBagContent {...ticket}/>)}
+                    {tickets.map(ticket=> <ShoppingBagContent key={ticket._id} {...ticket}/>)}
 
                     {/* Checkout Button */}
                     <div className="text-center mt-12">

@@ -27,7 +27,7 @@ export default function MobileHamburgerMenu({ isAuthenticated, setIsMenuOpen }) 
                     Artists
                 </Link>
                 <Link
-                    to="/stages"
+                    to="/stages-list"
                     className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-purple-800"
                     onClick={() => setIsMenuOpen(false)}
                 >
