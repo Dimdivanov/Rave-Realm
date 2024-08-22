@@ -41,7 +41,7 @@ export default function MobileApp() {
                     {/* Right Section */}
                     <div className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center p-8 rounded-lg lg:w-1/2 lg:ml-8 z-10">
                         <img
-                            src="src/assets/icons/logo.ico"
+                            src="dist/assets/icons/logo.ico"
                             alt="Icon"
                             className="w-24 mb-2"
                         />

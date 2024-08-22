@@ -1436,7 +1436,7 @@
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Main Stage',
                 stageImageUrl:
-                    '/client/src/assets/images/stageBanner/raveRealmMainStage.jpg',
+                    'dist/assets/images/stageBanner/raveRealmMainStage.jpg',
                 category: 'Electronic Music',
                 capacity: '25000',
                 likedBy: [],
@@ -1448,7 +1448,7 @@
             '39678929-667e-4497-b37c-fadb4117df75': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Mystic Meadows',
-                stageImageUrl: '/client/src/assets/images/stageBanner/mysticMeadows.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/mysticMeadows.jpg',
                 category: 'Chillwave',
                 capacity: '10000',
                 description:
@@ -1460,7 +1460,7 @@
             'a8b2539a-43ea-4796-a1ff-70d5a4b625aa': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Electric Forest',
-                stageImageUrl: '/client/src/assets/images/stageBanner/electricForest.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/electricForest.jpg',
                 category: 'Synthwave',
                 capacity: '15000',
                 description:
@@ -1472,7 +1472,7 @@
             'c3fcd524-6035-44ec-b1c0-31c9d65cdd3b': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Neon Oasis',
-                stageImageUrl: '/src/assets/images/stageBanner/neonOasis.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/neonOasis.jpg',
                 category: 'Dubstep, Trap',
                 capacity: '8000',
                 description:
@@ -1484,7 +1484,7 @@
             '9ab06b6d-3f83-4919-9840-0a6ea142386c': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Lunar Lagoon',
-                stageImageUrl: '/src/assets/images/stageBanner/lunarLagoon.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/lunarLagoon.jpg',
                 category: 'ChillStep',
                 capacity: '15000',
                 description:
@@ -1496,7 +1496,7 @@
             'ccbc10ca-4a47-406b-8770-67183e9fbed6': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Euphoria Field',
-                stageImageUrl: '/src/assets/images/stageBanner/euphoriaField.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/euphoriaField.jpg',
                 category: 'Techno, Trance',
                 capacity: '24000',
                 description:
@@ -1508,7 +1508,7 @@
             '90323a93-8970-44ce-857b-c556aa393f28': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Starlight Grove',
-                stageImageUrl: '/src/assets/images/stageBanner/starlightGrove.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/starlightGrove.jpg',
                 category: 'House, Space Disco',
                 capacity: '8000',
                 description:
@@ -1520,7 +1520,7 @@
             '4518e865-2c96-49c8-b299-55fb596ec18e': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Solar Sanctuary',
-                stageImageUrl: '/src/assets/images/stageBanner/solarSanctuary.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/solarSanctuary.jpg',
                 category: 'Groove House, Retro EDM',
                 capacity: '10000',
                 description:
@@ -1532,7 +1532,7 @@
             '55279640-67bd-46f2-8e1f-86e0cf55445b': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Twilight Temple',
-                stageImageUrl: '/src/assets/images/stageBanner/twilightTemple.jpg',
+                stageImageUrl: 'dist/assets/images/stageBanner/twilightTemple.jpg',
                 category: 'Dark Electro',
                 capacity: '6000',
                 description:
@@ -1678,7 +1678,7 @@
             '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 ticketName: 'VIP Access',
-                ticketImgUrl: '/client/src/assets/images/ticket/VIP.png',
+                ticketImgUrl: 'dist/assets/images/ticket/VIP.png',
                 type: 'VIP',
                 price: '500',
                 description:
@@ -1690,7 +1690,7 @@
             'b4892e56-bafe-4f18-8e07-ff4f882d71fc': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 ticketName: 'General Access',
-                ticketImgUrl: '/client/src/assets/images/ticket/GA.png',
+                ticketImgUrl: 'dist/assets/images/ticket/GA.png',
                 type: 'GA',
                 price: '125',
                 description:
@@ -1702,7 +1702,7 @@
             '085c5560-397b-4861-92d4-c70bf5922b9e': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 ticketName: 'One Day Pass',
-                ticketImgUrl: '/client/src/assets/images/ticket/ODP.png',
+                ticketImgUrl: 'dist/assets/images/ticket/ODP.png',
                 type: 'ODP',
                 price: '125',
                 description: 'One day pass ticket mockup',

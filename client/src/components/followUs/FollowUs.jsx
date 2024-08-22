@@ -15,9 +15,7 @@ export default function FollowUs() {
                     </div>
                     <div className={styles.textContainer}>
                         <p className={styles.textTitle}>Follow us on Instagram</p>
-                        <p className={styles.textHandle}>
-                            @RaveRealmTickets
-                        </p>
+                        <p className={styles.textHandle}>@RaveRealmTickets</p>
                     </div>
                 </div>
 

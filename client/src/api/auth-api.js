@@ -1,6 +1,6 @@
 import * as request from './requester';
 
-const BASE_URL = 'http://localhost:5000/first-project-test-ea6ec/us-central1/api/users';
+const BASE_URL = `${import.meta.env.VITE_API_URL}/users`;
 
 export const login = async (email, password) => {
     try {
@@ -8,7 +8,7 @@ export const login = async (email, password) => {
         return response;
     } catch (error) {
         console.error('Error during login:', error);
-        throw error; 
+        throw error;
     }
 };
 
@@ -18,7 +18,7 @@ export const register = async (email, password) => {
         return response;
     } catch (error) {
         console.error('Error during registration:', error);
-        throw error; 
+        throw error;
     }
 };
 
@@ -28,6 +28,6 @@ export const logout = async () => {
         return response;
     } catch (error) {
         console.error('Error during logout:', error);
-        throw error; 
+        throw error;
     }
 };

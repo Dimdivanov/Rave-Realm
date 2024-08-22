@@ -1,6 +1,6 @@
 import * as request from './requester';
 
-const BASE_URL = 'http://localhost:5000/first-project-test-ea6ec/us-central1/api/data/purchased';
+const BASE_URL = `${import.meta.env.VITE_API_URL}/data/purchased`;
 
 const create = async (ticketId, purchasedBy) => {
     try {
@@ -55,7 +55,7 @@ const purchaseAPI = {
     create,
     getAll,
     remove,
-    getAllPurchased
+    getAllPurchased,
 };
 
 export default purchaseAPI;
