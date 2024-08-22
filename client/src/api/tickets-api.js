@@ -1,6 +1,7 @@
 import * as request from './requester';
 
-const BASE_URL = 'http://localhost:3030/data/tickets';
+const BASE_URL =
+    'http://localhost:5000/first-project-test-ea6ec/us-central1/api/data/tickets';
 
 const getAll = async () => {
     try {

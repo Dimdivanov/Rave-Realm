@@ -9,8 +9,8 @@ export default function MobileApp() {
                     {/* Background Image */}
                     <div className="lg:inset-0 lg:w-1/2 w-full h-64 lg:h-auto lg:absolute lg:left-0 lg:top-0 lg:flex lg:items-center lg:justify-center z-0 mb-8 lg:mb-0">
                         <img
-                            src="src/assets/images/decorations/iphoneMockup.png"
-                            alt="Background Image"
+                            src="assets/images/decorations/iphoneMockup.png"
+                            alt="Background Image2"
                             className="object-cover scale-95"
                         />
                     </div>

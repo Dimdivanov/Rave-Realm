@@ -1,6 +1,6 @@
 import * as request from './requester';
 
-const BASE_URL = 'http://localhost:3030/data/stages';
+const BASE_URL = 'http://localhost:5000/first-project-test-ea6ec/us-central1/api/data/stages';
 
 const getAll = async () => {
     try {
