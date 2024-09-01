@@ -8,7 +8,7 @@ export default function TicketCard(ticket) {
                     <div className="flex items-center justify-between mb-4">
                         <div className="bg-yellow-500 p-2 rounded-full">
                             <img
-                                src="src/assets/icons/ticket.ico"
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2Fticket.ico?alt=media&token=169ff191-eb92-4785-8ba5-3922cf868351"
                                 alt="Ticket Icon"
                                 className="w-6 h-6"
                             />
