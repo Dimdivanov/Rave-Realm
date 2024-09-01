@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="flex justify-center space-x-6 mb-6">
                         <Link to="https://www.tiktok.com/en/" className="icon text-xl">
                             <img
-                                src="/src/assets/icons/tiktokIcon.png" // Make sure the file extension is correct
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2FtiktokIcon.png?alt=media&token=be375c79-0615-4513-bba3-98941c29509f" // Make sure the file extension is correct
                                 alt="xIcon"
                                 className="w-6 h-6" // Adjust size as needed
                             />
@@ -17,7 +17,7 @@ export default function Footer() {
                         </Link>
                         <Link to="https://x.com/home?lang=en" className="icon text-xl">
                             <img
-                                src="/src/assets/icons/xIcon.png" // Make sure the file extension is correct
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2FxIcon.png?alt=media&token=74311537-db84-4bbe-bf8e-825fd8242b86" // Make sure the file extension is correct
                                 alt="xIcon"
                                 className="w-6 h-6" // Adjust size as needed
                             />
@@ -28,7 +28,7 @@ export default function Footer() {
                             className="icon text-xl"
                         >
                             <img
-                                src="/src/assets/icons/instaIcon.png" // Make sure the file extension is correct
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2FinstaIcon.png?alt=media&token=f9f962f9-c94f-4b50-80c0-16d1504d0102" // Make sure the file extension is correct
                                 alt="xIcon"
                                 className="w-6 h-6" // Adjust size as needed
                             />
@@ -36,7 +36,7 @@ export default function Footer() {
                         </Link>
                         <Link to="https://www.youtube.com/" className="icon text-xl">
                             <img
-                                src="/src/assets/icons/utubeIcon.png" // Make sure the file extension is correct
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2FutubeIcon.png?alt=media&token=ea80d4af-d41b-4622-b8fc-fed76cbd84e4" // Make sure the file extension is correct
                                 alt="xIcon"
                                 className="w-6 h-6" // Adjust size as needed
                             />

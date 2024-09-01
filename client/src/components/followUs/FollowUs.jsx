@@ -8,7 +8,7 @@ export default function FollowUs() {
                 <div className={styles.item}>
                     <div className={styles.icon}>
                         <img
-                            src="/src/assets/icons/instagramLogo.png"
+                            src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2FinstagramLogo.png?alt=media&token=4db63e3d-c7e8-4308-a320-0f869d4e8177"
                             alt="instaLogo"
                             className={styles.iconImage}
                         />
@@ -25,7 +25,7 @@ export default function FollowUs() {
                     <div className="flex flex-wrap gap-6 mb-4">
                         <div className={styles.partner}>
                             <img
-                                src="/src/assets/images/sponsorsBanner/sponsor1.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FsponsorsBanner%2Fsponsor1.jpg?alt=media&token=f803269c-ea37-4abe-9d00-ef312143861e"
                                 alt="Sumiom"
                                 className={styles.partnerImage}
                             />
@@ -33,7 +33,7 @@ export default function FollowUs() {
                         </div>
                         <div className={styles.partner}>
                             <img
-                                src="/src/assets/images/sponsorsBanner/sponsor2.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FsponsorsBanner%2Fsponsor2.jpg?alt=media&token=86bd6bc5-9a47-491f-9827-068dd153f525"
                                 alt="Eedm"
                                 className={styles.partnerImage}
                             />
@@ -41,7 +41,7 @@ export default function FollowUs() {
                         </div>
                         <div className={styles.partner}>
                             <img
-                                src="/src/assets/images/sponsorsBanner/sponsor3.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FsponsorsBanner%2Fsponsor3.jpg?alt=media&token=a3fde589-8104-43ca-88fd-7f7d7776f0cb"
                                 alt="Sept Fest"
                                 className={styles.partnerImage}
                             />

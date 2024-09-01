@@ -42,7 +42,7 @@ export default function Register() {
             <div className="mt-24 sm:mx-auto sm:w-full sm:max-w-sm">
                 <img
                     className="mx-auto h-20 w-auto"
-                    src="dist/assets/icons/logo.ico"
+                    src="https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/icons%2Flogo.ico?alt=media&token=da4060b7-6a89-4625-8995-5e07384e4a2a"
                     alt="Your Company"
                 />
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-100">

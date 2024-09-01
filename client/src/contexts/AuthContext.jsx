@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 import usePersistedState from '../hooks/usePersistedState';
 
 export const AuthContext = createContext({

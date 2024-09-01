@@ -99,7 +99,7 @@
             if (method == 'OPTIONS') {
                 Object.assign(headers, {
                     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-                    'Access-Control-Allow-Credentials': false,
+                    'Access-Control-Allow-Credentials': true,
                     'Access-Control-Max-Age': '86400',
                     'Access-Control-Allow-Headers':
                         'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Authorization, X-Admin',
@@ -1436,7 +1436,7 @@
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Main Stage',
                 stageImageUrl:
-                    'dist/assets/images/stageBanner/raveRealmMainStage.jpg',
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FraveRealmMainStage.jpg?alt=media&token=b27bbc6d-7406-49df-ad2a-916f304a1d1b',
                 category: 'Electronic Music',
                 capacity: '25000',
                 likedBy: [],
@@ -1448,7 +1448,8 @@
             '39678929-667e-4497-b37c-fadb4117df75': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Mystic Meadows',
-                stageImageUrl: 'dist/assets/images/stageBanner/mysticMeadows.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FmysticMeadows.jpg?alt=media&token=83ea463d-3914-4645-8bc2-936c7ccfbb03',
                 category: 'Chillwave',
                 capacity: '10000',
                 description:
@@ -1460,7 +1461,8 @@
             'a8b2539a-43ea-4796-a1ff-70d5a4b625aa': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Electric Forest',
-                stageImageUrl: 'dist/assets/images/stageBanner/electricForest.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FelectricForest.jpg?alt=media&token=9f877723-86ec-40c9-9386-faf959207872',
                 category: 'Synthwave',
                 capacity: '15000',
                 description:
@@ -1472,7 +1474,8 @@
             'c3fcd524-6035-44ec-b1c0-31c9d65cdd3b': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 stageName: 'Neon Oasis',
-                stageImageUrl: 'dist/assets/images/stageBanner/neonOasis.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FneonOasis.jpg?alt=media&token=7ea5161a-77d8-44c9-8bb4-941489363d44',
                 category: 'Dubstep, Trap',
                 capacity: '8000',
                 description:
@@ -1484,7 +1487,8 @@
             '9ab06b6d-3f83-4919-9840-0a6ea142386c': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Lunar Lagoon',
-                stageImageUrl: 'dist/assets/images/stageBanner/lunarLagoon.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FlunarLagoon.jpg?alt=media&token=12999054-943c-4270-8d5c-0afd3045a608',
                 category: 'ChillStep',
                 capacity: '15000',
                 description:
@@ -1496,7 +1500,8 @@
             'ccbc10ca-4a47-406b-8770-67183e9fbed6': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Euphoria Field',
-                stageImageUrl: 'dist/assets/images/stageBanner/euphoriaField.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FeuphoriaField.jpg?alt=media&token=36a8ecc3-b03c-4a3f-b8ef-bc3a77f41203',
                 category: 'Techno, Trance',
                 capacity: '24000',
                 description:
@@ -1508,7 +1513,8 @@
             '90323a93-8970-44ce-857b-c556aa393f28': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Starlight Grove',
-                stageImageUrl: 'dist/assets/images/stageBanner/starlightGrove.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FstarlightGrove.jpg?alt=media&token=12d9e8c6-a1bf-4ed3-95cb-13862eab4796',
                 category: 'House, Space Disco',
                 capacity: '8000',
                 description:
@@ -1520,7 +1526,8 @@
             '4518e865-2c96-49c8-b299-55fb596ec18e': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Solar Sanctuary',
-                stageImageUrl: 'dist/assets/images/stageBanner/solarSanctuary.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FsolarSanctuary.jpg?alt=media&token=01894cac-0aa5-44bc-a710-d79997411152',
                 category: 'Groove House, Retro EDM',
                 capacity: '10000',
                 description:
@@ -1532,7 +1539,8 @@
             '55279640-67bd-46f2-8e1f-86e0cf55445b': {
                 _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
                 stageName: 'Twilight Temple',
-                stageImageUrl: 'dist/assets/images/stageBanner/twilightTemple.jpg',
+                stageImageUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2FstageBanner%2FtwilightTemple.jpg?alt=media&token=c884f1cf-1879-420c-aae7-6f01db41b389',
                 category: 'Dark Electro',
                 capacity: '6000',
                 description:
@@ -1678,7 +1686,8 @@
             '7e6f7e16-d4aa-4307-be58-15c4d53ff5fc': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 ticketName: 'VIP Access',
-                ticketImgUrl: 'dist/assets/images/ticket/VIP.png',
+                ticketImgUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2Fticket%2FVIP.png?alt=media&token=cf5e9f43-502b-4f05-9dcf-e8db620ad665',
                 type: 'VIP',
                 price: '500',
                 description:
@@ -1690,7 +1699,8 @@
             'b4892e56-bafe-4f18-8e07-ff4f882d71fc': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 ticketName: 'General Access',
-                ticketImgUrl: 'dist/assets/images/ticket/GA.png',
+                ticketImgUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2Fticket%2FGA.png?alt=media&token=5081066e-af34-4fe3-ab54-23fddff865a7',
                 type: 'GA',
                 price: '125',
                 description:
@@ -1702,7 +1712,8 @@
             '085c5560-397b-4861-92d4-c70bf5922b9e': {
                 _ownerId: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
                 ticketName: 'One Day Pass',
-                ticketImgUrl: 'dist/assets/images/ticket/ODP.png',
+                ticketImgUrl:
+                    'https://firebasestorage.googleapis.com/v0/b/first-project-test-ea6ec.appspot.com/o/images%2Fticket%2FODP.png?alt=media&token=a5fa6ddb-b153-47c3-9a02-42fef13f5c37',
                 type: 'ODP',
                 price: '125',
                 description: 'One day pass ticket mockup',
