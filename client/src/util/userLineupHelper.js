@@ -1,5 +1,5 @@
-import { useGetAllArtists } from "../hooks/useArtists";
-import { useGetAllToLine } from "../hooks/useLineup";
+import { useGetAllArtists } from '../hooks/useArtists';
+import { useGetAllToLine } from '../hooks/useLineup';
 
 export function getFilteredArtistDetails(email) {
   const [artistsLineUp = []] = useGetAllToLine(email);
@@ -10,12 +10,11 @@ export function getFilteredArtistDetails(email) {
       return [];
   }
 
-  const filteredArtists = artistsLineUp.filter((current, index, self) =>
-      index === self.findIndex((t) => t.artistId === current.artistId)
-  );
+    const filteredArtists = artistsLineUp.filter(
+        (current, index, self) =>
+            index === self.findIndex((t) => t.artistId === current.artistId)
+    );
 
-  const artistIds = filteredArtists.map((artist) => artist.artistId);
-  
-  return artists.filter((artist) => artistIds.includes(artist._id));
+    const artistIds = filteredArtists.map((artist) => artist.artistId);
+    return artists.filter((artist) => artistIds.includes(artist._id));
 }
-

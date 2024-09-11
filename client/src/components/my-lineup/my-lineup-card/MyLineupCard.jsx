@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { useRemoveAddToLine } from '../../../hooks/useLineup';
 
 export default function MyLineupCard({ _id, imageUrl, artistName, artistId }) {
-
     const removeHandler = () => {
         try {
             useRemoveAddToLine(artistId);
+            console.log('its working');
         } catch (error) {
             console.error('Error removing artist:', error);
         }

@@ -24,9 +24,9 @@ const getAll = async (email) => {
     }
 };
 
-const remove = (artistId) => {
+const remove = async (artistId) => {
     try {
-        request.del(`${BASE_URL}/${artistId}`);
+        await request.del(`${BASE_URL}/addedToLine/${artistId}`);
     } catch (err) {
         console.error('Error feching remove', err);
         throw err;

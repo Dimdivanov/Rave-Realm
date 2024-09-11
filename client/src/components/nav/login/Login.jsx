@@ -29,8 +29,6 @@ export default function Login() {
         }
     };
 
-    console.log(error);
-
     const { values, changeHandler, submitHandler } = useForm(initialValues, loginHandler);
 
     return (
